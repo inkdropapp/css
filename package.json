@@ -1,0 +1,14 @@
+{
+  "name": "@inkdropapp/css",
+  "version": "0.1.0",
+  "description": "The common stylesheets for Inkdrop",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
+}
