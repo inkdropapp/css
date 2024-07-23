@@ -1,4 +1,4 @@
-import { hsl } from 'tokens.mjs'
+import { hsl } from './tokens'
 
 export const tags = {
   default: {
