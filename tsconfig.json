@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "rootDir": "./" /* Specify the root folder within your source files. */,
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["es2017"],
+    "allowJs": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": false,
+    "allowUnusedLabels": true,
+    "baseUrl": "./" /* Base directory to resolve non-absolute module names. */,
+    "paths": {},
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules"]
+}
