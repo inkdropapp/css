@@ -1,0 +1,258 @@
+@layer theme.ui {
+  :root {
+    --tag-default-border-color: hsl(var(--hsl-slate-400) / 40%);
+    --tag-default-background-color: hsl(var(--hsl-gray-400) / 20%);
+    --tag-default-text-color: hsl(var(--hsl-gray-500));
+    --tag-default-active-background-color: hsl(var(--hsl-slate-400) / 40%);
+    --tag-default-active-border-color: hsl(var(--hsl-slate-400) / 60%);
+    --tag-default-active-text-color: hsl(var(--hsl-slate-500));
+    --tag-default-circular-background-color: hsl(var(--hsl-slate-400) / 60%);
+    --tag-default-circular-border-color: hsl(var(--hsl-slate-400));
+
+    --tag-red-background-color: hsl(var(--hsl-red-400) / 20%);
+    --tag-red-border-color: hsl(var(--hsl-red-400) / 40%);
+    --tag-red-text-color: hsl(var(--hsl-red-500));
+    --tag-red-active-background-color: hsl(var(--hsl-red-400) / 40%);
+    --tag-red-active-border-color: hsl(var(--hsl-red-400) / 60%);
+    --tag-red-active-text-color: hsl(var(--hsl-red-500));
+    --tag-red-circular-background-color: hsl(var(--hsl-red-400) / 60%);
+    --tag-red-circular-border-color: hsl(var(--hsl-red-500));
+
+    --tag-orange-background-color: hsl(var(--hsl-orange-400) / 20%);
+    --tag-orange-border-color: hsl(var(--hsl-orange-400) / 40%);
+    --tag-orange-text-color: hsl(var(--hsl-orange-500));
+    --tag-orange-active-background-color: hsl(var(--hsl-orange-400) / 40%);
+    --tag-orange-active-border-color: hsl(var(--hsl-orange-400) / 60%);
+    --tag-orange-active-text-color: hsl(var(--hsl-orange-500));
+    --tag-orange-circular-background-color: hsl(var(--hsl-orange-400) / 60%);
+    --tag-orange-circular-border-color: hsl(var(--hsl-orange-500));
+
+    --tag-yellow-background-color: hsl(var(--hsl-yellow-400) / 20%);
+    --tag-yellow-border-color: hsl(var(--hsl-yellow-400) / 40%);
+    --tag-yellow-text-color: hsl(var(--hsl-yellow-500));
+    --tag-yellow-active-background-color: hsl(var(--hsl-yellow-400) / 40%);
+    --tag-yellow-active-border-color: hsl(var(--hsl-yellow-400) / 60%);
+    --tag-yellow-active-text-color: hsl(var(--hsl-yellow-500));
+    --tag-yellow-circular-background-color: hsl(var(--hsl-yellow-400) / 60%);
+    --tag-yellow-circular-border-color: hsl(var(--hsl-yellow-500));
+
+    --tag-olive-background-color: hsl(var(--hsl-lime-400) / 20%);
+    --tag-olive-border-color: hsl(var(--hsl-lime-400) / 40%);
+    --tag-olive-text-color: hsl(var(--hsl-lime-500));
+    --tag-olive-active-background-color: hsl(var(--hsl-lime-400) / 40%);
+    --tag-olive-active-border-color: hsl(var(--hsl-lime-400) / 60%);
+    --tag-olive-active-text-color: hsl(var(--hsl-lime-500));
+    --tag-olive-circular-background-color: hsl(var(--hsl-lime-400) / 60%);
+    --tag-olive-circular-border-color: hsl(var(--hsl-lime-500));
+
+    --tag-green-background-color: hsl(var(--hsl-green-400) / 20%);
+    --tag-green-border-color: hsl(var(--hsl-green-400) / 40%);
+    --tag-green-text-color: hsl(var(--hsl-green-500));
+    --tag-green-active-background-color: hsl(var(--hsl-green-400) / 40%);
+    --tag-green-active-border-color: hsl(var(--hsl-green-400) / 60%);
+    --tag-green-active-text-color: hsl(var(--hsl-green-500));
+    --tag-green-circular-background-color: hsl(var(--hsl-green-400) / 60%);
+    --tag-green-circular-border-color: hsl(var(--hsl-green-500));
+
+    --tag-teal-background-color: hsl(var(--hsl-teal-400) / 20%);
+    --tag-teal-border-color: hsl(var(--hsl-teal-400) / 40%);
+    --tag-teal-text-color: hsl(var(--hsl-teal-500));
+    --tag-teal-active-background-color: hsl(var(--hsl-teal-400) / 40%);
+    --tag-teal-active-border-color: hsl(var(--hsl-teal-400) / 60%);
+    --tag-teal-active-text-color: hsl(var(--hsl-teal-500));
+    --tag-teal-circular-background-color: hsl(var(--hsl-teal-400) / 60%);
+    --tag-teal-circular-border-color: hsl(var(--hsl-teal-500));
+
+    --tag-blue-background-color: hsl(var(--hsl-blue-400) / 20%);
+    --tag-blue-border-color: hsl(var(--hsl-blue-400) / 40%);
+    --tag-blue-text-color: hsl(var(--hsl-blue-500));
+    --tag-blue-active-background-color: hsl(var(--hsl-blue-400) / 40%);
+    --tag-blue-active-border-color: hsl(var(--hsl-blue-400) / 60%);
+    --tag-blue-active-text-color: hsl(var(--hsl-blue-500));
+    --tag-blue-circular-background-color: hsl(var(--hsl-blue-400) / 60%);
+    --tag-blue-circular-border-color: hsl(var(--hsl-blue-500));
+
+    --tag-violet-background-color: hsl(var(--hsl-violet-400) / 20%);
+    --tag-violet-border-color: hsl(var(--hsl-violet-400) / 40%);
+    --tag-violet-text-color: hsl(var(--hsl-violet-500));
+    --tag-violet-active-background-color: hsl(var(--hsl-violet-400) / 40%);
+    --tag-violet-active-border-color: hsl(var(--hsl-violet-400) / 60%);
+    --tag-violet-active-text-color: hsl(var(--hsl-violet-500));
+    --tag-violet-circular-background-color: hsl(var(--hsl-violet-400) / 60%);
+    --tag-violet-circular-border-color: hsl(var(--hsl-violet-500));
+
+    --tag-purple-background-color: hsl(var(--hsl-purple-400) / 20%);
+    --tag-purple-border-color: hsl(var(--hsl-purple-400) / 40%);
+    --tag-purple-text-color: hsl(var(--hsl-purple-500));
+    --tag-purple-active-background-color: hsl(var(--hsl-purple-400) / 40%);
+    --tag-purple-active-border-color: hsl(var(--hsl-purple-400) / 60%);
+    --tag-purple-active-text-color: hsl(var(--hsl-purple-500));
+    --tag-purple-circular-background-color: hsl(var(--hsl-purple-400) / 60%);
+    --tag-purple-circular-border-color: hsl(var(--hsl-purple-500));
+
+    --tag-pink-background-color: hsl(var(--hsl-pink-400) / 20%);
+    --tag-pink-border-color: hsl(var(--hsl-pink-400) / 40%);
+    --tag-pink-text-color: hsl(var(--hsl-pink-500));
+    --tag-pink-active-background-color: hsl(var(--hsl-pink-400) / 40%);
+    --tag-pink-active-border-color: hsl(var(--hsl-pink-400) / 60%);
+    --tag-pink-active-text-color: hsl(var(--hsl-pink-500));
+    --tag-pink-circular-background-color: hsl(var(--hsl-pink-400) / 60%);
+    --tag-pink-circular-border-color: hsl(var(--hsl-pink-500));
+
+    --tag-brown-background-color: hsl(var(--hsl-amber-600) / 30%);
+    --tag-brown-border-color: hsl(var(--hsl-amber-700) / 60%);
+    --tag-brown-text-color: hsl(var(--hsl-amber-700));
+    --tag-brown-active-background-color: hsl(var(--hsl-amber-600) / 50%);
+    --tag-brown-active-border-color: hsl(var(--hsl-amber-700) / 60%);
+    --tag-brown-active-text-color: hsl(var(--hsl-amber-700));
+    --tag-brown-circular-background-color: hsl(var(--hsl-amber-600) / 30%);
+    --tag-brown-circular-border-color: hsl(var(--hsl-amber-700));
+
+    --tag-grey-background-color: hsl(var(--hsl-gray-500) / 40%);
+    --tag-grey-border-color: hsl(var(--hsl-gray-500) / 40%);
+    --tag-grey-text-color: hsl(var(--hsl-gray-600));
+    --tag-grey-active-background-color: hsl(var(--hsl-gray-500) / 60%);
+    --tag-grey-active-border-color: hsl(var(--hsl-gray-400) / 60%);
+    --tag-grey-active-text-color: hsl(var(--hsl-gray-700));
+    --tag-grey-circular-background-color: hsl(var(--hsl-gray-500) / 60%);
+    --tag-grey-circular-border-color: hsl(var(--hsl-gray-500));
+
+    --tag-black-background-color: hsl(var(--hsl-gray-950) / 80%);
+    --tag-black-border-color: hsl(var(--hsl-gray-300) / 30%);
+    --tag-black-text-color: hsl(var(--hsl-gray-400));
+    --tag-black-active-background-color: hsl(var(--hsl-gray-900) / 70%);
+    --tag-black-active-border-color: hsl(var(--hsl-gray-300) / 40%);
+    --tag-black-active-text-color: hsl(var(--hsl-gray-300));
+    --tag-black-circular-background-color: hsl(var(--hsl-gray-950) / 80%);
+    --tag-black-circular-border-color: hsl(var(--hsl-gray-400) / 40%);
+  }
+
+  body[class*='dark-ui'],
+  .dark-mode {
+    --tag-default-border-color: hsl(var(--hsl-slate-400) / 20%);
+    --tag-default-background-color: hsl(var(--hsl-gray-400) / 10%);
+    --tag-default-text-color: hsl(var(--hsl-gray-400));
+    --tag-default-active-background-color: hsl(var(--hsl-slate-400) / 20%);
+    --tag-default-active-border-color: hsl(var(--hsl-slate-400) / 30%);
+    --tag-default-active-text-color: hsl(var(--hsl-slate-300));
+    --tag-default-circular-background-color: hsl(var(--hsl-slate-400) / 30%);
+    --tag-default-circular-border-color: hsl(var(--hsl-slate-400));
+
+    --tag-red-background-color: hsl(var(--hsl-red-400) / 10%);
+    --tag-red-border-color: hsl(var(--hsl-red-400) / 20%);
+    --tag-red-text-color: hsl(var(--hsl-red-400));
+    --tag-red-active-background-color: hsl(var(--hsl-red-400) / 20%);
+    --tag-red-active-border-color: hsl(var(--hsl-red-400) / 30%);
+    --tag-red-active-text-color: hsl(var(--hsl-red-500));
+    --tag-red-circular-background-color: hsl(var(--hsl-red-400) / 30%);
+    --tag-red-circular-border-color: hsl(var(--hsl-red-400));
+
+    --tag-orange-background-color: hsl(var(--hsl-orange-400) / 10%);
+    --tag-orange-border-color: hsl(var(--hsl-orange-400) / 20%);
+    --tag-orange-text-color: hsl(var(--hsl-orange-400));
+    --tag-orange-active-background-color: hsl(var(--hsl-orange-400) / 20%);
+    --tag-orange-active-border-color: hsl(var(--hsl-orange-400) / 30%);
+    --tag-orange-active-text-color: hsl(var(--hsl-orange-500));
+    --tag-orange-circular-background-color: hsl(var(--hsl-orange-400) / 30%);
+    --tag-orange-circular-border-color: hsl(var(--hsl-orange-400));
+
+    --tag-yellow-background-color: hsl(var(--hsl-yellow-400) / 10%);
+    --tag-yellow-border-color: hsl(var(--hsl-yellow-400) / 20%);
+    --tag-yellow-text-color: hsl(var(--hsl-yellow-400));
+    --tag-yellow-active-background-color: hsl(var(--hsl-yellow-400) / 20%);
+    --tag-yellow-active-border-color: hsl(var(--hsl-yellow-400) / 30%);
+    --tag-yellow-active-text-color: hsl(var(--hsl-yellow-500));
+    --tag-yellow-circular-background-color: hsl(var(--hsl-yellow-400) / 30%);
+    --tag-yellow-circular-border-color: hsl(var(--hsl-yellow-400));
+
+    --tag-olive-background-color: hsl(var(--hsl-lime-400) / 10%);
+    --tag-olive-border-color: hsl(var(--hsl-lime-400) / 20%);
+    --tag-olive-text-color: hsl(var(--hsl-lime-400));
+    --tag-olive-active-background-color: hsl(var(--hsl-lime-400) / 20%);
+    --tag-olive-active-border-color: hsl(var(--hsl-lime-400) / 30%);
+    --tag-olive-active-text-color: hsl(var(--hsl-lime-500));
+    --tag-olive-circular-background-color: hsl(var(--hsl-lime-400) / 30%);
+    --tag-olive-circular-border-color: hsl(var(--hsl-lime-400));
+
+    --tag-green-background-color: hsl(var(--hsl-green-400) / 10%);
+    --tag-green-border-color: hsl(var(--hsl-green-400) / 20%);
+    --tag-green-text-color: hsl(var(--hsl-green-400));
+    --tag-green-active-background-color: hsl(var(--hsl-green-400) / 20%);
+    --tag-green-active-border-color: hsl(var(--hsl-green-400) / 30%);
+    --tag-green-active-text-color: hsl(var(--hsl-green-500));
+    --tag-green-circular-background-color: hsl(var(--hsl-green-400) / 30%);
+    --tag-green-circular-border-color: hsl(var(--hsl-green-400));
+
+    --tag-teal-background-color: hsl(var(--hsl-teal-400) / 10%);
+    --tag-teal-border-color: hsl(var(--hsl-teal-400) / 20%);
+    --tag-teal-text-color: hsl(var(--hsl-teal-400));
+    --tag-teal-active-background-color: hsl(var(--hsl-teal-400) / 20%);
+    --tag-teal-active-border-color: hsl(var(--hsl-teal-400) / 30%);
+    --tag-teal-active-text-color: hsl(var(--hsl-teal-500));
+    --tag-teal-circular-background-color: hsl(var(--hsl-teal-400) / 30%);
+    --tag-teal-circular-border-color: hsl(var(--hsl-teal-400));
+
+    --tag-blue-background-color: hsl(var(--hsl-blue-400) / 10%);
+    --tag-blue-border-color: hsl(var(--hsl-blue-400) / 20%);
+    --tag-blue-text-color: hsl(var(--hsl-blue-400));
+    --tag-blue-active-background-color: hsl(var(--hsl-blue-400) / 20%);
+    --tag-blue-active-border-color: hsl(var(--hsl-blue-400) / 30%);
+    --tag-blue-active-text-color: hsl(var(--hsl-blue-500));
+    --tag-blue-circular-background-color: hsl(var(--hsl-blue-400) / 30%);
+    --tag-blue-circular-border-color: hsl(var(--hsl-blue-400));
+
+    --tag-violet-background-color: hsl(var(--hsl-violet-400) / 10%);
+    --tag-violet-border-color: hsl(var(--hsl-violet-400) / 20%);
+    --tag-violet-text-color: hsl(var(--hsl-violet-400));
+    --tag-violet-active-background-color: hsl(var(--hsl-violet-400) / 20%);
+    --tag-violet-active-border-color: hsl(var(--hsl-violet-400) / 30%);
+    --tag-violet-active-text-color: hsl(var(--hsl-violet-500));
+    --tag-violet-circular-background-color: hsl(var(--hsl-violet-400) / 30%);
+    --tag-violet-circular-border-color: hsl(var(--hsl-violet-400));
+
+    --tag-purple-background-color: hsl(var(--hsl-purple-400) / 10%);
+    --tag-purple-border-color: hsl(var(--hsl-purple-400) / 20%);
+    --tag-purple-text-color: hsl(var(--hsl-purple-400));
+    --tag-purple-active-background-color: hsl(var(--hsl-purple-400) / 20%);
+    --tag-purple-active-border-color: hsl(var(--hsl-purple-400) / 30%);
+    --tag-purple-active-text-color: hsl(var(--hsl-purple-500));
+    --tag-purple-circular-background-color: hsl(var(--hsl-purple-400) / 30%);
+    --tag-purple-circular-border-color: hsl(var(--hsl-purple-400));
+
+    --tag-pink-background-color: hsl(var(--hsl-pink-400) / 10%);
+    --tag-pink-border-color: hsl(var(--hsl-pink-400) / 20%);
+    --tag-pink-text-color: hsl(var(--hsl-pink-400));
+    --tag-pink-active-background-color: hsl(var(--hsl-pink-400) / 20%);
+    --tag-pink-active-border-color: hsl(var(--hsl-pink-400) / 30%);
+    --tag-pink-active-text-color: hsl(var(--hsl-pink-500));
+    --tag-pink-circular-background-color: hsl(var(--hsl-pink-400) / 30%);
+    --tag-pink-circular-border-color: hsl(var(--hsl-pink-400));
+
+    --tag-brown-background-color: hsl(var(--hsl-amber-800) / 30%);
+    --tag-brown-border-color: hsl(var(--hsl-amber-700) / 30%);
+    --tag-brown-text-color: hsl(var(--hsl-amber-600));
+    --tag-brown-active-background-color: hsl(var(--hsl-amber-800) / 40%);
+    --tag-brown-active-border-color: hsl(var(--hsl-amber-700) / 50%);
+    --tag-brown-active-text-color: hsl(var(--hsl-amber-500));
+    --tag-brown-circular-background-color: hsl(var(--hsl-amber-700) / 30%);
+    --tag-brown-circular-border-color: hsl(var(--hsl-amber-700));
+
+    --tag-grey-background-color: hsl(var(--hsl-gray-500) / 50%);
+    --tag-grey-border-color: hsl(var(--hsl-gray-500) / 40%);
+    --tag-grey-text-color: hsl(var(--hsl-gray-400));
+    --tag-grey-active-background-color: hsl(var(--hsl-gray-400) / 40%);
+    --tag-grey-active-border-color: hsl(var(--hsl-gray-400) / 40%);
+    --tag-grey-active-text-color: hsl(var(--hsl-gray-300));
+    --tag-grey-circular-background-color: hsl(var(--hsl-gray-500) / 50%);
+    --tag-grey-circular-border-color: hsl(var(--hsl-gray-500));
+
+    --tag-black-background-color: hsl(var(--hsl-gray-950) / 40%);
+    --tag-black-border-color: hsl(var(--hsl-gray-300) / 30%);
+    --tag-black-text-color: hsl(var(--hsl-gray-400));
+    --tag-black-active-background-color: hsl(var(--hsl-gray-800) / 50%);
+    --tag-black-active-border-color: hsl(var(--hsl-gray-300) / 40%);
+    --tag-black-active-text-color: hsl(var(--hsl-gray-300));
+    --tag-black-circular-background-color: hsl(var(--hsl-gray-950) / 40%);
+    --tag-black-circular-border-color: hsl(var(--hsl-gray-400) / 40%);
+  }
+}
