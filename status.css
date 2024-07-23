@@ -1,0 +1,14 @@
+@layer theme.ui {
+  :root {
+    --note-status-active: hsl(var(--hsl-slate-400));
+    --note-status-onhold: hsl(var(--hsl-amber-500));
+    --note-status-completed: hsl(var(--hsl-emerald-500));
+    --note-status-dropped: hsl(var(--hsl-rose-400));
+
+    /* For backward compatibility */
+    --task-icon-active: var(--note-status-active);
+    --task-icon-onhold: var(--note-status-onhold);
+    --task-icon-completed: var(--note-status-completed);
+    --task-icon-dropped: var(--note-status-dropped);
+  }
+}
