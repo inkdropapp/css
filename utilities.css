@@ -1,0 +1,238 @@
+@layer utilities {
+  :root {
+    /*-------------------
+        Base Sizes
+   --------------------*/
+    /* This is the single variable that controls them all */
+    --em-size: 14px;
+    /* The size of page text  */
+    --font-size: 14px;
+    /*-------------------
+      Border Radius
+    --------------------*/
+    /* See Power-user section below
+      for explanation of @px variables
+    */
+    --relative-border-radius: var(--relative4px);
+    --absolute-border-radius: var(--4px);
+    --default-border-radius: var(--absolute-border-radius);
+
+    --border-radius-xs: var(--4px);
+    --border-radius-sm: var(--16px);
+    --border-radius-md: var(--24px);
+    --border-radius-lg: var(--64px);
+    --border-radius-hg: var(--128px);
+
+    /*-------------------
+          Sizes
+    --------------------*/
+    /*
+    Sizes are all expressed in terms of 14px/em (default em)
+    This ensures these "ratios" remain constant despite changes in EM
+    */
+    --mini-size: calc(11 / 14);
+    --tiny-size: calc(12 / 14);
+    --small-size: calc(13 / 14);
+    --medium-size: calc(14 / 14);
+    --large-size: calc(16 / 14);
+    --big-size: calc(18 / 14);
+    --huge-size: calc(20 / 14);
+    --massive-size: calc(24 / 14);
+    /*-------------------
+       Transitions
+    --------------------*/
+    --default-duration: 0.1s;
+    --default-easing: ease;
+    /*-------------------
+       Breakpoints
+    --------------------*/
+    --mobile-breakpoint: 320px;
+    --tablet-breakpoint: 768px;
+    --computer-breakpoint: 992px;
+    --large-monitor-breakpoint: 1200px;
+    --widescreen-monitor-breakpoint: 1920px;
+
+    --largest-mobile-screen: 767px;
+    --largest-tablet-screen: 991px;
+    --largest-small-monitor: 1199px;
+    --largest-large-monitor: 1919px;
+
+    /*-------------------
+         Em Sizes
+    --------------------*/
+    /*
+      This rounds @size values to the closest pixel then expresses that value in (r)em.
+      This ensures all size values round to exact pixels
+    */
+    --mini: calc(var(--mini-size) * 1rem);
+    --tiny: calc(var(--tiny-size) * 1rem);
+    --small: calc(var(--small-size) * 1rem);
+    --medium: calc(var(--medium-size) * 1rem);
+    --large: calc(var(--large-size) * 1rem);
+    --big: calc(var(--big-size) * 1rem);
+    --huge: calc(var(--huge-size) * 1rem);
+    --massive: calc(var(--massive-size) * 1rem);
+    /* em */
+    --relative-mini: calc(var(--mini-size) * 1em);
+    --relative-tiny: calc(var(--tiny-size) * 1em);
+    --relative-small: calc(var(--small-size) * 1em);
+    --relative-medium: calc(var(--medium-size) * 1em);
+    --relative-large: calc(var(--large-size) * 1em);
+    --relative-big: calc(var(--big-size) * 1em);
+    --relative-huge: calc(var(--huge-size) * 1em);
+    --relative-massive: calc(var(--massive-size) * 1em);
+    /* rem */
+    --absolute-mini: calc(var(--mini-size) * 1rem);
+    --absolute-tiny: calc(var(--tiny-size) * 1rem);
+    --absolute-small: calc(var(--small-size) * 1rem);
+    --absolute-medium: calc(var(--medium-size) * 1rem);
+    --absolute-large: calc(var(--large-size) * 1rem);
+    --absolute-big: calc(var(--big-size) * 1rem);
+    --absolute-huge: calc(var(--huge-size) * 1rem);
+    --absolute-massive: calc(var(--massive-size) * 1rem);
+
+    /*-------------------
+    Exact Pixel Values
+   --------------------*/
+    /*
+    These are used to specify exact pixel values in em
+    for things like borders that remain constantly
+    sized as emSize adjusts
+
+    Since there are many more sizes than names for sizes,
+    these are named by their original pixel values.
+
+    @1px  : unit( (1 / @emSize), rem);
+    */
+    --1px: 0.07142857rem;
+    --2px: 0.14285714rem;
+    --3px: 0.21428571rem;
+    --4px: 0.28571429rem;
+    --5px: 0.35714286rem;
+    --6px: 0.42857143rem;
+    --7px: 0.5rem;
+    --8px: 0.57142857rem;
+    --9px: 0.64285714rem;
+    --10px: 0.71428571rem;
+    --11px: 0.78571429rem;
+    --12px: 0.85714286rem;
+    --13px: 0.92857143rem;
+    --14px: 1rem;
+    --15px: 1.07142857rem;
+    --16px: 1.14285714rem;
+    --17px: 1.21428571rem;
+    --18px: 1.28571429rem;
+    --19px: 1.35714286rem;
+    --20px: 1.42857143rem;
+    --21px: 1.5rem;
+    --22px: 1.57142857rem;
+    --23px: 1.64285714rem;
+    --24px: 1.71428571rem;
+    --25px: 1.78571429rem;
+    --26px: 1.85714286rem;
+    --27px: 1.92857143rem;
+    --28px: 2rem;
+    --29px: 2.07142857rem;
+    --30px: 2.14285714rem;
+    --31px: 2.21428571rem;
+    --32px: 2.28571429rem;
+    --33px: 2.35714286rem;
+    --34px: 2.42857143rem;
+    --35px: 2.5rem;
+    --36px: 2.57142857rem;
+    --37px: 2.64285714rem;
+    --38px: 2.71428571rem;
+    --39px: 2.78571429rem;
+    --40px: 2.85714286rem;
+    --41px: 2.92857143rem;
+    --42px: 3rem;
+    --43px: 3.07142857rem;
+    --44px: 3.14285714rem;
+    --45px: 3.21428571rem;
+    --46px: 3.28571429rem;
+    --47px: 3.35714286rem;
+    --48px: 3.42857143rem;
+    --49px: 3.5rem;
+    --50px: 3.57142857rem;
+    --51px: 3.64285714rem;
+    --52px: 3.71428571rem;
+    --53px: 3.78571429rem;
+    --54px: 3.85714286rem;
+    --55px: 3.92857143rem;
+    --56px: 4rem;
+    --57px: 4.07142857rem;
+    --58px: 4.14285714rem;
+    --59px: 4.21428571rem;
+    --60px: 4.28571429rem;
+    --61px: 4.35714286rem;
+    --62px: 4.42857143rem;
+    --63px: 4.5rem;
+    --64px: 4.57142857rem;
+    --128px: 9.14285714rem;
+    --relative1px: 0.07142857em;
+    --relative2px: 0.14285714em;
+    --relative3px: 0.21428571em;
+    --relative4px: 0.28571429em;
+    --relative5px: 0.35714286em;
+    --relative6px: 0.42857143em;
+    --relative7px: 0.5em;
+    --relative8px: 0.57142857em;
+    --relative9px: 0.64285714em;
+    --relative10px: 0.71428571em;
+    --relative11px: 0.78571429em;
+    --relative12px: 0.85714286em;
+    --relative13px: 0.92857143em;
+    --relative14px: 1em;
+    --relative15px: 1.07142857em;
+    --relative16px: 1.14285714em;
+    --relative17px: 1.21428571em;
+    --relative18px: 1.28571429em;
+    --relative19px: 1.35714286em;
+    --relative20px: 1.42857143em;
+    --relative21px: 1.5em;
+    --relative22px: 1.57142857em;
+    --relative23px: 1.64285714em;
+    --relative24px: 1.71428571em;
+    --relative25px: 1.78571429em;
+    --relative26px: 1.85714286em;
+    --relative27px: 1.92857143em;
+    --relative28px: 2em;
+    --relative29px: 2.07142857em;
+    --relative30px: 2.14285714em;
+    --relative31px: 2.21428571em;
+    --relative32px: 2.28571429em;
+    --relative33px: 2.35714286em;
+    --relative34px: 2.42857143em;
+    --relative35px: 2.5em;
+    --relative36px: 2.57142857em;
+    --relative37px: 2.64285714em;
+    --relative38px: 2.71428571em;
+    --relative39px: 2.78571429em;
+    --relative40px: 2.85714286em;
+    --relative41px: 2.92857143em;
+    --relative42px: 3em;
+    --relative43px: 3.07142857em;
+    --relative44px: 3.14285714em;
+    --relative45px: 3.21428571em;
+    --relative46px: 3.28571429em;
+    --relative47px: 3.35714286em;
+    --relative48px: 3.42857143em;
+    --relative49px: 3.5em;
+    --relative50px: 3.57142857em;
+    --relative51px: 3.64285714em;
+    --relative52px: 3.71428571em;
+    --relative53px: 3.78571429em;
+    --relative54px: 3.85714286em;
+    --relative55px: 3.92857143em;
+    --relative56px: 4em;
+    --relative57px: 4.07142857em;
+    --relative58px: 4.14285714em;
+    --relative59px: 4.21428571em;
+    --relative60px: 4.28571429em;
+    --relative61px: 4.35714286em;
+    --relative62px: 4.42857143em;
+    --relative63px: 4.5em;
+    --relative64px: 4.57142857em;
+    --relative128px: 9.14285714em;
+  }
+}
