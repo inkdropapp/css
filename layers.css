@@ -1,1 +1,9 @@
-@layer reset, base, tokens, recipes, utilities, theme, theme.ui, theme.preview, theme.syntax;
+@layer reset, 
+  base,
+  tokens,
+  recipes,
+  utilities,
+  theme,
+  theme.ui,
+  theme.preview,
+  theme.syntax;
