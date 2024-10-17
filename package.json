@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inkdropapp/css.git"
+  },
+  "author": "Takuya Matsuyama <t@inkdrop.app>",
   "license": "UNLICENSED",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^7.16.1",
