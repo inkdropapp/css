@@ -138,6 +138,16 @@
     line-height: 1.5;
     word-wrap: break-word;
 
+    .metadata + h1,
+    .metadata + h2,
+    .metadata + h3,
+    .metadata + h4,
+    .metadata + h5,
+    .metadata + h6 {
+      padding-top: 0;
+      margin-top: 0;
+    }
+
     details,
     figcaption,
     figure {
@@ -146,6 +156,12 @@
 
     summary {
       display: list-item;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 400px;
     }
 
     [hidden] {
