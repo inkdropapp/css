@@ -974,6 +974,10 @@
       list-style-type: none;
     }
 
+    ol > li.task-list-item {
+      list-style-type: inherit;
+    }
+
     .task-list-item label {
       font-weight: var(--base-text-weight-normal, 400);
     }
@@ -993,6 +997,15 @@
     .task-list-item-checkbox {
       margin: 0 0.2em 0.25em -1.4em;
       vertical-align: middle;
+    }
+
+    .task-list-item .task-list-item-checkbox {
+      margin-inline-end: 4px;
+    }
+
+    .task-list-item.checked {
+      text-decoration: line-through;
+      text-decoration-color: var(--muted-text-color);
     }
 
     .contains-task-list:dir(rtl) .task-list-item-checkbox {
