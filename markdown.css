@@ -60,6 +60,9 @@
     --color-danger-emphasis: var(--red-active, #da3633);
     --color-done-fg: var(--violet, #a371f7);
     --color-done-emphasis: var(--violet-active, #8957e5);
+
+    --color-inline-mark-bg: hsl(var(--hsl-yellow-500) / 30%);
+    --color-inline-mark-underline: hsl(var(--hsl-yellow-500));
   }
 
   body[class*='dark-ui'],
@@ -120,6 +123,9 @@
       --color-danger-emphasis: var(--red-active, #da3633);
       --color-done-fg: var(--violet, #a371f7);
       --color-done-emphasis: var(--violet-active, #8957e5);
+
+      --color-inline-mark-bg: hsl(var(--hsl-yellow-500) / 30%);
+      --color-inline-mark-underline: hsl(var(--hsl-yellow-500));
     }
   }
 
@@ -198,8 +204,13 @@
     }
 
     mark {
-      background-color: var(--color-attention-subtle);
-      color: var(--color-fg-default);
+      color: currentColor;
+      background-color: var(--color-inline-mark-bg, #f0f00030);
+      text-decoration: underline var(--color-inline-mark-underline, yellow);
+      text-underline-offset: 3px;
+      text-decoration-thickness: 3px;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: none;
     }
 
     small {
