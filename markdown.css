@@ -908,6 +908,7 @@
 
     .codeblock pre,
     pre {
+      position: relative;
       padding: 16px;
       overflow: auto;
       font-size: 85%;
