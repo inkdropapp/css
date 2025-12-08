@@ -45,7 +45,8 @@
     --color-fg-default: var(--text-color, #1f2328);
     --color-fg-muted: var(--muted-text-color, #656d76);
     --color-fg-subtle: var(--dark-text-color, #6e7781);
-    --color-canvas-subtle: var(--transparent-black, #f6f8fa);
+    --color-canvas-default: var(--strong-transparent-black, hsl(210, 25%, 95%));
+    --color-canvas-subtle: var(--transparent-black, hsl(210, 25%, 97.6%));
     --color-border-default: var(--solid-border-color, #d0d7de);
     --color-border-muted: var(--border-color, hsla(210, 18%, 87%, 1));
     --color-neutral-muted: var(--transparent-black, rgba(175, 184, 193, 0.2));
@@ -63,6 +64,10 @@
 
     --color-inline-mark-bg: hsl(var(--hsl-yellow-500) / 30%);
     --color-inline-mark-underline: hsl(var(--hsl-yellow-500));
+
+    --color-codeblock-bg: var(--color-canvas-subtle);
+    --color-codeblock-meta-bg: var(--color-canvas-default);
+    --color-codeblock-border: var(--color-border-muted);
   }
 
   body[class*='dark-ui'],
@@ -105,7 +110,11 @@
       --color-fg-default: var(--text-color, #e6edf3);
       --color-fg-muted: var(--muted-text-color, #848d97);
       --color-fg-subtle: var(--dark-text-color, #6e7681);
-      --color-canvas-subtle: var(--transparent-white, rgba(0, 0, 0, 0.1));
+      --color-canvas-default: var(
+        --strong-transparent-white,
+        hsl(0 0 100% / 15%)
+      );
+      --color-canvas-subtle: var(--transparent-white, hsl(0 0 100% / 8%));
       --color-border-default: var(--solid-border-color, #444c56);
       --color-border-muted: var(--border-color, #444c56b3);
       --color-neutral-muted: var(--transparent-white, rgba(110, 118, 129, 0.4));
@@ -135,7 +144,6 @@
     text-size-adjust: 100%;
     margin: 0;
     color: var(--color-fg-default);
-    background-color: var(--color-canvas-default);
     font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans,
       sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', */
@@ -856,6 +864,38 @@
       border: 0;
     }
 
+    .codeblock .codeblock-meta + pre {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+    }
+
+    .codeblock .codeblock-meta {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 16px;
+      font-size: 80%;
+      line-height: 1.3;
+      color: var(--color-fg-muted);
+      background-color: var(
+        --color-codeblock-meta-bg,
+        var(--color-codeblock-bg, var(--color-canvas-default))
+      );
+      border: 1px solid var(--color-codeblock-border);
+      border-radius: 6px 6px 0 0;
+      border-bottom: none;
+
+      .codeblock-meta-icon {
+        flex: 0 0 24px;
+      }
+
+      .codeblock-title,
+      .codeblock-filename {
+        font-weight: 600;
+      }
+    }
+
     .codeblock {
       position: relative;
       margin-bottom: 16px;
@@ -873,7 +913,8 @@
       font-size: 85%;
       line-height: 1.45;
       color: var(--color-fg-default);
-      background-color: var(--color-codeblock-bg, var(--color-canvas-subtle));
+      background-color: var(--color-codeblock-bg);
+      border: 1px solid var(--color-codeblock-border);
       border-radius: 6px;
     }
 
