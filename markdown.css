@@ -8,9 +8,6 @@
   }
 
   .mde-preview {
-    /*light*/
-    color-scheme: light;
-
     --color-syntax-comment: #57606a;
     --color-syntax-constant: #0550ae;
     --color-syntax-entity: #6639ba;
@@ -73,9 +70,6 @@
   body[class*='dark-ui'],
   .dark-mode {
     .mde-preview {
-      /*dark*/
-      color-scheme: dark;
-
       --color-syntax-comment: #8b949e;
       --color-syntax-constant: #79c0ff;
       --color-syntax-entity: #d2a8ff;
@@ -885,6 +879,20 @@
       border: 1px solid var(--color-codeblock-border);
       border-radius: 6px 6px 0 0;
       border-bottom: none;
+
+      .codeblock-meta-body {
+        flex: 1;
+
+        .codeblock-info {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.4em;
+
+          & :first-child:first-letter {
+            text-transform: capitalize;
+          }
+        }
+      }
 
       .codeblock-meta-icon {
         flex: 0 0 24px;
