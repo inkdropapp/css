@@ -2,23 +2,22 @@
   "name": "@inkdropapp/css",
   "version": "0.6.3",
   "description": "The common stylesheets for Inkdrop",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "license": "UNLICENSED",
+  "author": "Takuya Matsuyama <t@inkdrop.app>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/inkdropapp/css.git"
   },
-  "author": "Takuya Matsuyama <t@inkdrop.app>",
-  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "format": "oxfmt \"**/*.{js,ts,json}\"",
+    "lint": "oxlint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.16.1",
-    "@typescript-eslint/parser": "^7.16.1",
-    "eslint-config-prettier": "^9.1.0",
-    "free-style": "^5.0.1",
-    "prettier": "^3.2.5",
-    "typescript": "^5.5.3"
+    "oxfmt": "0.54.0",
+    "oxlint": "1.69.0",
+    "typescript": "^6.0.3"
   },
   "optionalDependencies": {
     "inkdrop-model": "^2.7.3"

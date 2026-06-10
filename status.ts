@@ -1,4 +1,5 @@
 import { NOTE_STATUS } from 'inkdrop-model'
+
 import { hsl } from './tokens'
 
 export const status = {

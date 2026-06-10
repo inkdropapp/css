@@ -11,13 +11,11 @@
     "noEmit": true,
     "isolatedModules": true,
     "declaration": false,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "noImplicitAny": false,
     "noUnusedLocals": false,
     "allowUnusedLabels": true,
-    "baseUrl": "./" /* Base directory to resolve non-absolute module names. */,
-    "paths": {},
     "skipLibCheck": true
   },
   "exclude": ["node_modules"]
