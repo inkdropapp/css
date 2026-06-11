@@ -2,7 +2,7 @@
   "name": "@inkdropapp/css",
   "version": "0.6.3",
   "description": "The common stylesheets for Inkdrop",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "author": "Takuya Matsuyama <t@inkdrop.app>",
   "repository": {
     "type": "git",
@@ -10,7 +10,7 @@
   },
   "type": "module",
   "scripts": {
-    "format": "oxfmt \"**/*.{js,ts,json}\"",
+    "format": "oxfmt",
     "lint": "oxlint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

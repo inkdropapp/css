@@ -70,25 +70,25 @@ const weight = fontWeights.semibold // 600
 reset, base, tokens, recipes, utilities, theme, theme.ui, theme.preview, theme.syntax
 ```
 
-| Layer            | File                 | Contents                                                     |
-| ---------------- | -------------------- | ----------------------------------------------------------- |
-| `reset`          | `reset.css`          | CSS reset / normalize                                        |
-| `tokens`         | `tokens.css`         | Design tokens as custom properties (`--hsl-*`, `--color-*`, `--font-weights-*`) |
-| `utilities`      | `utilities.css`      | Utility classes and base sizing variables                   |
-| `theme.ui`       | `status.css`         | Note status colors (`--note-status-*`)                      |
-| `theme`          | `task-progress.css`  | Task progress view colors (light + dark)                    |
-| `theme.preview`  | `markdown.css`       | GFM markdown preview, alert colors, and syntax theme        |
-| —                | `tags.css`           | Tag color palettes                                          |
+| Layer           | File                | Contents                                                                        |
+| --------------- | ------------------- | ------------------------------------------------------------------------------- |
+| `reset`         | `reset.css`         | CSS reset / normalize                                                           |
+| `tokens`        | `tokens.css`        | Design tokens as custom properties (`--hsl-*`, `--color-*`, `--font-weights-*`) |
+| `utilities`     | `utilities.css`     | Utility classes and base sizing variables                                       |
+| `theme.ui`      | `status.css`        | Note status colors (`--note-status-*`)                                          |
+| `theme`         | `task-progress.css` | Task progress view colors (light + dark)                                        |
+| `theme.preview` | `markdown.css`      | GFM markdown preview, alert colors, and syntax theme                            |
+| —               | `tags.css`          | Tag color palettes                                                              |
 
 ## TypeScript exports
 
-| Module            | Exports                          | Description                                              |
-| ----------------- | -------------------------------- | ------------------------------------------------------- |
-| `tokens.ts`       | `hsl`, `colors`, `fontWeights`   | Color channel triplets, named colors, font weights      |
-| `tags.ts`         | `tags`, `tagsDark`               | Per-color tag style objects (light + dark)              |
-| `status.ts`       | `status`                         | Note status colors keyed by `NOTE_STATUS`               |
-| `markdown.ts`     | `markdown`                       | GFM alert colors                                        |
-| `task-progress.ts`| `taskProgress`, `taskProgressDark` | Task progress view colors (light + dark)              |
+| Module             | Exports                            | Description                                        |
+| ------------------ | ---------------------------------- | -------------------------------------------------- |
+| `tokens.ts`        | `hsl`, `colors`, `fontWeights`     | Color channel triplets, named colors, font weights |
+| `tags.ts`          | `tags`, `tagsDark`                 | Per-color tag style objects (light + dark)         |
+| `status.ts`        | `status`                           | Note status colors keyed by `NOTE_STATUS`          |
+| `markdown.ts`      | `markdown`                         | GFM alert colors                                   |
+| `task-progress.ts` | `taskProgress`, `taskProgressDark` | Task progress view colors (light + dark)           |
 
 `status.ts` keys its map by `NOTE_STATUS` from [`inkdrop-model`](https://www.npmjs.com/package/inkdrop-model) (an optional dependency).
 
@@ -108,4 +108,4 @@ Linting and formatting use the [oxc](https://oxc.rs) toolchain (oxlint + oxfmt);
 
 ## License
 
-Proprietary. © Takuya Matsuyama. Not licensed for external use.
+[MIT](./LICENSE) © Takuya Matsuyama
