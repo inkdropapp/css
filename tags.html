@@ -28,12 +28,8 @@
         cursor: pointer;
         font-size: 0.9em;
         border-radius: 2em;
-        box-shadow: 0px 0px 0px 1px
-          var(--tag-border-color, var(--tag-default-border-color)) inset;
-        background-color: var(
-          --tag-background-color,
-          var(--tag-default-background-color)
-        );
+        box-shadow: 0px 0px 0px 1px var(--tag-border-color, var(--tag-default-border-color)) inset;
+        background-color: var(--tag-background-color, var(--tag-default-background-color));
         padding: 0.1em 0.4em;
         color: var(--tag-text-color, var(--tag-default-text-color));
         -webkit-tap-highlight-color: transparent;
@@ -45,15 +41,8 @@
             var(--tag-default-active-background-color)
           );
           box-shadow: 0px 0px 0px 1px
-            var(
-              --tag-active-border-color,
-              var(--tag-default-active-border-color)
-            )
-            inset;
-          color: var(
-            --tag-active-text-color,
-            var(--tag-default-active-text-color)
-          );
+            var(--tag-active-border-color, var(--tag-default-active-border-color)) inset;
+          color: var(--tag-active-text-color, var(--tag-default-active-text-color));
         }
 
         &:active {
@@ -75,11 +64,7 @@
             var(--tag-default-circular-background-color)
           );
           box-shadow: 0px 0px 0px 1px
-            var(
-              --tag-circular-border-color,
-              var(--tag-default-circular-border-color)
-            )
-            inset;
+            var(--tag-circular-border-color, var(--tag-default-circular-border-color)) inset;
         }
 
         &.red {
@@ -89,177 +74,127 @@
           --tag-active-background-color: var(--tag-red-active-background-color);
           --tag-active-border-color: var(--tag-red-active-border-color);
           --tag-active-text-color: var(--tag-red-active-text-color);
-          --tag-circular-background-color: var(
-            --tag-red-circular-background-color
-          );
+          --tag-circular-background-color: var(--tag-red-circular-background-color);
           --tag-circular-border-color: var(--tag-red-circular-border-color);
         }
         &.orange {
           --tag-border-color: var(--tag-orange-border-color);
           --tag-background-color: var(--tag-orange-background-color);
           --tag-text-color: var(--tag-orange-text-color);
-          --tag-active-background-color: var(
-            --tag-orange-active-background-color
-          );
+          --tag-active-background-color: var(--tag-orange-active-background-color);
           --tag-active-border-color: var(--tag-orange-active-border-color);
           --tag-active-text-color: var(--tag-orange-active-text-color);
-          --tag-circular-background-color: var(
-            --tag-orange-circular-background-color
-          );
+          --tag-circular-background-color: var(--tag-orange-circular-background-color);
           --tag-circular-border-color: var(--tag-orange-circular-border-color);
         }
         &.yellow {
           --tag-border-color: var(--tag-yellow-border-color);
           --tag-background-color: var(--tag-yellow-background-color);
           --tag-text-color: var(--tag-yellow-text-color);
-          --tag-active-background-color: var(
-            --tag-yellow-active-background-color
-          );
+          --tag-active-background-color: var(--tag-yellow-active-background-color);
           --tag-active-border-color: var(--tag-yellow-active-border-color);
           --tag-active-text-color: var(--tag-yellow-active-text-color);
-          --tag-circular-background-color: var(
-            --tag-yellow-circular-background-color
-          );
+          --tag-circular-background-color: var(--tag-yellow-circular-background-color);
           --tag-circular-border-color: var(--tag-yellow-circular-border-color);
         }
         &.olive {
           --tag-border-color: var(--tag-olive-border-color);
           --tag-background-color: var(--tag-olive-background-color);
           --tag-text-color: var(--tag-olive-text-color);
-          --tag-active-background-color: var(
-            --tag-olive-active-background-color
-          );
+          --tag-active-background-color: var(--tag-olive-active-background-color);
           --tag-active-border-color: var(--tag-olive-active-border-color);
           --tag-active-text-color: var(--tag-olive-active-text-color);
-          --tag-circular-background-color: var(
-            --tag-olive-circular-background-color
-          );
+          --tag-circular-background-color: var(--tag-olive-circular-background-color);
           --tag-circular-border-color: var(--tag-olive-circular-border-color);
         }
         &.green {
           --tag-border-color: var(--tag-green-border-color);
           --tag-background-color: var(--tag-green-background-color);
           --tag-text-color: var(--tag-green-text-color);
-          --tag-active-background-color: var(
-            --tag-green-active-background-color
-          );
+          --tag-active-background-color: var(--tag-green-active-background-color);
           --tag-active-border-color: var(--tag-green-active-border-color);
           --tag-active-text-color: var(--tag-green-active-text-color);
-          --tag-circular-background-color: var(
-            --tag-green-circular-background-color
-          );
+          --tag-circular-background-color: var(--tag-green-circular-background-color);
           --tag-circular-border-color: var(--tag-green-circular-border-color);
         }
         &.teal {
           --tag-border-color: var(--tag-teal-border-color);
           --tag-background-color: var(--tag-teal-background-color);
           --tag-text-color: var(--tag-teal-text-color);
-          --tag-active-background-color: var(
-            --tag-teal-active-background-color
-          );
+          --tag-active-background-color: var(--tag-teal-active-background-color);
           --tag-active-border-color: var(--tag-teal-active-border-color);
           --tag-active-text-color: var(--tag-teal-active-text-color);
-          --tag-circular-background-color: var(
-            --tag-teal-circular-background-color
-          );
+          --tag-circular-background-color: var(--tag-teal-circular-background-color);
           --tag-circular-border-color: var(--tag-teal-circular-border-color);
         }
         &.blue {
           --tag-border-color: var(--tag-blue-border-color);
           --tag-background-color: var(--tag-blue-background-color);
           --tag-text-color: var(--tag-blue-text-color);
-          --tag-active-background-color: var(
-            --tag-blue-active-background-color
-          );
+          --tag-active-background-color: var(--tag-blue-active-background-color);
           --tag-active-border-color: var(--tag-blue-active-border-color);
           --tag-active-text-color: var(--tag-blue-active-text-color);
-          --tag-circular-background-color: var(
-            --tag-blue-circular-background-color
-          );
+          --tag-circular-background-color: var(--tag-blue-circular-background-color);
           --tag-circular-border-color: var(--tag-blue-circular-border-color);
         }
         &.violet {
           --tag-border-color: var(--tag-violet-border-color);
           --tag-background-color: var(--tag-violet-background-color);
           --tag-text-color: var(--tag-violet-text-color);
-          --tag-active-background-color: var(
-            --tag-violet-active-background-color
-          );
+          --tag-active-background-color: var(--tag-violet-active-background-color);
           --tag-active-border-color: var(--tag-violet-active-border-color);
           --tag-active-text-color: var(--tag-violet-active-text-color);
-          --tag-circular-background-color: var(
-            --tag-violet-circular-background-color
-          );
+          --tag-circular-background-color: var(--tag-violet-circular-background-color);
           --tag-circular-border-color: var(--tag-violet-circular-border-color);
         }
         &.purple {
           --tag-border-color: var(--tag-purple-border-color);
           --tag-background-color: var(--tag-purple-background-color);
           --tag-text-color: var(--tag-purple-text-color);
-          --tag-active-background-color: var(
-            --tag-purple-active-background-color
-          );
+          --tag-active-background-color: var(--tag-purple-active-background-color);
           --tag-active-border-color: var(--tag-purple-active-border-color);
           --tag-active-text-color: var(--tag-purple-active-text-color);
-          --tag-circular-background-color: var(
-            --tag-purple-circular-background-color
-          );
+          --tag-circular-background-color: var(--tag-purple-circular-background-color);
           --tag-circular-border-color: var(--tag-purple-circular-border-color);
         }
         &.pink {
           --tag-border-color: var(--tag-pink-border-color);
           --tag-background-color: var(--tag-pink-background-color);
           --tag-text-color: var(--tag-pink-text-color);
-          --tag-active-background-color: var(
-            --tag-pink-active-background-color
-          );
+          --tag-active-background-color: var(--tag-pink-active-background-color);
           --tag-active-border-color: var(--tag-pink-active-border-color);
           --tag-active-text-color: var(--tag-pink-active-text-color);
-          --tag-circular-background-color: var(
-            --tag-pink-circular-background-color
-          );
+          --tag-circular-background-color: var(--tag-pink-circular-background-color);
           --tag-circular-border-color: var(--tag-pink-circular-border-color);
         }
         &.brown {
           --tag-border-color: var(--tag-brown-border-color);
           --tag-background-color: var(--tag-brown-background-color);
           --tag-text-color: var(--tag-brown-text-color);
-          --tag-active-background-color: var(
-            --tag-brown-active-background-color
-          );
+          --tag-active-background-color: var(--tag-brown-active-background-color);
           --tag-active-border-color: var(--tag-brown-active-border-color);
           --tag-active-text-color: var(--tag-brown-active-text-color);
-          --tag-circular-background-color: var(
-            --tag-brown-circular-background-color
-          );
+          --tag-circular-background-color: var(--tag-brown-circular-background-color);
           --tag-circular-border-color: var(--tag-brown-circular-border-color);
         }
         &.grey {
           --tag-border-color: var(--tag-grey-border-color);
           --tag-background-color: var(--tag-grey-background-color);
           --tag-text-color: var(--tag-grey-text-color);
-          --tag-active-background-color: var(
-            --tag-grey-active-background-color
-          );
+          --tag-active-background-color: var(--tag-grey-active-background-color);
           --tag-active-border-color: var(--tag-grey-active-border-color);
           --tag-active-text-color: var(--tag-grey-active-text-color);
-          --tag-circular-background-color: var(
-            --tag-grey-circular-background-color
-          );
+          --tag-circular-background-color: var(--tag-grey-circular-background-color);
           --tag-circular-border-color: var(--tag-grey-circular-border-color);
         }
         &.black {
           --tag-border-color: var(--tag-black-border-color);
           --tag-background-color: var(--tag-black-background-color);
           --tag-text-color: var(--tag-black-text-color);
-          --tag-active-background-color: var(
-            --tag-black-active-background-color
-          );
+          --tag-active-background-color: var(--tag-black-active-background-color);
           --tag-active-border-color: var(--tag-black-active-border-color);
           --tag-active-text-color: var(--tag-black-active-text-color);
-          --tag-circular-background-color: var(
-            --tag-black-circular-background-color
-          );
+          --tag-circular-background-color: var(--tag-black-circular-background-color);
           --tag-circular-border-color: var(--tag-black-circular-border-color);
         }
       }

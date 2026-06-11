@@ -6,14 +6,10 @@
     --tag-light-default-border-color: hsl(var(--hsl-slate-400) / 40%);
     --tag-light-default-background-color: hsl(var(--hsl-gray-400) / 20%);
     --tag-light-default-text-color: hsl(var(--hsl-gray-500));
-    --tag-light-default-active-background-color: hsl(
-      var(--hsl-slate-400) / 40%
-    );
+    --tag-light-default-active-background-color: hsl(var(--hsl-slate-400) / 40%);
     --tag-light-default-active-border-color: hsl(var(--hsl-slate-400) / 60%);
     --tag-light-default-active-text-color: hsl(var(--hsl-slate-500));
-    --tag-light-default-circular-background-color: hsl(
-      var(--hsl-slate-400) / 60%
-    );
+    --tag-light-default-circular-background-color: hsl(var(--hsl-slate-400) / 60%);
     --tag-light-default-circular-border-color: hsl(var(--hsl-slate-400));
 
     --tag-light-red-background-color: hsl(var(--hsl-red-400) / 20%);
@@ -28,27 +24,19 @@
     --tag-light-orange-background-color: hsl(var(--hsl-orange-400) / 20%);
     --tag-light-orange-border-color: hsl(var(--hsl-orange-400) / 40%);
     --tag-light-orange-text-color: hsl(var(--hsl-orange-500));
-    --tag-light-orange-active-background-color: hsl(
-      var(--hsl-orange-400) / 40%
-    );
+    --tag-light-orange-active-background-color: hsl(var(--hsl-orange-400) / 40%);
     --tag-light-orange-active-border-color: hsl(var(--hsl-orange-400) / 60%);
     --tag-light-orange-active-text-color: hsl(var(--hsl-orange-500));
-    --tag-light-orange-circular-background-color: hsl(
-      var(--hsl-orange-400) / 60%
-    );
+    --tag-light-orange-circular-background-color: hsl(var(--hsl-orange-400) / 60%);
     --tag-light-orange-circular-border-color: hsl(var(--hsl-orange-500));
 
     --tag-light-yellow-background-color: hsl(var(--hsl-yellow-400) / 20%);
     --tag-light-yellow-border-color: hsl(var(--hsl-yellow-400) / 40%);
     --tag-light-yellow-text-color: hsl(var(--hsl-yellow-500));
-    --tag-light-yellow-active-background-color: hsl(
-      var(--hsl-yellow-400) / 40%
-    );
+    --tag-light-yellow-active-background-color: hsl(var(--hsl-yellow-400) / 40%);
     --tag-light-yellow-active-border-color: hsl(var(--hsl-yellow-400) / 60%);
     --tag-light-yellow-active-text-color: hsl(var(--hsl-yellow-500));
-    --tag-light-yellow-circular-background-color: hsl(
-      var(--hsl-yellow-400) / 60%
-    );
+    --tag-light-yellow-circular-background-color: hsl(var(--hsl-yellow-400) / 60%);
     --tag-light-yellow-circular-border-color: hsl(var(--hsl-yellow-500));
 
     --tag-light-olive-background-color: hsl(var(--hsl-lime-400) / 20%);
@@ -66,9 +54,7 @@
     --tag-light-green-active-background-color: hsl(var(--hsl-green-400) / 40%);
     --tag-light-green-active-border-color: hsl(var(--hsl-green-400) / 60%);
     --tag-light-green-active-text-color: hsl(var(--hsl-green-500));
-    --tag-light-green-circular-background-color: hsl(
-      var(--hsl-green-400) / 60%
-    );
+    --tag-light-green-circular-background-color: hsl(var(--hsl-green-400) / 60%);
     --tag-light-green-circular-border-color: hsl(var(--hsl-green-500));
 
     --tag-light-teal-background-color: hsl(var(--hsl-teal-400) / 20%);
@@ -92,27 +78,19 @@
     --tag-light-violet-background-color: hsl(var(--hsl-violet-400) / 20%);
     --tag-light-violet-border-color: hsl(var(--hsl-violet-400) / 40%);
     --tag-light-violet-text-color: hsl(var(--hsl-violet-500));
-    --tag-light-violet-active-background-color: hsl(
-      var(--hsl-violet-400) / 40%
-    );
+    --tag-light-violet-active-background-color: hsl(var(--hsl-violet-400) / 40%);
     --tag-light-violet-active-border-color: hsl(var(--hsl-violet-400) / 60%);
     --tag-light-violet-active-text-color: hsl(var(--hsl-violet-500));
-    --tag-light-violet-circular-background-color: hsl(
-      var(--hsl-violet-400) / 60%
-    );
+    --tag-light-violet-circular-background-color: hsl(var(--hsl-violet-400) / 60%);
     --tag-light-violet-circular-border-color: hsl(var(--hsl-violet-500));
 
     --tag-light-purple-background-color: hsl(var(--hsl-purple-400) / 20%);
     --tag-light-purple-border-color: hsl(var(--hsl-purple-400) / 40%);
     --tag-light-purple-text-color: hsl(var(--hsl-purple-500));
-    --tag-light-purple-active-background-color: hsl(
-      var(--hsl-purple-400) / 40%
-    );
+    --tag-light-purple-active-background-color: hsl(var(--hsl-purple-400) / 40%);
     --tag-light-purple-active-border-color: hsl(var(--hsl-purple-400) / 60%);
     --tag-light-purple-active-text-color: hsl(var(--hsl-purple-500));
-    --tag-light-purple-circular-background-color: hsl(
-      var(--hsl-purple-400) / 60%
-    );
+    --tag-light-purple-circular-background-color: hsl(var(--hsl-purple-400) / 60%);
     --tag-light-purple-circular-border-color: hsl(var(--hsl-purple-500));
 
     --tag-light-pink-background-color: hsl(var(--hsl-pink-400) / 20%);
@@ -130,9 +108,7 @@
     --tag-light-brown-active-background-color: hsl(var(--hsl-amber-600) / 50%);
     --tag-light-brown-active-border-color: hsl(var(--hsl-amber-700) / 60%);
     --tag-light-brown-active-text-color: hsl(var(--hsl-amber-700));
-    --tag-light-brown-circular-background-color: hsl(
-      var(--hsl-amber-600) / 30%
-    );
+    --tag-light-brown-circular-background-color: hsl(var(--hsl-amber-600) / 30%);
     --tag-light-brown-circular-border-color: hsl(var(--hsl-amber-700));
 
     --tag-light-grey-background-color: hsl(var(--hsl-gray-500) / 40%);
@@ -162,9 +138,7 @@
     --tag-dark-default-active-background-color: hsl(var(--hsl-slate-400) / 20%);
     --tag-dark-default-active-border-color: hsl(var(--hsl-slate-400) / 30%);
     --tag-dark-default-active-text-color: hsl(var(--hsl-slate-300));
-    --tag-dark-default-circular-background-color: hsl(
-      var(--hsl-slate-400) / 30%
-    );
+    --tag-dark-default-circular-background-color: hsl(var(--hsl-slate-400) / 30%);
     --tag-dark-default-circular-border-color: hsl(var(--hsl-slate-400));
 
     --tag-dark-red-background-color: hsl(var(--hsl-red-400) / 10%);
@@ -182,9 +156,7 @@
     --tag-dark-orange-active-background-color: hsl(var(--hsl-orange-400) / 20%);
     --tag-dark-orange-active-border-color: hsl(var(--hsl-orange-400) / 30%);
     --tag-dark-orange-active-text-color: hsl(var(--hsl-orange-500));
-    --tag-dark-orange-circular-background-color: hsl(
-      var(--hsl-orange-400) / 30%
-    );
+    --tag-dark-orange-circular-background-color: hsl(var(--hsl-orange-400) / 30%);
     --tag-dark-orange-circular-border-color: hsl(var(--hsl-orange-400));
 
     --tag-dark-yellow-background-color: hsl(var(--hsl-yellow-400) / 10%);
@@ -193,9 +165,7 @@
     --tag-dark-yellow-active-background-color: hsl(var(--hsl-yellow-400) / 20%);
     --tag-dark-yellow-active-border-color: hsl(var(--hsl-yellow-400) / 30%);
     --tag-dark-yellow-active-text-color: hsl(var(--hsl-yellow-500));
-    --tag-dark-yellow-circular-background-color: hsl(
-      var(--hsl-yellow-400) / 30%
-    );
+    --tag-dark-yellow-circular-background-color: hsl(var(--hsl-yellow-400) / 30%);
     --tag-dark-yellow-circular-border-color: hsl(var(--hsl-yellow-400));
 
     --tag-dark-olive-background-color: hsl(var(--hsl-lime-400) / 10%);
@@ -240,9 +210,7 @@
     --tag-dark-violet-active-background-color: hsl(var(--hsl-violet-400) / 20%);
     --tag-dark-violet-active-border-color: hsl(var(--hsl-violet-400) / 30%);
     --tag-dark-violet-active-text-color: hsl(var(--hsl-violet-500));
-    --tag-dark-violet-circular-background-color: hsl(
-      var(--hsl-violet-400) / 30%
-    );
+    --tag-dark-violet-circular-background-color: hsl(var(--hsl-violet-400) / 30%);
     --tag-dark-violet-circular-border-color: hsl(var(--hsl-violet-400));
 
     --tag-dark-purple-background-color: hsl(var(--hsl-purple-400) / 10%);
@@ -251,9 +219,7 @@
     --tag-dark-purple-active-background-color: hsl(var(--hsl-purple-400) / 20%);
     --tag-dark-purple-active-border-color: hsl(var(--hsl-purple-400) / 30%);
     --tag-dark-purple-active-text-color: hsl(var(--hsl-purple-500));
-    --tag-dark-purple-circular-background-color: hsl(
-      var(--hsl-purple-400) / 30%
-    );
+    --tag-dark-purple-circular-background-color: hsl(var(--hsl-purple-400) / 30%);
     --tag-dark-purple-circular-border-color: hsl(var(--hsl-purple-400));
 
     --tag-dark-pink-background-color: hsl(var(--hsl-pink-400) / 10%);
