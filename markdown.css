@@ -712,7 +712,7 @@
       border-top: 1px solid var(--color-border-muted);
     }
 
-    table tr:nth-child(2n) {
+    table tbody tr:nth-child(odd) {
       background-color: var(--color-canvas-subtle);
     }
 
