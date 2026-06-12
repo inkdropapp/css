@@ -139,12 +139,6 @@
     --inverted-loader-line-color: var(--white);
 
     /*-------------------
-          Grid
-   --------------------*/
-
-    --column-count: 16;
-
-    /*-------------------
         Site Colors
    --------------------*/
 
@@ -329,8 +323,6 @@
         Borders
    --------------------*/
 
-    --circular-radius: 500rem;
-
     --border-color: hsl(var(--hsl-neutral-900) / 15%);
     --strong-border-color: hsl(var(--hsl-neutral-900) / 22%);
     --internal-border-color: hsl(var(--hsl-neutral-900) / 10%);
@@ -383,41 +375,6 @@
     --error-border-color: var(--negative-border-color);
     --error-header-color: var(--negative-header-color);
     --error-text-color: var(--negative-text-color);
-
-    /* Columns */
-    --one-wide: 6.25%;
-    --two-wide: 12.5%;
-    --three-wide: 18.75%;
-    --four-wide: 25%;
-    --five-wide: 31.25%;
-    --six-wide: 37.5%;
-    --seven-wide: 43.75%;
-    --eight-wide: 50%;
-    --nine-wide: 56.25%;
-    --ten-wide: 62.5%;
-    --eleven-wide: 68.75%;
-    --twelve-wide: 75%;
-    --thirteen-wide: 81.25%;
-    --fourteen-wide: 87.5%;
-    --fifteen-wide: 93.75%;
-    --sixteen-wide: 100%;
-
-    --one-column: 100%;
-    --two-column: 50%;
-    --three-column: 33.33333333%;
-    --four-column: 25%;
-    --five-column: 20%;
-    --six-column: 16.66666667%;
-    --seven-column: 14.28571429%;
-    --eight-column: 12.5%;
-    --nine-column: 11.11111111%;
-    --ten-column: 10%;
-    --eleven-column: 9.09090909%;
-    --twelve-column: 8.33333333%;
-    --thirteen-column: 7.69230769%;
-    --fourteen-column: 7.14285714%;
-    --fifteen-column: 6.66666667%;
-    --sixteen-column: 6.25%;
 
     /*******************************
                States
