@@ -13,8 +13,8 @@
     /* See Power-user section below
       for explanation of @px variables
     */
-    --relative-border-radius: var(--relative4px);
-    --absolute-border-radius: var(--4px);
+    --relative-border-radius: var(--relative7px);
+    --absolute-border-radius: var(--7px);
     --default-border-radius: var(--absolute-border-radius);
 
     --border-radius-xs: var(--4px);
