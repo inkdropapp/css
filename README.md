@@ -22,21 +22,21 @@ pnpm add @inkdropapp/css
 Import `layers.css` **first** — it declares the cascade-layer order that everything else relies on for correct precedence — then pull in the layers you need:
 
 ```css
-@import '@inkdropapp/css/layers.css'; /* declares @layer order — must come first */
-@import '@inkdropapp/css/reset.css';
-@import '@inkdropapp/css/tokens.css';
-@import '@inkdropapp/css/utilities.css';
-@import '@inkdropapp/css/status.css';
-@import '@inkdropapp/css/task-progress.css';
-@import '@inkdropapp/css/tags.css';
-@import '@inkdropapp/css/markdown.css';
+@import "@inkdropapp/css/layers.css"; /* declares @layer order — must come first */
+@import "@inkdropapp/css/reset.css";
+@import "@inkdropapp/css/tokens.css";
+@import "@inkdropapp/css/utilities.css";
+@import "@inkdropapp/css/status.css";
+@import "@inkdropapp/css/task-progress.css";
+@import "@inkdropapp/css/tags.css";
+@import "@inkdropapp/css/markdown.css";
 ```
 
 Or, from a JS bundler:
 
 ```ts
-import '@inkdropapp/css/layers.css'
-import '@inkdropapp/css/tokens.css'
+import "@inkdropapp/css/layers.css";
+import "@inkdropapp/css/tokens.css";
 // ...
 ```
 
@@ -54,12 +54,12 @@ import '@inkdropapp/css/tokens.css'
 The same values are available as typed objects:
 
 ```ts
-import { hsl, colors, fontWeights } from '@inkdropapp/css/tokens'
-import { tags, tagsDark } from '@inkdropapp/css/tags'
-import { status } from '@inkdropapp/css/status'
+import { hsl, colors, fontWeights } from "@inkdropapp/css/tokens";
+import { tags, tagsDark } from "@inkdropapp/css/tags";
+import { status } from "@inkdropapp/css/status";
 
-const activeColor = `hsl(${hsl.slate400})` // "hsl(215 16% 47%)"
-const weight = fontWeights.semibold // 600
+const activeColor = `hsl(${hsl.slate400})`; // "hsl(215 16% 47%)"
+const weight = fontWeights.semibold; // 600
 ```
 
 ## Cascade layers
@@ -77,7 +77,7 @@ reset, base, tokens, recipes, utilities, theme, theme.ui, theme.preview, theme.s
 | `utilities`     | `utilities.css`     | Utility classes and base sizing variables                                       |
 | `theme.ui`      | `status.css`        | Note status colors (`--note-status-*`)                                          |
 | `theme`         | `task-progress.css` | Task progress view colors (light + dark)                                        |
-| `theme.preview` | `markdown.css`      | GFM markdown preview, alert colors, and syntax theme                            |
+| `theme.preview` | `markdown.css`      | GFM markdown preview and alert colors (light + dark via `light-dark()`)         |
 | —               | `tags.css`          | Tag color palettes                                                              |
 
 ## TypeScript exports
