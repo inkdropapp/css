@@ -8,10 +8,7 @@
 
     --mde-preview-text-color: var(--text-color);
     --mde-preview-muted-text-color: var(--muted-text-color);
-    --mde-preview-light-text-color: light-dark(
-      var(--light-text-color),
-      var(--dark-text-color)
-    );
+    --mde-preview-light-text-color: light-dark(var(--light-text-color), var(--dark-text-color));
     --mde-preview-canvas-default-color: light-dark(
       var(--strong-transparent-black),
       var(--strong-transparent-white)
@@ -28,14 +25,9 @@
     );
     --mde-preview-accent-text-color: var(--primary-color);
     --mde-preview-accent-emphasis-color: var(--primary-color-active);
-    --mde-preview-danger-text-color: light-dark(
-      var(--negative-color),
-      var(--red)
-    );
+    --mde-preview-danger-text-color: light-dark(var(--negative-color), var(--red));
 
-    --mde-preview-inline-mark-background-color: hsl(
-      var(--hsl-yellow-500) / 30%
-    );
+    --mde-preview-inline-mark-background-color: hsl(var(--hsl-yellow-500) / 30%);
     --mde-preview-inline-mark-underline-color: hsl(var(--hsl-yellow-500));
 
     --mde-preview-inline-code-padding: 0.2em 0.4em;
@@ -43,9 +35,7 @@
     --mde-preview-inline-code-background-color: var(--transparent-black);
     --mde-preview-codeblock-meta-font-size: 80%;
     --mde-preview-codeblock-bg-color: var(--mde-preview-canvas-subtle-color);
-    --mde-preview-codeblock-meta-bg-color: var(
-      --mde-preview-canvas-default-color
-    );
+    --mde-preview-codeblock-meta-bg-color: var(--mde-preview-canvas-default-color);
     --mde-preview-codeblock-border-color: var(--mde-preview-border-muted-color);
   }
 
@@ -194,26 +184,26 @@
       line-height: inherit;
     }
 
-    [type="button"],
-    [type="reset"],
-    [type="submit"] {
+    [type='button'],
+    [type='reset'],
+    [type='submit'] {
       -webkit-appearance: button;
       appearance: button;
     }
 
-    [type="checkbox"],
-    [type="radio"] {
+    [type='checkbox'],
+    [type='radio'] {
       box-sizing: border-box;
       padding: 0;
     }
 
-    [type="number"]::-webkit-inner-spin-button,
-    [type="number"]::-webkit-outer-spin-button {
+    [type='number']::-webkit-inner-spin-button,
+    [type='number']::-webkit-outer-spin-button {
       height: auto;
     }
 
-    [type="search"]::-webkit-search-cancel-button,
-    [type="search"]::-webkit-search-decoration {
+    [type='search']::-webkit-search-cancel-button,
+    [type='search']::-webkit-search-decoration {
       -webkit-appearance: none;
       appearance: none;
     }
@@ -240,13 +230,13 @@
 
     hr::before {
       display: table;
-      content: "";
+      content: '';
     }
 
     hr::after {
       display: table;
       clear: both;
-      content: "";
+      content: '';
     }
 
     pre {
@@ -276,25 +266,25 @@
     }
 
     a:focus,
-    [role="button"]:focus,
-    input[type="radio"]:focus,
-    input[type="checkbox"]:focus {
+    [role='button']:focus,
+    input[type='radio']:focus,
+    input[type='checkbox']:focus {
       outline: 2px solid var(--mde-preview-accent-text-color);
       outline-offset: -2px;
       box-shadow: none;
     }
 
     a:focus:not(:focus-visible),
-    [role="button"]:focus:not(:focus-visible),
-    input[type="radio"]:focus:not(:focus-visible),
-    input[type="checkbox"]:focus:not(:focus-visible) {
+    [role='button']:focus:not(:focus-visible),
+    input[type='radio']:focus:not(:focus-visible),
+    input[type='checkbox']:focus:not(:focus-visible) {
       outline: solid 1px transparent;
     }
 
     a:focus-visible,
-    [role="button"]:focus-visible,
-    input[type="radio"]:focus-visible,
-    input[type="checkbox"]:focus-visible {
+    [role='button']:focus-visible,
+    input[type='radio']:focus-visible,
+    input[type='checkbox']:focus-visible {
       outline: 2px solid var(--mde-preview-accent-text-color);
       outline-offset: -2px;
       box-shadow: none;
@@ -302,10 +292,10 @@
 
     a:not([class]):focus,
     a:not([class]):focus-visible,
-    input[type="radio"]:focus,
-    input[type="radio"]:focus-visible,
-    input[type="checkbox"]:focus,
-    input[type="checkbox"]:focus-visible {
+    input[type='radio']:focus,
+    input[type='radio']:focus-visible,
+    input[type='checkbox']:focus,
+    input[type='checkbox']:focus-visible {
       outline-offset: 0;
     }
 
@@ -555,23 +545,23 @@
       list-style-type: none;
     }
 
-    ol[type="a s"] {
+    ol[type='a s'] {
       list-style-type: lower-alpha;
     }
 
-    ol[type="A s"] {
+    ol[type='A s'] {
       list-style-type: upper-alpha;
     }
 
-    ol[type="i s"] {
+    ol[type='i s'] {
       list-style-type: lower-roman;
     }
 
-    ol[type="I s"] {
+    ol[type='I s'] {
       list-style-type: upper-roman;
     }
 
-    ol[type="1"] {
+    ol[type='1'] {
       list-style-type: decimal;
     }
 
@@ -643,11 +633,11 @@
       background-color: transparent;
     }
 
-    img[align="right"] {
+    img[align='right'] {
       padding-left: 20px;
     }
 
-    img[align="left"] {
+    img[align='left'] {
       padding-right: 20px;
     }
 
@@ -792,10 +782,7 @@
       color: var(--mde-preview-muted-text-color);
       background-color: var(
         --mde-preview-codeblock-meta-bg-color,
-        var(
-          --mde-preview-codeblock-bg-color,
-          var(--mde-preview-canvas-default-color)
-        )
+        var(--mde-preview-codeblock-bg-color, var(--mde-preview-canvas-default-color))
       );
       border: 1px solid var(--mde-preview-codeblock-border-color);
       border-radius: 6px 6px 0 0;
@@ -890,11 +877,11 @@
     }
 
     [data-footnote-ref]::before {
-      content: "[";
+      content: '[';
     }
 
     [data-footnote-ref]::after {
-      content: "]";
+      content: ']';
     }
 
     .footnotes {
@@ -924,7 +911,7 @@
       bottom: -8px;
       left: -24px;
       pointer-events: none;
-      content: "";
+      content: '';
       border: 2px solid var(--mde-preview-accent-emphasis-color);
       border-radius: 6px;
     }
@@ -940,7 +927,7 @@
     g-emoji {
       display: inline-block;
       min-width: 1ch;
-      font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
       font-size: 1em;
       font-style: normal !important;
       font-weight: var(--font-weights-normal, 400);
@@ -1066,7 +1053,7 @@
     }
   }
 
-  body[class*="dark-ui"] .mde-preview,
+  body[class*='dark-ui'] .mde-preview,
   .dark-mode .mde-preview {
     color-scheme: dark;
   }
