@@ -1,4 +1,13 @@
 @layer reset {
+  /* Font family */
+  body {
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      Segoe UI,
+      'Lato';
+  }
+
   /* Border-Box */
   *,
   *:before,
