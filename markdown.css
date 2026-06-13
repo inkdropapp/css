@@ -265,40 +265,6 @@
       display: none !important;
     }
 
-    a:focus,
-    [role='button']:focus,
-    input[type='radio']:focus,
-    input[type='checkbox']:focus {
-      outline: 2px solid var(--mde-preview-accent-text-color);
-      outline-offset: -2px;
-      box-shadow: none;
-    }
-
-    a:focus:not(:focus-visible),
-    [role='button']:focus:not(:focus-visible),
-    input[type='radio']:focus:not(:focus-visible),
-    input[type='checkbox']:focus:not(:focus-visible) {
-      outline: solid 1px transparent;
-    }
-
-    a:focus-visible,
-    [role='button']:focus-visible,
-    input[type='radio']:focus-visible,
-    input[type='checkbox']:focus-visible {
-      outline: 2px solid var(--mde-preview-accent-text-color);
-      outline-offset: -2px;
-      box-shadow: none;
-    }
-
-    a:not([class]):focus,
-    a:not([class]):focus-visible,
-    input[type='radio']:focus,
-    input[type='radio']:focus-visible,
-    input[type='checkbox']:focus,
-    input[type='checkbox']:focus-visible {
-      outline-offset: 0;
-    }
-
     kbd {
       display: inline-block;
       padding: 3px 5px;
@@ -464,10 +430,6 @@
       padding-right: 4px;
       margin-left: -20px;
       line-height: 1;
-    }
-
-    .anchor:focus {
-      outline: none;
     }
 
     p,
@@ -639,100 +601,6 @@
 
     img[align='left'] {
       padding-right: 20px;
-    }
-
-    .emoji {
-      max-width: none;
-      vertical-align: text-top;
-      background-color: transparent;
-    }
-
-    span.frame {
-      display: block;
-      overflow: hidden;
-    }
-
-    span.frame > span {
-      display: block;
-      float: left;
-      width: auto;
-      padding: 7px;
-      margin: 13px 0 0;
-      overflow: hidden;
-      border: 1px solid var(--mde-preview-border-default-color);
-    }
-
-    span.frame span img {
-      display: block;
-      float: left;
-    }
-
-    span.frame span span {
-      display: block;
-      padding: 5px 0 0;
-      clear: both;
-      color: var(--mde-preview-text-color);
-    }
-
-    span.align-center {
-      display: block;
-      overflow: hidden;
-      clear: both;
-    }
-
-    span.align-center > span {
-      display: block;
-      margin: 13px auto 0;
-      overflow: hidden;
-      text-align: center;
-    }
-
-    span.align-center span img {
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    span.align-right {
-      display: block;
-      overflow: hidden;
-      clear: both;
-    }
-
-    span.align-right > span {
-      display: block;
-      margin: 13px 0 0;
-      overflow: hidden;
-      text-align: right;
-    }
-
-    span.align-right span img {
-      margin: 0;
-      text-align: right;
-    }
-
-    span.float-left {
-      display: block;
-      float: left;
-      margin-right: 13px;
-      overflow: hidden;
-    }
-
-    span.float-left span {
-      margin: 13px 0 0;
-    }
-
-    span.float-right {
-      display: block;
-      float: right;
-      margin-left: 13px;
-      overflow: hidden;
-    }
-
-    span.float-right > span {
-      display: block;
-      margin: 13px auto 0;
-      overflow: hidden;
-      text-align: right;
     }
 
     code,
@@ -984,19 +852,6 @@
 
     .contains-task-list {
       position: relative;
-    }
-
-    .contains-task-list:hover .task-list-item-convert-container,
-    .contains-task-list:focus-within .task-list-item-convert-container {
-      display: block;
-      width: auto;
-      height: 24px;
-      overflow: visible;
-      clip: auto;
-    }
-
-    ::-webkit-calendar-picker-indicator {
-      filter: invert(50%);
     }
 
     .gfm-alert {
