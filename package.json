@@ -12,14 +12,18 @@
   "scripts": {
     "format": "oxfmt",
     "lint": "oxlint",
+    "typecheck": "tsc --noEmit",
+    "generate-variable-names": "node ./scripts/generate-variable-names.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@types/node": "^25.9.3",
     "oxfmt": "0.54.0",
     "oxlint": "1.69.0",
+    "postcss": "^8.5.15",
     "typescript": "^6.0.3"
   },
   "optionalDependencies": {
-    "inkdrop-model": "^2.7.3"
+    "inkdrop-model": "^2.11.5"
   }
 }
