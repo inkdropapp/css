@@ -14,7 +14,8 @@
     "lint": "oxlint",
     "typecheck": "tsc --noEmit",
     "generate-variable-names": "node ./scripts/generate-variable-names.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run generate-variable-names"
   },
   "devDependencies": {
     "@types/node": "^25.9.3",
