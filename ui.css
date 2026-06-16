@@ -1,12 +1,12 @@
 @layer theme.ui.base {
   :root {
     /*******************************
-           Site Settings
-  *******************************/
+      Site Settings
+    *******************************/
 
     /*-------------------
-         Fonts
-   --------------------*/
+      Fonts
+    --------------------*/
     --font-name: -apple-system, BlinkMacSystemFont, Segoe UI, 'Lato';
     --font-smoothing: antialiased;
 
@@ -19,7 +19,7 @@
 
     /*-------------------
       Border Radius
-   --------------------*/
+    --------------------*/
 
     --default-corner-shape: squircle;
     --default-squircle-radius: var(--15px);
@@ -27,120 +27,129 @@
 
     /*-------------------
       Brand Colors
-   --------------------*/
+    --------------------*/
 
-    --primary-color: var(--color-blue-500);
+    --primary-color: light-dark(var(--color-blue-500), hsl(var(--hsl-blue-400) / 80%));
     --secondary-color: var(--color-zinc-900);
 
-    --light-primary-color: var(--color-blue-400);
+    --light-primary-color: light-dark(var(--color-blue-400), hsl(var(--hsl-blue-300) / 80%));
     --light-secondary-color: var(--color-neutral-700);
 
     /*--------------
-    Page Heading
-   ---------------*/
+      Page Heading
+    ---------------*/
 
     --header-font-weight: 600;
     --header-line-height: 1.28571429em;
 
-    --h1: 2rem;
-    --h2: 1.71428571rem;
-    --h3: 1.28571429rem;
-    --h4: 1.07142857rem;
-    --h5: 1rem;
+    --h1: 2em;
+    --h2: 1.5em;
+    --h3: 1.25em;
+    --h4: 1em;
+    --h5: 0.875em;
+    --h6: 0.85em;
 
     /*--------------
-     Form Input
-   ---------------*/
+      Form Input
+    ---------------*/
 
     /* This adjusts the default form input across all elements */
-    --input-background: var(--white);
+    --input-background: light-dark(var(--white), var(--color-neutral-900));
     --input-vertical-padding: var(--relative11px);
     --input-horizontal-padding: var(--relative14px);
     --input-padding: var(--input-vertical-padding) var(--input-horizontal-padding);
 
     /* Input Text Color */
-    --input-color: var(--text-color);
-    --input-placeholder-color: rgba(191, 191, 191, 0.87);
-    --input-placeholder-focus-color: rgba(115, 115, 115, 0.87);
-    --input-error-placeholder-color: #e7bdbc;
-    --input-error-placeholder-focus-color: #da9796;
+    --input-color: light-dark(var(--text-color), hsl(var(--hsl-neutral-50) / 85%));
+    --input-placeholder-color: light-dark(
+      rgba(191, 191, 191, 0.87),
+      hsl(var(--hsl-neutral-200) / 25%)
+    );
+    --input-placeholder-focus-color: light-dark(
+      rgba(115, 115, 115, 0.87),
+      hsl(var(--hsl-neutral-300) / 35%)
+    );
+    --input-error-placeholder-color: light-dark(#e7bdbc, var(--negative-text-color));
+    --input-error-placeholder-focus-color: light-dark(#da9796, hsl(var(--hsl-red-200) / 90%));
 
     /* Line Height Default For Inputs in Browser */
     --input-line-height: 1.21428571em;
 
     /*-------------------
       Focused Input
-   --------------------*/
+    --------------------*/
 
     /* Used on inputs, textarea etc */
-    --focused-form-border-color: #85b7d9;
+    --focused-form-border-color: light-dark(#85b7d9, hsl(var(--hsl-sky-300) / 60%));
 
     /* Used on dropdowns, other larger blocks */
-    --focused-form-muted-border-color: #96c8da;
+    --focused-form-muted-border-color: light-dark(#96c8da, hsl(var(--hsl-sky-300) / 40%));
 
     --unfocused-outline-color: transparent;
     --unfocused-outline-offset: 0.4rem;
     --focused-outline-style: solid;
     --focused-outline-width: var(--2px);
-    --focused-outline-color: color-mix(
-      in srgb,
-      var(--focused-form-muted-border-color),
-      transparent 30%
+    --focused-outline-color: light-dark(
+      color-mix(in srgb, var(--focused-form-muted-border-color), transparent 30%),
+      hsl(var(--hsl-sky-300) / 30%)
     );
     --focused-outline-offset: 0rem;
 
     /*-------------------
-          Page
-   --------------------*/
+      Page
+    --------------------*/
 
-    --page-background: #ffffff;
+    --page-background: light-dark(var(--color-white), var(--color-neutral-950));
     --page-overflow-x: hidden;
 
     --line-height: 1.4285em;
-    --text-color: hsl(var(--hsl-black) / 87%);
+    --text-color: light-dark(hsl(var(--hsl-black) / 87%), hsl(var(--hsl-neutral-50) / 87%));
 
     /*-------------------
-        Paragraph
-   --------------------*/
+      Paragraph
+    --------------------*/
 
     --paragraph-margin: 0em 0em 1em;
     --paragraph-line-height: var(--line-height);
 
     /*-------------------
-         Links
-   --------------------*/
+      Links
+    --------------------*/
 
     --link-color: var(--color-blue-500);
     --link-underline: none;
-    --link-hover-color: var(--color-blue-600);
+    --link-hover-color: light-dark(var(--color-blue-600), var(--color-blue-400));
     --link-hover-underline: var(--link-underline);
 
     /*-------------------
-    Highlighted Text
-   --------------------*/
+      Highlighted Text
+    --------------------*/
 
-    --highlight-background: var(--color-blue-200);
-    --highlight-color: var(--text-color);
+    --highlight-background: light-dark(var(--color-blue-200), var(--color-sky-600));
+    --highlight-color: light-dark(var(--text-color), var(--color-white));
 
-    --input-highlight-background: hsl(var(--hsl-neutral-600) / 40%);
+    --input-highlight-background: light-dark(
+      hsl(var(--hsl-neutral-600) / 40%),
+      hsl(var(--hsl-neutral-400) / 40%)
+    );
     --input-highlight-color: var(--text-color);
 
     /*-------------------
-         Loader
-   --------------------*/
+      Loader
+    --------------------*/
 
     --loader-size: var(--relative-big);
     --loader-speed: 0.6s;
     --loader-line-width: 0.2em;
     --loader-fill-color: rgba(0, 0, 0, 0.1);
-    --loader-line-color: var(--grey);
+    --loader-line-color: light-dark(var(--grey), #767676);
 
     --inverted-loader-fill-color: rgba(255, 255, 255, 0.15);
-    --inverted-loader-line-color: var(--white);
+    --inverted-loader-line-color: light-dark(var(--white), #ffffff);
 
     /*-------------------
-        Site Colors
-   --------------------*/
+      Site Colors
+    --------------------*/
 
     /*---  Colors  ---*/
     --red: var(--color-red-500);
@@ -180,43 +189,43 @@
     --white: var(--color-white);
 
     /*--- Colored Backgrounds ---*/
-    --red-background: var(--color-red-100);
-    --orange-background: var(--color-orange-100);
-    --yellow-background: var(--color-yellow-100);
-    --olive-background: var(--color-lime-100);
-    --green-background: var(--color-green-100);
-    --teal-background: var(--color-teal-100);
-    --blue-background: var(--color-blue-100);
-    --violet-background: var(--color-violet-100);
-    --purple-background: var(--color-purple-100);
-    --pink-background: var(--color-pink-100);
-    --brown-background: var(--color-orange-100);
+    --red-background: light-dark(var(--color-red-100), var(--color-red-900));
+    --orange-background: light-dark(var(--color-orange-100), var(--color-orange-900));
+    --yellow-background: light-dark(var(--color-yellow-100), var(--color-yellow-900));
+    --olive-background: light-dark(var(--color-lime-100), var(--color-lime-900));
+    --green-background: light-dark(var(--color-green-100), var(--color-green-900));
+    --teal-background: light-dark(var(--color-teal-100), var(--color-teal-900));
+    --blue-background: light-dark(var(--color-blue-100), var(--color-blue-900));
+    --violet-background: light-dark(var(--color-violet-100), var(--color-violet-900));
+    --purple-background: light-dark(var(--color-purple-100), var(--color-purple-900));
+    --pink-background: light-dark(var(--color-pink-100), var(--color-pink-900));
+    --brown-background: light-dark(var(--color-orange-100), var(--color-orange-900));
 
     /*--- Colored Headers ---*/
-    --red-header-color: var(--color-red-600);
-    --orange-header-color: var(--color-orange-600);
-    --yellow-header-color: var(--color-yellow-800);
-    --olive-header-color: var(--color-lime-700);
-    --green-header-color: var(--color-green-700);
-    --teal-header-color: var(--color-teal-700);
-    --blue-header-color: var(--color-blue-600);
-    --violet-header-color: var(--color-violet-600);
-    --purple-header-color: var(--color-purple-600);
-    --pink-header-color: var(--color-pink-600);
-    --brown-header-color: var(--color-yellow-900);
+    --red-header-color: light-dark(var(--color-red-600), var(--color-red-400));
+    --orange-header-color: light-dark(var(--color-orange-600), var(--color-orange-400));
+    --yellow-header-color: light-dark(var(--color-yellow-800), var(--color-yellow-300));
+    --olive-header-color: light-dark(var(--color-lime-700), var(--color-lime-400));
+    --green-header-color: light-dark(var(--color-green-700), var(--color-green-400));
+    --teal-header-color: light-dark(var(--color-teal-700), var(--color-teal-400));
+    --blue-header-color: light-dark(var(--color-blue-600), var(--color-blue-400));
+    --violet-header-color: light-dark(var(--color-violet-600), var(--color-violet-400));
+    --purple-header-color: light-dark(var(--color-purple-600), var(--color-purple-400));
+    --pink-header-color: light-dark(var(--color-pink-600), var(--color-pink-400));
+    --brown-header-color: light-dark(var(--color-yellow-900), var(--color-yellow-500));
 
     /*--- Colored Text ---*/
-    --red-text-color: var(--color-red-500);
-    --orange-text-color: var(--color-orange-500);
-    --yellow-text-color: var(--color-yellow-700);
-    --olive-text-color: var(--color-lime-600);
-    --green-text-color: var(--color-green-600);
-    --teal-text-color: var(--color-teal-600);
-    --blue-text-color: var(--color-blue-500);
-    --violet-text-color: var(--color-violet-500);
-    --purple-text-color: var(--color-purple-500);
-    --pink-text-color: var(--color-pink-500);
-    --brown-text-color: var(--color-yellow-800);
+    --red-text-color: light-dark(var(--color-red-500), var(--color-red-400));
+    --orange-text-color: light-dark(var(--color-orange-500), var(--color-orange-400));
+    --yellow-text-color: light-dark(var(--color-yellow-700), var(--color-yellow-400));
+    --olive-text-color: light-dark(var(--color-lime-600), var(--color-lime-400));
+    --green-text-color: light-dark(var(--color-green-600), var(--color-green-400));
+    --teal-text-color: light-dark(var(--color-teal-600), var(--color-teal-400));
+    --blue-text-color: light-dark(var(--color-blue-500), var(--color-blue-400));
+    --violet-text-color: light-dark(var(--color-violet-500), var(--color-violet-400));
+    --purple-text-color: light-dark(var(--color-purple-500), var(--color-purple-400));
+    --pink-text-color: light-dark(var(--color-pink-500), var(--color-pink-400));
+    --brown-text-color: light-dark(var(--color-yellow-800), var(--color-yellow-500));
 
     /*--- Colored Border ---*/
     --red-border-color: var(--red-text-color);
@@ -232,107 +241,194 @@
     --brown-border-color: var(--brown-text-color);
 
     /*-------------------
-       Alpha Colors
-   --------------------*/
+      Alpha Colors
+    --------------------*/
 
-    --subtle-transparent-black: rgba(0, 0, 0, 0.03);
-    --transparent-black: rgba(0, 0, 0, 0.05);
-    --strong-transparent-black: rgba(0, 0, 0, 0.1);
-    --very-strong-transparent-black: rgba(0, 0, 0, 0.15);
+    --subtle-transparent-black: light-dark(rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.06));
+    --transparent-black: light-dark(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
+    --strong-transparent-black: light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+    --very-strong-transparent-black: light-dark(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.3));
 
     --subtle-transparent-white: rgba(255, 255, 255, 0.02);
     --transparent-white: rgba(255, 255, 255, 0.08);
     --strong-transparent-white: rgba(255, 255, 255, 0.15);
 
     /*-------------------
-         Accents
-   --------------------*/
+      Accents
+    --------------------*/
 
     /* Differentiating Neutrals */
-    --subtle-gradient: linear-gradient(transparent, var(--transparent-black));
+    --subtle-gradient: linear-gradient(
+      transparent,
+      light-dark(var(--transparent-black), rgba(0, 0, 0, 0.05))
+    );
 
     /* Differentiating Layers */
-    --subtle-shadow: 0px 1px 2px 0 var(--border-color);
+    --subtle-shadow: 0px 1px 2px 0 light-dark(var(--border-color), var(--black));
     --floating-shadow:
-      0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.15);
-    --raised-shadow: 0px 2px 3px 0px var(--border-color);
+      0px 2px 4px 0px light-dark(rgba(34, 36, 38, 0.12), hsl(var(--hsl-black) / 20%)),
+      0px 2px 10px 0px light-dark(rgba(34, 36, 38, 0.15), hsl(var(--hsl-black) / 30%));
+    --raised-shadow:
+      0 1.5px 3px -2px hsl(var(--hsl-black) / 0.4), 0 4px 6px hsl(var(--hsl-black) / 0.2),
+      0 8px 12px -1px hsl(var(--hsl-black) / 0.1);
 
     /*-------------------
       Emotive Colors
-   --------------------*/
+    --------------------*/
 
     /* Positive */
-    --positive-color: hsl(var(--hsl-green-500));
-    --positive-background-color: hsl(var(--hsl-green-500) / 10%);
-    --positive-border-color: hsl(var(--hsl-green-600) / 50%);
-    --positive-header-color: hsl(var(--hsl-green-800) / 90%);
-    --positive-text-color: hsl(var(--hsl-green-900) / 90%);
+    --positive-color: light-dark(hsl(var(--hsl-green-500)), var(--color-green-500));
+    --positive-background-color: light-dark(
+      hsl(var(--hsl-green-500) / 10%),
+      hsl(var(--hsl-green-200) / 20%)
+    );
+    --positive-border-color: light-dark(
+      hsl(var(--hsl-green-600) / 50%),
+      hsl(var(--hsl-green-300) / 70%)
+    );
+    --positive-header-color: light-dark(
+      hsl(var(--hsl-green-800) / 90%),
+      hsl(var(--hsl-green-300) / 90%)
+    );
+    --positive-text-color: light-dark(
+      hsl(var(--hsl-green-900) / 90%),
+      hsl(var(--hsl-green-100) / 90%)
+    );
 
     /* Negative */
-    --negative-color: hsl(var(--hsl-red-500));
-    --negative-background-color: hsl(var(--hsl-red-500) / 10%);
-    --negative-border-color: hsl(var(--hsl-red-500) / 50%);
-    --negative-header-color: hsl(var(--hsl-red-800) / 90%);
-    --negative-text-color: hsl(var(--hsl-red-800) / 90%);
+    --negative-color: light-dark(hsl(var(--hsl-red-500)), var(--color-red-500));
+    --negative-background-color: light-dark(
+      hsl(var(--hsl-red-500) / 10%),
+      hsl(var(--hsl-red-200) / 20%)
+    );
+    --negative-border-color: light-dark(
+      hsl(var(--hsl-red-500) / 50%),
+      hsl(var(--hsl-red-300) / 70%)
+    );
+    --negative-header-color: light-dark(
+      hsl(var(--hsl-red-800) / 90%),
+      hsl(var(--hsl-red-300) / 90%)
+    );
+    --negative-text-color: light-dark(hsl(var(--hsl-red-800) / 90%), hsl(var(--hsl-red-100) / 90%));
 
     /* Info */
-    --info-color: hsl(var(--hsl-sky-500));
-    --info-background-color: hsl(var(--hsl-sky-500) / 10%);
-    --info-border-color: hsl(var(--hsl-sky-500) / 70%);
-    --info-header-color: hsl(var(--hsl-sky-800) / 90%);
-    --info-text-color: hsl(var(--hsl-sky-800) / 90%);
+    --info-color: light-dark(hsl(var(--hsl-sky-500)), var(--color-cyan-400));
+    --info-background-color: light-dark(
+      hsl(var(--hsl-sky-500) / 10%),
+      hsl(var(--hsl-sky-200) / 20%)
+    );
+    --info-border-color: light-dark(hsl(var(--hsl-sky-500) / 70%), hsl(var(--hsl-sky-300) / 70%));
+    --info-header-color: light-dark(hsl(var(--hsl-sky-800) / 90%), hsl(var(--hsl-sky-300) / 90%));
+    --info-text-color: light-dark(hsl(var(--hsl-sky-800) / 90%), hsl(var(--hsl-sky-100) / 90%));
 
     /* Warning */
-    --warning-color: hsl(var(--hsl-amber-400));
-    --warning-background-color: hsl(var(--hsl-yellow-500) / 10%);
-    --warning-border-color: hsl(var(--hsl-amber-600) / 70%);
-    --warning-header-color: hsl(var(--hsl-yellow-800) / 90%);
-    --warning-text-color: hsl(var(--hsl-amber-900) / 90%);
+    --warning-color: light-dark(hsl(var(--hsl-amber-400)), var(--color-amber-400));
+    --warning-background-color: light-dark(
+      hsl(var(--hsl-yellow-500) / 10%),
+      hsl(var(--hsl-amber-200) / 20%)
+    );
+    --warning-border-color: light-dark(
+      hsl(var(--hsl-amber-600) / 70%),
+      hsl(var(--hsl-yellow-600) / 70%)
+    );
+    --warning-header-color: light-dark(
+      hsl(var(--hsl-yellow-800) / 90%),
+      hsl(var(--hsl-amber-300) / 90%)
+    );
+    --warning-text-color: light-dark(
+      hsl(var(--hsl-amber-900) / 90%),
+      hsl(var(--hsl-amber-100) / 90%)
+    );
 
     /*-------------------
-         Icons
-   --------------------*/
+      Icons
+    --------------------*/
 
     /* Maximum Glyph Width of Icon */
     --icon-width: 1.18em;
 
     /*-------------------
-       Neutral Text
-   --------------------*/
+      Neutral Text
+    --------------------*/
 
-    --dark-text-color: hsl(var(--hsl-black) / 85%);
-    --muted-text-color: hsl(var(--hsl-black) / 60%);
-    --light-text-color: hsl(var(--hsl-black) / 40%);
+    --dark-text-color: light-dark(hsl(var(--hsl-black) / 85%), hsl(var(--hsl-neutral-50) / 40%));
+    --muted-text-color: light-dark(hsl(var(--hsl-black) / 60%), hsl(var(--hsl-neutral-50) / 60%));
+    --light-text-color: light-dark(hsl(var(--hsl-black) / 40%), hsl(var(--hsl-neutral-50) / 85%));
 
-    --unselected-text-color: hsl(var(--hsl-black) / 40%);
-    --hovered-text-color: hsl(var(--hsl-black) / 80%);
-    --pressed-text-color: hsl(var(--hsl-black) / 90%);
-    --selected-text-color: hsl(var(--hsl-black) / 95%);
+    --unselected-text-color: light-dark(
+      hsl(var(--hsl-black) / 40%),
+      hsl(var(--hsl-neutral-50) / 40%)
+    );
+    --hovered-text-color: light-dark(hsl(var(--hsl-black) / 80%), hsl(var(--hsl-neutral-50) / 80%));
+    --pressed-text-color: light-dark(hsl(var(--hsl-black) / 90%), hsl(var(--hsl-neutral-50) / 90%));
+    --selected-text-color: light-dark(
+      hsl(var(--hsl-black) / 95%),
+      hsl(var(--hsl-neutral-50) / 95%)
+    );
     --disabled-text-color: hsl(var(--hsl-black) / 20%);
 
-    --inverted-text-color: hsl(var(--hsl-white) / 90%);
-    --inverted-muted-text-color: hsl(var(--hsl-white) / 80%);
-    --inverted-light-text-color: hsl(var(--hsl-white) / 70%);
-    --inverted-unselected-text-color: hsl(var(--hsl-white) / 50%);
-    --inverted-hovered-text-color: hsl(var(--hsl-white) / 100%);
-    --inverted-pressed-text-color: hsl(var(--hsl-white) / 100%);
-    --inverted-selected-text-color: hsl(var(--hsl-white) / 100%);
+    --inverted-text-color: light-dark(
+      hsl(var(--hsl-white) / 90%),
+      hsl(var(--hsl-neutral-950) / 90%)
+    );
+    --inverted-muted-text-color: light-dark(
+      hsl(var(--hsl-white) / 80%),
+      hsl(var(--hsl-neutral-950) / 80%)
+    );
+    --inverted-light-text-color: light-dark(
+      hsl(var(--hsl-white) / 70%),
+      hsl(var(--hsl-neutral-950) / 70%)
+    );
+    --inverted-unselected-text-color: light-dark(
+      hsl(var(--hsl-white) / 50%),
+      hsl(var(--hsl-neutral-950) / 50%)
+    );
+    --inverted-hovered-text-color: light-dark(
+      hsl(var(--hsl-white) / 100%),
+      hsl(var(--hsl-neutral-950) / 100%)
+    );
+    --inverted-pressed-text-color: light-dark(
+      hsl(var(--hsl-white) / 100%),
+      hsl(var(--hsl-neutral-950) / 100%)
+    );
+    --inverted-selected-text-color: light-dark(
+      hsl(var(--hsl-white) / 100%),
+      hsl(var(--hsl-neutral-950) / 100%)
+    );
     --inverted-disabled-text-color: hsl(var(--hsl-white) / 20%);
 
     /*-------------------
-        Borders
-   --------------------*/
+      Borders
+    --------------------*/
 
-    --border-color: hsl(var(--hsl-neutral-900) / 15%);
-    --strong-border-color: hsl(var(--hsl-neutral-900) / 22%);
-    --internal-border-color: hsl(var(--hsl-neutral-900) / 10%);
-    --selected-border-color: hsl(var(--hsl-neutral-900) / 35%);
-    --strong-selected-border-color: hsl(var(--hsl-neutral-900) / 50%);
-    --disabled-border-color: hsl(var(--hsl-neutral-900) / 50%);
+    --border-color: light-dark(
+      hsl(var(--hsl-neutral-900) / 15%),
+      hsl(var(--hsl-neutral-100) / 10%)
+    );
+    --strong-border-color: light-dark(
+      hsl(var(--hsl-neutral-900) / 22%),
+      hsl(var(--hsl-neutral-100) / 22%)
+    );
+    --internal-border-color: light-dark(
+      hsl(var(--hsl-neutral-900) / 10%),
+      hsl(var(--hsl-neutral-100) / 10%)
+    );
+    --selected-border-color: light-dark(
+      hsl(var(--hsl-neutral-900) / 35%),
+      hsl(var(--hsl-neutral-100) / 35%)
+    );
+    --strong-selected-border-color: light-dark(
+      hsl(var(--hsl-neutral-900) / 50%),
+      hsl(var(--hsl-neutral-100) / 50%)
+    );
+    --disabled-border-color: light-dark(
+      hsl(var(--hsl-neutral-900) / 50%),
+      hsl(var(--hsl-neutral-100) / 50%)
+    );
 
-    --solid-internal-border-color: var(--color-neutral-50);
-    --solid-border-color: var(--color-zinc-300);
-    --solid-selected-border-color: var(--color-neutral-400);
+    --solid-internal-border-color: light-dark(var(--color-neutral-50), var(--color-neutral-800));
+    --solid-border-color: light-dark(var(--color-zinc-300), var(--color-zinc-700));
+    --solid-selected-border-color: light-dark(var(--color-neutral-400), var(--color-neutral-600));
 
     --white-border-color: hsl(var(--hsl-white) / 10%);
     --selected-white-border-color: hsl(var(--hsl-white) / 80%);
@@ -342,7 +438,7 @@
 
     /*-------------------
       Derived Values
-   --------------------*/
+    --------------------*/
 
     /* Loaders Position Offset */
     --loader-offset: -0.64285714em;
@@ -377,20 +473,26 @@
     --error-text-color: var(--negative-text-color);
 
     /*******************************
-               States
-  *******************************/
+      States
+    *******************************/
 
     /*-------------------
-        Disabled
-   --------------------*/
+      Disabled
+    --------------------*/
 
     --disabled-opacity: 0.45;
-    --disabled-text-color: hsl(var(--hsl-neutral-800) / 30%);
-    --inverted-disabled-text-color: hsl(var(--hsl-white) / 30%);
+    --disabled-text-color: light-dark(
+      hsl(var(--hsl-neutral-800) / 30%),
+      hsl(var(--hsl-neutral-50) / 30%)
+    );
+    --inverted-disabled-text-color: light-dark(
+      hsl(var(--hsl-white) / 30%),
+      hsl(var(--hsl-neutral-950) / 20%)
+    );
 
     /*-------------------
-          Hover
-   --------------------*/
+      Hover
+    --------------------*/
 
     /*---  Shadows  ---*/
     --floating-shadow-hover:
@@ -441,8 +543,8 @@
     --dark-white-hover: var(--color-gray-200);
 
     /*-------------------
-          Focus
-   --------------------*/
+      Focus
+    --------------------*/
 
     /*---  Colors  ---*/
     --primary-color-focus: var(--color-blue-600);
@@ -490,7 +592,7 @@
 
     /*-------------------
       Down (:active)
-   --------------------*/
+    --------------------*/
 
     /*---  Colors  ---*/
     --primary-color-down: var(--color-blue-700);
@@ -537,8 +639,8 @@
     --dark-white-down: var(--color-gray-400);
 
     /*-------------------
-          Active
-   --------------------*/
+      Active
+    --------------------*/
 
     /*---  Colors  ---*/
     --primary-color-active: var(--color-blue-700);
@@ -585,26 +687,32 @@
     --dark-white-active: var(--color-gray-400);
 
     /*******************************
-             Components
-  *******************************/
+      Components
+    *******************************/
 
     /*-------------------
-        Button
-  --------------------*/
-    --button-background: var(--color-gray-200) none;
-    --button-text-color: hsl(var(--hsl-black) / 60%);
+      Button
+    --------------------*/
+    --button-background: light-dark(var(--color-gray-200), hsl(var(--hsl-neutral-800) / 70%)) none;
+    --button-text-color: light-dark(hsl(var(--hsl-black) / 60%), hsl(var(--hsl-neutral-50) / 60%));
     --button-border: none;
+    /* --button-border: 1px solid */
+    /*   light-dark(var(--strong-transparent-black), var(--strong-transparent-white)); */
     --button-margin: 0em 0.25em 0em 0em;
     --button-padding: var(--input-vertical-padding) var(--input-horizontal-padding);
     --button-text-shadow: none;
-    --button-box-shadow: 0px 0px 0px 1px transparent inset;
+    --button-box-shadow: 0px 0px 0px 1px
+      light-dark(var(--strong-transparent-black), var(--strong-transparent-white)) inset;
     --button-font-weight: 600;
     --button-line-height: 1em;
     --button-border-radius: var(--default-squircle-radius);
     --button-corner-shape: var(--default-corner-shape);
 
     /* Hovered */
-    --button-hover-background-color: var(--color-gray-300);
+    --button-hover-background-color: light-dark(
+      var(--color-gray-300),
+      hsl(var(--hsl-neutral-700) / 70%)
+    );
     --button-hover-background-image: none;
     --button-hover-box-shadow: var(--button-box-shadow);
     --button-hover-color: var(--hovered-text-color);
@@ -613,7 +721,7 @@
     /* Focused */
     --button-focus-background-color: var(--button-hover-background-color);
     --button-focus-background-image: '';
-    --button-focus-boxshadow: '';
+    --button-focus-box-shadow: '';
     --button-focus-color: var(--hovered-text-color);
     --button-icon-focus-opacity: 0.85;
 
@@ -622,14 +730,20 @@
     --button-disabled-box-shadow: none;
 
     /* Pressed Down */
-    --button-down-background-color: var(--color-gray-400);
+    --button-down-background-color: light-dark(
+      var(--color-gray-400),
+      hsl(var(--hsl-neutral-800) / 80%)
+    );
     --button-down-background-image: '';
     --button-down-pressed-shadow: none;
-    --button-down-box-shadow: var(--button-box-shadow), none;
+    --button-down-box-shadow: var(--button-box-shadow);
     --button-down-color: var(--pressed-text-color);
 
     /* Active */
-    --button-active-background-color: var(--color-gray-400);
+    --button-active-background-color: light-dark(
+      var(--color-gray-400),
+      hsl(var(--hsl-neutral-700) / 70%)
+    );
     --button-active-background-image: none;
     --button-active-color: var(--selected-text-color);
     --button-active-box-shadow: var(--button-box-shadow);
@@ -656,22 +770,26 @@
     --basic-button-border-radius: var(--default-squircle-radius);
     --basic-button-box-shadow: 0px 0px 0px 1px var(--border-color) inset;
 
-    --basic-button-hover-background: var(--color-white);
+    --basic-button-hover-background: light-dark(
+      var(--color-white),
+      hsl(var(--hsl-neutral-800) / 50%)
+    );
     --basic-button-hover-text-color: var(--hovered-text-color);
-    --basic-button-hover-box-shadow:
-      0px 0px 0px 1px var(--selected-border-color) inset, 0px 0px 0px 0px var(--border-color) inset;
+    --basic-button-hover-box-shadow: 0px 0px 0px 1px var(--selected-border-color) inset;
 
     --basic-button-focus-background: var(--basic-button-hover-background);
     --basic-button-focus-text-color: var(--basic-button-hover-text-color);
     --basic-button-focus-box-shadow: var(--basic-button-hover-box-shadow);
 
-    --basic-button-down-background: var(--color-gray-50);
+    --basic-button-down-background: light-dark(
+      var(--color-gray-50),
+      hsl(var(--hsl-neutral-700) / 50%)
+    );
     --basic-button-down-text-color: var(--pressed-text-color);
-    --basic-button-down-box-shadow:
-      0px 0px 0px 1px rgba(0, 0, 0, 0.15) inset, 0px 1px 4px 0px var(--border-color) inset;
+    --basic-button-down-box-shadow: 0px 0px 0px 1px var(--strong-selected-border-color) inset;
 
     --basic-button-active-background: var(--transparent-black);
-    --basic-button-active-box-shadow: none;
+    --basic-button-active-box-shadow: var(--basic-button-hover-box-shadow);
     --basic-button-active-text-color: var(--selected-text-color);
 
     /*--- Primary ----*/
@@ -759,8 +877,8 @@
     --basic-negative-button-active-box-shadow: 0px 0px 0px 1px var(--negative-color-active) inset;
 
     /*-------------------
-        Divider
-  --------------------*/
+      Divider
+    --------------------*/
 
     --divider-text-color: var(--dark-text-color);
     --divider-border-shadow-width: 1px;
@@ -769,8 +887,8 @@
     --divider-border-highlight-color: var(--white-border-color);
 
     /*-------------------
-        Elements
-  --------------------*/
+      Elements
+    --------------------*/
     --mark-border-width: 1px;
     --mark-border-color: hsl(var(--hsl-yellow-400) / 40%);
     --mark-background-color: hsl(var(--hsl-yellow-400) / 20%);
@@ -781,8 +899,8 @@
     --kbd-border-color: var(--border-color);
 
     /*-------------------
-        Header
-  --------------------*/
+      Header
+    --------------------*/
 
     --header-text-color: var(--text-color);
     --header-vertical-padding: 0em;
@@ -814,15 +932,15 @@
     --tiny-sub-header-font-size: var(--h5-sub-header-font-size);
 
     /*-------------------
-        Input
-  --------------------*/
+      Input
+    --------------------*/
 
     --input-font-family: var(--page-font);
     --input-border-width: 1px;
     --input-border: var(--input-border-width) solid var(--border-color);
     --input-border-radius: var(--default-squircle-radius);
     --input-corner-shape: var(--default-corner-shape);
-    --input-box-shadow: none;
+    --input-box-shadow: 0em 0em 0em 0em transparent inset;
 
     --input-down-border-color: rgba(0, 0, 0, 0.3);
     --input-down-background: var(--color-gray-50);
@@ -850,8 +968,8 @@
     --input-icon-transition: opacity 0.3s var(--default-easing);
 
     /*-------------------
-        Label
-  --------------------*/
+      Label
+    --------------------*/
     --label-background-image: none;
     --label-font-weight: var(--font-weights-medium);
     --label-border: 0px solid transparent;
@@ -865,7 +983,7 @@
     --label-active-hover-background-image: none;
     --label-active-hover-text-color: var(--selected-text-color);
 
-    --label-basic-background: none var(--white);
+    --label-basic-background: none light-dark(var(--white), hsl(var(--hsl-neutral-50) / 5%));
     --label-basic-border-width: 1px;
     --label-basic-border-color: var(--border-color);
     --label-basic-border: var(--label-basic-border-width) solid var(--label-basic-border-color);
@@ -877,30 +995,42 @@
     --label-basic-hover-box-shadow: var(--label-basic-box-shadow);
 
     /*-------------------
-        List
-  --------------------*/
+      List
+    --------------------*/
     --selection-list-item-border-radius: 0.5em;
-    --selection-list-hover-background: var(--subtle-transparent-black);
+    --selection-list-hover-background: light-dark(
+      var(--subtle-transparent-black),
+      var(--subtle-transparent-white)
+    );
     --selection-list-hover-color: var(--hovered-text-color);
-    --selection-list-down-background: var(--transparent-black);
+    --selection-list-down-background: light-dark(
+      var(--transparent-black),
+      var(--transparent-white)
+    );
     --selection-list-down-color: var(--pressed-text-color);
-    --selection-list-active-background: var(--transparent-black);
+    --selection-list-active-background: light-dark(
+      var(--transparent-black),
+      var(--transparent-white)
+    );
     --selection-list-active-color: var(--selected-text-color);
 
     /*-------------------
-        Loader
-  --------------------*/
+      Loader
+    --------------------*/
     --loader-shape-border-color: var(--loader-line-color) transparent transparent;
     --loader-text-color: var(--text-color);
 
     /*-------------------
-        Segment
-  --------------------*/
-    --segment-background: var(--white);
+      Segment
+    --------------------*/
+    --segment-background: light-dark(var(--white), var(--color-neutral-900));
     --segment-border: 1px solid var(--border-color);
     --segment-box-shadow: var(--subtle-shadow);
     --segment-border-radius: var(--default-border-radius);
-    --secondary-segment-background: var(--dark-white);
+    --secondary-segment-background: light-dark(
+      var(--dark-white),
+      hsl(var(--hsl-neutral-700) / 50%)
+    );
     --secondary-segment-color: var(--muted-text-color);
     --grouped-segment-box-shadow: none;
     --grouped-segment-border: none;
@@ -908,42 +1038,52 @@
     /* --grouped-segment-group-border: 1px solid var(--border-color); */
     --grouped-segment-group-border: none;
     --grouped-segment-group-segment-box-shadow:
-      0 0 0 1px hsl(var(--hsl-neutral-900) / 0.1), 0 1px 1px hsl(var(--hsl-neutral-900) / 0.1),
+      0 0 0 1px light-dark(hsl(var(--hsl-neutral-900) / 0.1), hsl(var(--hsl-neutral-100) / 10%)),
+      0 1px 1px hsl(var(--hsl-neutral-900) / 0.1),
       0 1.5px 3px -2px hsl(var(--hsl-neutral-900) / 0.3),
       0 4px 6px hsl(var(--hsl-neutral-900) / 0.04),
       0 8px 12px -1px hsl(var(--hsl-neutral-900) / 0.03);
     --grouped-segment-group-border-radius: var(--default-border-radius);
-    --grouped-segment-hover-background: var(--off-white);
-    --piled-segments-background: var(--subtle-transparent-black);
+    --grouped-segment-hover-background: light-dark(
+      var(--off-white),
+      hsl(var(--hsl-neutral-800) / 80%)
+    );
+    --piled-segments-border: 1px solid var(--border-color);
+    --piled-segments-background: light-dark(
+      var(--subtle-transparent-black),
+      var(--color-neutral-900)
+    );
+    --stacked-segment-page-background: var(--subtle-transparent-black);
 
     /*-------------------
-        Form
-  --------------------*/
+      Form
+    --------------------*/
     --form-input-font: var(--page-font);
     --form-input-font-size: 1em;
     --form-label-color: var(--text-color);
     --form-label-font-size: var(--relative-small);
     --form-label-font-weight: var(--font-weights-bold);
-    --input-box-shadow: 0em 0em 0em 0em transparent inset;
     --form-textarea-line-height: 1.2857;
-    --form-select-background: var(--white);
+    --form-select-background: light-dark(var(--white), var(--color-neutral-900));
     --form-select-border: var(--input-border);
-    --form-select-border-radius: var(--default-border-radius);
+    --form-select-corner-shape: var(--default-corner-shape);
+    --form-select-border-radius: var(--input-border-radius);
     --form-select-box-shadow: var(--input-box-shadow);
     --form-select-color: var(--input-color);
-    --form-prompt-background: var(--white);
+    --form-prompt-background: light-dark(var(--white), var(--color-neutral-800));
     --form-prompt-border-color: var(--negative-border-color);
     --form-prompt-border: 1px solid var(--form-prompt-border-color);
     --form-prompt-text-color: var(--negative-text-color);
-    --form-input-border-radius: var(--default-border-radius);
+    --form-input-corner-shape: var(--default-corner-shape);
+    --form-input-border-radius: var(--input-border-radius);
     --form-input-focus-color: var(--selected-text-color);
     --form-input-focus-border-color: var(--focused-form-border-color);
-    --form-input-focus-border-radius: var(--default-border-radius);
+    --form-input-focus-border-radius: var(--form-input-border-radius);
     --form-input-focus-background: var(--input-background);
     --form-input-focus-box-shadow: 0px 0em 0em 0em var(--selected-border-color) inset;
     --form-textarea-focus-color: var(--selected-text-color);
     --form-textarea-focus-border-color: var(--focused-form-border-color);
-    --form-textarea-focus-border-radius: var(--default-border-radius);
+    --form-textarea-focus-border-radius: var(--form-input-border-radius);
     --form-textarea-focus-background: var(--input-background);
     --form-textarea-focus-box-shadow: 0px 0em 0em 0em var(--selected-border-color) inset;
 
@@ -965,9 +1105,9 @@
     --form-inline-input-size: var(--relative-medium);
 
     /*-------------------
-        Menu
-  --------------------*/
-    --menu-background: var(--white);
+      Menu
+    --------------------*/
+    --menu-background: light-dark(var(--white), var(--color-neutral-900));
     --menu-font-weight: normal;
     --menu-font-family: var(--page-font);
     --menu-border: 1px solid var(--border-color);
@@ -978,27 +1118,42 @@
     --menu-item-text-color: var(--text-color);
     --menu-item-font-weight: normal;
     --menu-divider-background: var(--internal-border-color);
-    --menu-hover-item-background: var(--subtle-transparent-black);
+    --menu-hover-item-background: light-dark(
+      var(--subtle-transparent-black),
+      var(--subtle-transparent-white)
+    );
     --menu-hover-item-text-color: var(--selected-text-color);
-    --menu-pressed-item-background: var(--subtle-transparent-black);
+    --menu-pressed-item-background: light-dark(
+      var(--subtle-transparent-black),
+      var(--subtle-transparent-white)
+    );
     --menu-pressed-item-text-color: var(--selected-text-color);
     --menu-active-item-background: var(--transparent-black);
     --menu-active-item-text-color: var(--selected-text-color);
     --menu-active-item-font-weight: normal;
     --menu-active-item-box-shadow: none;
-    --menu-active-hover-item-background: var(--transparent-black);
+    --menu-active-hover-item-background: light-dark(
+      var(--transparent-black),
+      var(--transparent-white)
+    );
     --menu-active-hover-item-color: var(--selected-text-color);
-    --vertical-menu-background: hsl(var(--hsl-white) / 70%);
+    --vertical-menu-background: light-dark(
+      hsl(var(--hsl-white) / 70%),
+      hsl(var(--hsl-neutral-900) / 70%)
+    );
     --vertical-menu-box-shadow: var(--subtle-shadow);
     --vertical-menu-item-background: none;
-    --vertical-menu-item-active-background: var(--transparent-black);
+    --vertical-menu-item-active-background: light-dark(
+      var(--transparent-black),
+      var(--transparent-white)
+    );
     --vertical-divider-background: var(--internal-border-color);
     --tabular-menu-background: none transparent;
     --tabular-menu-border-width: 1px;
     --tabular-menu-border-color: var(--solid-border-color);
     --tabular-menu-text-color: var(--menu-item-text-color);
     --tabular-menu-hovered-text-color: var(--hovered-text-color);
-    --tabular-menu-active-background: none var(--white);
+    --tabular-menu-active-background: none light-dark(var(--white), hsl(var(--hsl-neutral-800)));
     --tabular-menu-active-color: var(--selected-text-color);
     --tabular-menu-active-box-shadow: none;
     --tabular-menu-border-radius: var(--default-border-radius);
@@ -1015,15 +1170,19 @@
     --secondary-menu-active-hover-item-color: var(--selected-text-color);
     --secondary-vertical-pointing-menu-border-right-color: var(--border-color);
     --secondary-vertical-menu-item-border-radius: var(--default-border-radius);
-    --secondary-pointing-menu-hover-text-color: var(--text-color);
+    --secondary-pointing-menu-hover-text-color: light-dark(
+      var(--text-color),
+      var(--highlight-color)
+    );
     --secondary-pointing-menu-active-item-color: var(--selected-text-color);
     --secondary-pointing-menu-active-hover-item-color: var(--selected-text-color);
 
     /*-------------------
-        Message
-  --------------------*/
-    --message-background: hsl(var(--hsl-zinc-400) / 10%);
-    --message-shadow-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+      Message
+    --------------------*/
+    --message-background: light-dark(hsl(var(--hsl-zinc-400) / 10%), hsl(var(--hsl-zinc-50) / 15%));
+    --message-shadow-shadow: 0px 0px 0px 0px
+      light-dark(rgba(0, 0, 0, 0), hsl(var(--hsl-white) / 20%));
     --message-box-shadow:
       0px 0px 0px 1px var(--strong-border-color) inset, var(--message-shadow-shadow);
     --message-header-font-weight: var(--font-weights-bold);
@@ -1043,13 +1202,13 @@
       0px 0px 0px 1px var(--success-border-color) inset, var(--message-shadow-shadow);
 
     /*-------------------
-        Popup
-  --------------------*/
+      Popup
+    --------------------*/
     --popup-z-index: 10;
     --popup-border-width: 1px;
     --popup-border-color: var(--solid-border-color);
     --popup-border: var(--popup-border-width) solid var(--solid-border-color);
-    --popup-background: var(--white);
+    --popup-background: light-dark(var(--white), var(--color-neutral-900));
     --popup-color: var(--text-color);
     --popup-box-shadow: var(--floating-shadow);
     --popup-vertical-padding: 0.833em;
@@ -1104,13 +1263,16 @@
       var(--tooltip-border-width) 0px 0px var(--tooltip-border-color);
 
     /*-------------------
-        Table
-  --------------------*/
-    --table-background: hsl(var(--hsl-white) / 20%);
+      Table
+    --------------------*/
+    --table-background: light-dark(hsl(var(--hsl-white) / 20%), hsl(var(--hsl-neutral-800) / 20%));
     --table-border-width: 1px;
     --table-border: var(--table-border-width) solid var(--border-color);
     --table-box-shadow: noone;
-    --table-header-background: hsl(var(--hsl-gray-200) / 30%);
+    --table-header-background: light-dark(
+      hsl(var(--hsl-gray-200) / 30%),
+      hsl(var(--hsl-neutral-700) / 30%)
+    );
     --table-header-color: var(--text-color);
     --table-header-font-style: none;
     --table-header-font-weight: var(--font-weights-bold);
@@ -1119,25 +1281,25 @@
     --table-row-border: 1px solid var(--internal-border-color);
 
     /*-------------------
-        Checkbox
-  --------------------*/
+      Checkbox
+    --------------------*/
     --checkbox-color: var(--text-color);
-    --checkbox-background: var(--white);
+    --checkbox-background: light-dark(var(--white), var(--color-neutral-800));
     --checkbox-border-radius: var(--3px);
     --checkbox-border: 1px solid var(--solid-border-color);
     --checkbox-label-color: var(--text-color);
     --checkbox-hover-background: var(--checkbox-background);
     --checkbox-hover-border-color: var(--selected-border-color);
     --checkbox-label-hover-color: var(--hovered-text-color);
-    --checkbox-pressed-background: var(--off-white);
+    --checkbox-pressed-background: light-dark(var(--off-white), var(--color-neutral-900));
     --checkbox-pressed-border-color: var(--selected-border-color);
     --checkbox-pressed-color: var(--selected-text-color);
     --checkbox-pressed-label-color: var(--selected-text-color);
-    --checkbox-focus-background: var(--white);
+    --checkbox-focus-background: light-dark(var(--white), var(--color-neutral-700));
     --checkbox-focus-border-color: var(--focused-form-muted-border-color);
     --checkbox-focus-check-color: var(--selected-text-color);
     --checkbox-focus-label-color: var(--selected-text-color);
-    --checkbox-active-background: var(--white);
+    --checkbox-active-background: light-dark(var(--white), var(--color-neutral-800));
     --checkbox-active-border-color: var(--selected-border-color);
     --checkbox-active-check-opacity: 1;
     --checkbox-active-check-color: var(--selected-text-color);
@@ -1145,11 +1307,11 @@
     --checkbox-intermediate-border-color: var(--checkbox-active-border-color);
     --checkbox-intermediate-check-opacity: 1;
     --checkbox-intermediate-check-color: var(--checkbox-active-check-color);
-    --checkbox-active-focus-background: var(--white);
+    --checkbox-active-focus-background: light-dark(var(--white), var(--color-neutral-800));
     --checkbox-active-focus-border-color: var(--checkbox-focus-border-color);
     --checkbox-active-focus-check-color: var(--selected-text-color);
     --checkbox-disabled-opacity: 0.5;
-    --checkbox-disabled-label-color: rgba(0, 0, 0, 1);
+    --checkbox-disabled-label-color: light-dark(rgba(0, 0, 0, 1), #000000);
     --radio-bullet-color: var(--text-color);
     --radio-focus-background: var(--checkbox-focus-background);
     --radio-focus-bullet-color: var(--checkbox-focus-check-color);
@@ -1158,12 +1320,16 @@
     --radio-active-focus-background: var(--checkbox-active-focus-background);
     --radio-active-focus-bullet-color: var(--checkbox-active-focus-check-color);
     --toggle-off-label-color: var(--checkbox-color);
-    --toggle-lane-background: var(--transparent-black);
+    --toggle-lane-background: light-dark(var(--transparent-black), var(--transparent-white));
     --toggle-lane-box-shadow: none;
     --toggle-handle-radius: var(--circular-radius);
-    --toggle-handle-background: var(--white) var(--subtle-gradient);
+    --toggle-handle-background: light-dark(var(--white), var(--color-neutral-100))
+      var(--subtle-gradient);
     --toggle-handle-box-shadow: var(--subtle-shadow), 0px 0px 0px 1px var(--border-color) inset;
-    --toggle-focus-color: var(--very-strong-transparent-black);
+    --toggle-focus-color: light-dark(
+      var(--very-strong-transparent-black),
+      var(--transparent-white)
+    );
     --toggle-hover-color: var(--toggle-focus-color);
     --toggle-on-label-color: var(--selected-text-color);
     --toggle-on-lane-color: var(--primary-color);
@@ -1172,10 +1338,10 @@
     --toggle-on-focus-lane-color: var(--primary-color-focus);
 
     /*-------------------
-        Dropdown
-  --------------------*/
+      Dropdown
+    --------------------*/
 
-    --dropdown-menu-background: var(--white);
+    --dropdown-menu-background: light-dark(var(--white), var(--color-neutral-900));
     --dropdown-menu-box-shadow: var(--raised-shadow);
     --dropdown-menu-border-width: 1px;
     --dropdown-menu-border-color: var(--border-color);
@@ -1195,23 +1361,32 @@
     --dropdown-menu-divider-border: 1px solid var(--internal-border-color);
     --dropdown-menu-item-description-color: var(--light-text-color);
     --dropdown-menu-message-color: var(--unselected-text-color);
-    --inline-dropdown-menu-background: hsl(var(--hsl-white) / 70%);
+    --inline-dropdown-menu-background: light-dark(
+      hsl(var(--hsl-white) / 70%),
+      hsl(var(--hsl-neutral-900) / 70%)
+    );
     --inline-dropdown-text-font-weight: var(--font-weights-bold);
     --dropdown-active-item-background: transparent;
     --dropdown-active-item-font-weight: var(--font-weights-bold);
     --dropdown-active-item-color: var(--selected-text-color);
-    --dropdown-hovered-item-background: var(--transparent-black);
+    --dropdown-hovered-item-background: light-dark(
+      var(--transparent-black),
+      var(--transparent-white)
+    );
     --dropdown-hovered-item-color: var(--selected-text-color);
     --dropdown-default-text-color: var(--input-placeholder-color);
     --dropdown-default-text-focus-color: var(--input-placeholder-focus-color);
-    --dropdown-selected-background: var(--subtle-transparent-black);
+    --dropdown-selected-background: light-dark(
+      var(--subtle-transparent-black),
+      var(--transparent-white)
+    );
     --dropdown-selected-color: var(--selected-text-color);
     --dropdown-error-item-hover-background: #fff2f2;
     --dropdown-error-item-active-background: #fdcfcf;
 
     /*-------------------
-        Modal
-  --------------------*/
+      Modal
+    --------------------*/
     --modal-border: none;
     --modal-border-radius: var(--large-squircle-radius);
     --modal-corner-shape: var(--default-corner-shape);
@@ -1221,32 +1396,43 @@
       0 41.8px 33.4px rgba(0, 0, 0, 0.173), 0 100px 80px rgba(0, 0, 0, 0.24);
     --modal-box-close-opacity: 0.8;
     --modal-box-close-size: 1.25em;
-    --modal-box-close-color: var(--white);
-    --modal-box-header-background: var(--white);
-    --modal-box-header-color: var(--dark-text-color);
+    --modal-box-close-color: light-dark(var(--white), var(--text-color));
+    --modal-box-header-background: light-dark(var(--white), var(--color-neutral-900));
+    --modal-box-header-color: light-dark(var(--dark-text-color), var(--light-text-color));
     --modal-box-header-border: 1px solid var(--border-color);
     --modal-box-header-font-size: 1rem;
     --modal-box-header-font-weight: var(--font-weights-bold);
     --modal-box-content-font-size: 1em;
-    --modal-box-content-background: var(--white);
-    --modal-box-actions-background: var(--off-white);
+    --modal-box-content-background: light-dark(var(--white), var(--color-neutral-900));
+    --modal-box-actions-background: light-dark(var(--off-white), var(--color-neutral-800));
     --modal-box-actions-border: 1px solid var(--border-color);
 
     /*-------------------
-        Side Bar
-  --------------------*/
-    --sidebar-color-scheme: light;
-    --sidebar-background: var(--color-gray-100);
-    --sidebar-border-right: none;
-    --sidebar-menu-item-inactive-background: hsl(var(--hsl-sky-800) / 20%);
-    --sidebar-menu-item-active-background: var(--primary-color);
+      Side Bar
+    --------------------*/
+    --sidebar-background: light-dark(var(--color-gray-100), var(--color-neutral-900));
+    --sidebar-border-right: 1px solid light-dark(var(--border-color), hsl(var(--hsl-neutral-800)));
+    --sidebar-menu-item-inactive-background: light-dark(
+      hsl(var(--hsl-sky-800) / 20%),
+      hsl(var(--hsl-blue-300) / 20%)
+    );
+    --sidebar-menu-item-active-background: light-dark(
+      var(--primary-color),
+      hsl(var(--hsl-blue-300) / 30%)
+    );
     --sidebar-menu-section-color: var(--unselected-text-color);
-    --sidebar-menu-section-separator-color: var(--internal-border-color);
-    --sidebar-menu-item-color: var(--dark-text-color);
-    --sidebar-menu-active-item-color: var(--dark-text-color);
-    --sidebar-menu-action-color: var(--light-text-color);
+    --sidebar-menu-section-separator-color: light-dark(
+      var(--internal-border-color),
+      rgba(255, 255, 255, 0.1)
+    );
+    --sidebar-menu-item-color: light-dark(var(--dark-text-color), var(--muted-text-color));
+    --sidebar-menu-active-item-color: light-dark(var(--dark-text-color), var(--text-color));
+    --sidebar-menu-action-color: light-dark(var(--light-text-color), var(--disabled-text-color));
     --sidebar-menu-action-hover-color: var(--light-text-color);
-    --sidebar-sync-status-view-background: var(--subtle-transparent-white);
+    --sidebar-sync-status-view-background: light-dark(
+      var(--subtle-transparent-white),
+      hsl(var(--hsl-neutral-800) / 50%)
+    );
     --sidebar-sync-status-view-text-color: var(--muted-text-color);
     --sidebar-sync-status-view-detail-color: var(--unselected-text-color);
     --sidebar-sync-status-view-border-top: 1px solid var(--border-color);
@@ -1254,47 +1440,67 @@
     --sidebar-scrollbar-track-background: rgba(255, 255, 255, 0.02);
     --sidebar-scrollbar-thumb-background: rgba(255, 255, 255, 0.2);
     --sidebar-notification-view-background: var(--warning-color);
-    --sidebar-notification-view-color: var(--warning-text-color);
+    --sidebar-notification-view-color: light-dark(
+      var(--warning-text-color),
+      hsl(var(--hsl-amber-900) / 90%)
+    );
 
     /*-------------------
-        Scroll Bar
-  --------------------*/
+      Scroll Bar
+    --------------------*/
     --scrollbar-width: 6px;
-    --scrollbar-track-background: rgba(0, 0, 0, 0.05);
-    --scrollbar-thumb-background: rgba(0, 0, 0, 0.2);
+    --scrollbar-track-background: light-dark(rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.02));
+    --scrollbar-thumb-background: light-dark(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
 
     /*-------------------
-        Note List Bar
-  --------------------*/
-    --note-list-bar-background: var(--color-stone-50);
-    --note-list-bar-border-right: none;
+      Note List Bar
+    --------------------*/
+    --note-list-bar-background: light-dark(
+      var(--color-stone-50),
+      hsl(var(--hsl-neutral-900) / 50%)
+    );
+    --note-list-bar-border-right: 1px solid
+      light-dark(var(--white-down), hsl(var(--hsl-neutral-800) / 75%));
     --note-list-bar-pinned-section-header-background: var(--color-neutral-200);
     --note-list-bar-pinned-section-header-border-bottom: none;
     --note-list-bar-pinned-section-footer-border-bottom: 4px solid #ccc;
     --note-list-view-item-header-color: var(--text-color);
     --note-list-view-item-color: var(--muted-text-color);
-    --note-list-view-item-separator-border: 1px solid var(--white-down);
+    --note-list-view-item-separator-border: 1px solid
+      light-dark(var(--white-down), hsl(var(--hsl-neutral-800) / 75%));
     --note-list-view-item-date-color: var(--primary-color);
-    --note-list-view-item-selected-background: hsl(var(--hsl-sky-800) / 20%);
-    --note-list-view-item-active-background: var(--primary-color);
+    --note-list-view-item-selected-background: light-dark(
+      hsl(var(--hsl-sky-800) / 20%),
+      hsl(var(--hsl-blue-300) / 20%)
+    );
+    --note-list-view-item-active-background: light-dark(
+      var(--primary-color),
+      hsl(var(--hsl-blue-300) / 40%)
+    );
     --note-list-header-separator-border: none;
     --note-search-bar-background: transparent;
-    --note-search-bar-input-border: 1px solid transparent;
+    --note-search-bar-input-border: 1px solid var(--internal-border-color);
     --note-search-bar-input-background: var(--input-background);
 
     /*-------------------
-        Editor
-  --------------------*/
-    --editor-background: var(--color-white);
+      Editor
+    --------------------*/
+    --editor-background: light-dark(var(--color-white), var(--color-neutral-950));
     --editor-header-title-input-background: transparent;
-    --editor-floating-actions-background: hsl(var(--hsl-white) / 60%);
-    --editor-drawer-background: hsl(var(--hsl-white) / 70%);
-    --editor-drawer-border-left: none;
+    --editor-floating-actions-background: light-dark(
+      hsl(var(--hsl-white) / 60%),
+      hsl(var(--hsl-neutral-800) / 60%)
+    );
+    --editor-drawer-background: light-dark(
+      hsl(var(--hsl-white) / 70%),
+      hsl(var(--hsl-neutral-900) / 70%)
+    );
+    --editor-drawer-border-left: 1px solid var(--border-color);
     --note-tags-bar-input-background: transparent;
 
     /*-------------------
-        Header Note Menu
-  --------------------*/
+      Header Note Menu
+    --------------------*/
     --header-note-menu-background: transparent;
     --header-note-menu-color: var(--light-text-color);
     --header-note-menu-action-item-active-background: var(--info-background-color);
@@ -1304,20 +1510,26 @@
     --header-note-menu-encrypt-button-background: var(--yellow-background);
 
     /*-------------------
-        Notifications
-  --------------------*/
-    --notification-item-background: hsl(var(--hsl-white) / 80%);
+      Notifications
+    --------------------*/
+    --notification-item-background: light-dark(
+      hsl(var(--hsl-white) / 80%),
+      hsl(var(--hsl-neutral-900) / 80%)
+    );
 
     /*-------------------
-        Preferences
-  --------------------*/
-    --preferences-sidebar-background: rgb(245, 245, 244);
-    --preferences-sidebar-item-active-background: rgba(79, 142, 255, 0.2);
-    --preferences-view-background: rgb(255, 255, 255);
+      Preferences
+    --------------------*/
+    --preferences-sidebar-background: light-dark(var(--color-gray-100), var(--color-neutral-900));
+    --preferences-sidebar-item-active-background: light-dark(
+      hsl(var(--hsl-sky-800) / 20%),
+      hsl(var(--hsl-blue-300) / 20%)
+    );
+    --preferences-view-background: light-dark(var(--color-white), var(--color-neutral-950));
 
     /*-------------------
-        Task Icons
-  --------------------*/
+      Task Icons
+    --------------------*/
     --task-icon-active: hsl(var(--hsl-slate-400));
     --task-icon-onhold: hsl(var(--hsl-amber-500));
     --task-icon-completed: hsl(var(--hsl-emerald-500));
@@ -1326,15 +1538,31 @@
 
   /*-------------------------------
     Acrylic background window
---------------------------------*/
+  --------------------------------*/
 
   :root:has(body.acrylic-window) {
     --page-background: transparent;
-    --sidebar-background: var(--subtle-transparent-white);
-    --note-list-bar-background: hsl(var(--hsl-stone-100) / 80%);
-    --editor-background: hsl(var(--hsl-white) / 70%);
-    --editor-drawer-background: hsl(var(--hsl-white));
-    --inline-dropdown-menu-background: hsl(var(--hsl-white));
-    --vertical-menu-background: hsl(var(--hsl-white));
+    --sidebar-background: light-dark(var(--subtle-transparent-white), hsl(var(--hsl-black) / 10%));
+    --note-list-bar-background: light-dark(
+      hsl(var(--hsl-stone-100) / 80%),
+      hsl(var(--hsl-neutral-900) / 50%)
+    );
+    --editor-background: light-dark(hsl(var(--hsl-white) / 70%), hsl(var(--hsl-neutral-950) / 60%));
+    --editor-drawer-background: light-dark(hsl(var(--hsl-white)), hsl(var(--hsl-neutral-800)));
+    --inline-dropdown-menu-background: light-dark(
+      hsl(var(--hsl-white)),
+      hsl(var(--hsl-neutral-900))
+    );
+    --vertical-menu-background: light-dark(hsl(var(--hsl-white)), hsl(var(--hsl-neutral-900)));
+  }
+
+  /*-------------------------------
+    Windows with acrylic background on dark mode
+  --------------------------------*/
+
+  :root:has(body.acrylic-window[class*='dark-ui'].platform-win32),
+  :root:has(body.dark-mode.acrylic-window.platform-win32) {
+    --sidebar-background: hsl(var(--hsl-black) / 20%);
+    --page-background: hsl(var(--hsl-black) / 40%);
   }
 }
