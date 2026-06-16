@@ -7,6 +7,7 @@
     --gfm-alert-caution: var(--red, hsl(var(--hsl-red-500)));
 
     --mde-preview-line-height: 1.5;
+    --mde-preview-inline-mark-text-color: var(--text-color);
     --mde-preview-inline-mark-background-color: hsl(var(--hsl-yellow-500) / 30%);
     --mde-preview-inline-mark-underline-color: hsl(var(--hsl-yellow-500));
 
@@ -65,16 +66,6 @@
     );
     --mde-preview-table-row-border-color: var(--border-color);
     --mde-preview-table-row-stripe-background-color: light-dark(
-      var(--transparent-black),
-      var(--transparent-white)
-    );
-
-    /* CSV table */
-    --mde-preview-csv-line-number-background-color: light-dark(
-      var(--strong-transparent-black),
-      var(--strong-transparent-white)
-    );
-    --mde-preview-csv-header-background-color: light-dark(
       var(--transparent-black),
       var(--transparent-white)
     );
@@ -177,7 +168,7 @@
     }
 
     mark {
-      color: currentColor;
+      color: var(--mde-preview-inline-mark-text-color, currentColor);
       background-color: var(--mde-preview-inline-mark-background-color);
       text-decoration: underline var(--mde-preview-inline-mark-underline-color);
       text-underline-offset: 3px;
@@ -779,33 +770,6 @@
       word-wrap: normal;
       background-color: transparent;
       border: 0;
-    }
-
-    .csv-data td,
-    .csv-data th {
-      padding: 5px;
-      overflow: hidden;
-      font-size: 12px;
-      line-height: 1;
-      text-align: left;
-      white-space: nowrap;
-    }
-
-    .csv-data .blob-num {
-      padding: 10px 8px 9px;
-      text-align: right;
-      background: var(--mde-preview-csv-line-number-background-color);
-      border: 0;
-    }
-
-    .csv-data tr {
-      border-top: 0;
-    }
-
-    .csv-data th {
-      font-weight: var(--font-weights-bold, 600);
-      background: var(--mde-preview-csv-header-background-color);
-      border-top: 0;
     }
 
     [data-footnote-ref]::before {
