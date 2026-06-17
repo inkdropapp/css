@@ -9,6 +9,11 @@
     "url": "git+https://github.com/inkdropapp/css.git"
   },
   "type": "module",
+  "files": [
+    "*.css",
+    "*.ts",
+    "ui.json"
+  ],
   "scripts": {
     "format": "oxfmt",
     "lint": "oxlint",
