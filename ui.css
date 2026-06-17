@@ -762,6 +762,7 @@
 
     /* Icon Only */
     --button-icon-only-opacity: 0.9;
+    --icon-button-font-size: 1.28571429rem;
 
     /* Basic style */
     --basic-button-background: transparent none;
