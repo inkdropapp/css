@@ -1529,14 +1529,6 @@
       hsl(var(--hsl-blue-300) / 20%)
     );
     --preferences-view-background: light-dark(var(--color-white), var(--color-neutral-950));
-
-    /*-------------------
-      Task Icons
-    --------------------*/
-    --task-icon-active: hsl(var(--hsl-slate-400));
-    --task-icon-onhold: hsl(var(--hsl-amber-500));
-    --task-icon-completed: hsl(var(--hsl-emerald-500));
-    --task-icon-dropped: hsl(var(--hsl-rose-400));
   }
 
   /*-------------------------------
