@@ -5,5 +5,7 @@
   utilities,
   theme,
   theme.ui,
+  theme.ui.base,
+  theme.ui.components,
   theme.preview,
   theme.syntax;
