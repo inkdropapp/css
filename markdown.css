@@ -11,8 +11,11 @@
     --mde-preview-inline-mark-background-color: hsl(var(--hsl-yellow-500) / 30%);
     --mde-preview-inline-mark-underline-color: hsl(var(--hsl-yellow-500));
 
+    --mde-preview-inline-code-text-color: var(--text-color);
     --mde-preview-inline-code-padding: 0.2em 0.4em;
     --mde-preview-inline-code-font-size: 85%;
+    --mde-preview-inline-code-border-width: 0px;
+    --mde-preview-inline-code-border-color: var(--border-color);
     --mde-preview-inline-code-background-color: light-dark(
       var(--transparent-black),
       var(--transparent-white)
@@ -658,8 +661,10 @@
       padding-right: 20px;
     }
 
-    code,
-    tt {
+    code {
+      color: var(--mde-preview-inline-code-text-color, currentColor);
+      border: var(--mde-preview-inline-code-border-width, 0) solid
+        var(--mde-preview-inline-code-border-color, transparent);
       padding: var(--mde-preview-inline-code-padding);
       margin: 0;
       font-size: var(--mde-preview-inline-code-font-size);
