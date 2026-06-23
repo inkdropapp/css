@@ -1,7 +1,4 @@
 @layer theme.syntax.base {
-  :root {
-  }
-
   /*
    * Syntax-token colors for the CodeMirror editor and the rendered Markdown
    * preview's code blocks. These rules map the token classes produced by
