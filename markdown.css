@@ -31,10 +31,15 @@
     );
 
     /* Headings */
+    --mde-preview-heading-color: var(--text-color);
     --mde-preview-heading-border-color: var(--border-color);
     --mde-preview-heading-muted-text-color: var(--muted-text-color);
     --mde-preview-h1-border-width: 2px;
     --mde-preview-heading-border-width: 1px;
+
+    /* Strong / Emphasis */
+    --mde-preview-strong-color: var(--text-color);
+    --mde-preview-em-color: var(--text-color);
 
     /* Horizontal rule */
     --mde-preview-hr-border-color: var(--border-color);
@@ -155,6 +160,11 @@
     b,
     strong {
       font-weight: var(--font-weights-bold, 600);
+      color: var(--mde-preview-strong-color);
+    }
+
+    em {
+      color: var(--mde-preview-em-color);
     }
 
     dfn {
@@ -352,6 +362,7 @@
       margin-bottom: 16px;
       font-weight: var(--font-weights-bold, 600);
       line-height: 1.25;
+      color: var(--mde-preview-heading-color);
     }
 
     h2 {
