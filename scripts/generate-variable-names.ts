@@ -4,12 +4,14 @@ import path from 'path'
 import postcss, { Rule } from 'postcss'
 
 /**
- * Generates the list of themeable CSS custom properties exposed by the package.
+ * Generates the themeable CSS custom properties exposed by the package, grouped
+ * by source stylesheet.
  *
  * Reads every `--*` declaration defined directly on a base `:root` rule across
- * the themeable stylesheets and writes the deduplicated names, in source order,
- * to `variables.json`. Inkdrop consumes this list to know which variables a
- * theme may override at runtime.
+ * the themeable stylesheets and writes an object keyed by stylesheet name (e.g.
+ * `ui`, `status`), each holding that sheet's deduplicated names in source order,
+ * to `variables.json`. Inkdrop consumes this to know which variables a theme may
+ * override at runtime.
  */
 
 const STYLESHEETS = ['ui.css', 'status.css', 'tags.css', 'task-progress.css']
@@ -34,14 +36,23 @@ const collectRootVariables = (cssPath: string): string[] => {
   return names
 }
 
-const names = STYLESHEETS.flatMap(sheet =>
-  collectRootVariables(path.resolve(import.meta.dirname, '..', sheet))
+const variables = Object.fromEntries(
+  STYLESHEETS.map(sheet => {
+    const names = collectRootVariables(
+      path.resolve(import.meta.dirname, '..', sheet)
+    )
+    return [path.basename(sheet, '.css'), Array.from(new Set(names))]
+  })
 )
-const variables = Array.from(new Set(names))
+
+const total = Object.values(variables).reduce(
+  (sum, names) => sum + names.length,
+  0
+)
 
 const pathToOutput = path.resolve(import.meta.dirname, '..', 'variables.json')
 fs.writeFileSync(pathToOutput, JSON.stringify(variables, null, 2) + '\n')
 
 console.log(
-  `Wrote ${variables.length} variable names to ${path.relative(process.cwd(), pathToOutput)}`
+  `Wrote ${total} variable names across ${Object.keys(variables).length} groups to ${path.relative(process.cwd(), pathToOutput)}`
 )
