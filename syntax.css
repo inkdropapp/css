@@ -1,0 +1,389 @@
+@layer theme.syntax.base {
+  /*
+   * Syntax-token colors for the CodeMirror editor and the rendered Markdown
+   * preview's code blocks. These rules map the token classes produced by
+   * tokenHighlighter (@inkdropapp/cm6-theme-common) to the --editor-token-*
+   * variables that each syntax theme defines, so themes only supply values.
+   */
+  .cm-editor,
+  .mde-preview .codeblock {
+    /* Comments ----------------------------------------------------------- */
+    .tok-comment {
+      color: var(--editor-token-comment-color);
+      font-style: var(--editor-token-comment-font-style, italic);
+    }
+    .tok-line-comment {
+      color: var(--editor-token-line-comment-color);
+      font-style: var(--editor-token-line-comment-font-style, italic);
+    }
+    .tok-block-comment {
+      color: var(--editor-token-block-comment-color);
+      font-style: var(--editor-token-block-comment-font-style, italic);
+    }
+    .tok-doc-comment {
+      color: var(--editor-token-doc-comment-color);
+      font-style: var(--editor-token-doc-comment-font-style, italic);
+    }
+    /* Names -------------------------------------------------------------- */
+    .tok-name {
+      color: var(--editor-token-name-color);
+    }
+    .tok-name.tok-constant {
+      color: var(--editor-token-name-constant-color);
+    }
+    .tok-name.tok-standard {
+      color: var(--editor-token-name-standard-color);
+    }
+    .tok-name.tok-definition {
+      color: var(--editor-token-name-definition-color);
+    }
+    .tok-name.tok-function {
+      color: var(--editor-token-name-function-color);
+    }
+    .tok-name.tok-special {
+      color: var(--editor-token-name-special-color);
+    }
+    .tok-name.tok-local {
+      color: var(--editor-token-name-local-color);
+    }
+    /* Variable names ----------------------------------------------------- */
+    .tok-variable-name {
+      color: var(--editor-token-variable-name-color);
+    }
+    .tok-variable-name.tok-constant {
+      color: var(--editor-token-variable-name-constant-color);
+    }
+    .tok-variable-name.tok-standard {
+      color: var(--editor-token-variable-name-standard-color);
+    }
+    .tok-variable-name.tok-definition {
+      color: var(--editor-token-variable-name-definition-color);
+    }
+    .tok-variable-name.tok-function {
+      color: var(--editor-token-variable-name-function-color);
+    }
+    .tok-variable-name.tok-special {
+      color: var(--editor-token-variable-name-special-color);
+    }
+    .tok-variable-name.tok-local {
+      color: var(--editor-token-variable-name-local-color);
+    }
+    /* Property names ----------------------------------------------------- */
+    .tok-property-name {
+      color: var(--editor-token-property-name-color);
+    }
+    .tok-property-name.tok-constant {
+      color: var(--editor-token-property-name-constant-color);
+    }
+    .tok-property-name.tok-standard {
+      color: var(--editor-token-property-name-standard-color);
+    }
+    .tok-property-name.tok-definition {
+      color: var(--editor-token-property-name-definition-color);
+    }
+    .tok-property-name.tok-function {
+      color: var(--editor-token-property-name-function-color);
+    }
+    .tok-property-name.tok-special {
+      color: var(--editor-token-property-name-special-color);
+    }
+    .tok-property-name.tok-local {
+      color: var(--editor-token-property-name-local-color);
+    }
+    /* Other names -------------------------------------------------------- */
+    .tok-tag-name {
+      color: var(--editor-token-tag-name-color);
+    }
+    .tok-attribute-name {
+      color: var(--editor-token-attribute-name-color);
+    }
+    .tok-class-name {
+      color: var(--editor-token-class-name-color);
+    }
+    /* legacy alias — t.typeName is not mapped by the current tokenHighlighter */
+    .tok-type-name {
+      color: var(--editor-token-class-name-color);
+    }
+    .tok-label-name {
+      color: var(--editor-token-label-name-color);
+    }
+    .tok-namespace {
+      color: var(--editor-token-namespace-color);
+    }
+    .tok-macro-name {
+      color: var(--editor-token-macro-name-color);
+    }
+    /* Strings ------------------------------------------------------------ */
+    .tok-string {
+      color: var(--editor-token-string-color);
+    }
+    .tok-string.tok-special {
+      color: var(--editor-token-string-special-color);
+    }
+    .tok-string.tok-constant {
+      color: var(--editor-token-string-constant-color);
+    }
+    .tok-string.tok-standard {
+      color: var(--editor-token-string-standard-color);
+    }
+    /* legacy alias — not produced by the current tokenHighlighter */
+    .tok-escape {
+      color: var(--editor-token-string-special-color);
+    }
+    /* Numbers & literals ------------------------------------------------- */
+    .tok-number {
+      color: var(--editor-token-number-color);
+    }
+    .tok-literal {
+      color: var(--editor-token-literal-color);
+    }
+    .tok-character {
+      color: var(--editor-token-character-color);
+    }
+    .tok-integer {
+      color: var(--editor-token-integer-color);
+    }
+    .tok-float {
+      color: var(--editor-token-float-color);
+    }
+    .tok-bool {
+      color: var(--editor-token-bool-color);
+    }
+    .tok-regexp {
+      color: var(--editor-token-regexp-color);
+    }
+    .tok-color {
+      color: var(--editor-token-color-color);
+    }
+    .tok-url {
+      color: var(--editor-token-url-color);
+    }
+    .tok-attribute-value {
+      color: var(--editor-token-attribute-value-color);
+    }
+    /* Keywords ----------------------------------------------------------- */
+    .tok-self {
+      color: var(--editor-token-self-color);
+    }
+    .tok-null {
+      color: var(--editor-token-null-color);
+    }
+    .tok-atom {
+      color: var(--editor-token-atom-color);
+    }
+    .tok-unit {
+      color: var(--editor-token-unit-color);
+    }
+    .tok-modifier {
+      color: var(--editor-token-modifier-color);
+    }
+    .tok-operator-keyword {
+      color: var(--editor-token-operator-keyword-color);
+    }
+    .tok-control-keyword {
+      color: var(--editor-token-control-keyword-color);
+    }
+    .tok-definition-keyword {
+      color: var(--editor-token-definition-keyword-color);
+    }
+    .tok-module-keyword {
+      color: var(--editor-token-module-keyword-color);
+    }
+    .tok-keyword {
+      color: var(--editor-token-keyword-color);
+    }
+    /* Operators ---------------------------------------------------------- */
+    .tok-operator {
+      color: var(--editor-token-operator-color);
+    }
+    .tok-deref-operator {
+      color: var(--editor-token-deref-operator-color);
+    }
+    .tok-arithmetic-operator {
+      color: var(--editor-token-arithmetic-operator-color);
+    }
+    .tok-logic-operator {
+      color: var(--editor-token-logic-operator-color);
+    }
+    .tok-bitwise-operator {
+      color: var(--editor-token-bitwise-operator-color);
+    }
+    .tok-compare-operator {
+      color: var(--editor-token-compare-operator-color);
+    }
+    .tok-update-operator {
+      color: var(--editor-token-update-operator-color);
+    }
+    .tok-definition-operator {
+      color: var(--editor-token-definition-operator-color);
+    }
+    .tok-type-operator {
+      color: var(--editor-token-type-operator-color);
+    }
+    .tok-control-operator {
+      color: var(--editor-token-control-operator-color);
+    }
+    /* Punctuation -------------------------------------------------------- */
+    .tok-separator {
+      color: var(--editor-token-separator-color);
+    }
+    .tok-angle-bracket {
+      color: var(--editor-token-angle-bracket-color);
+    }
+    .tok-square-bracket {
+      color: var(--editor-token-square-bracket-color);
+    }
+    .tok-paren {
+      color: var(--editor-token-paren-color);
+    }
+    .tok-brace {
+      color: var(--editor-token-brace-color);
+    }
+    .tok-bracket {
+      color: var(--editor-token-bracket-color);
+    }
+    .tok-punctuation {
+      color: var(--editor-token-punctuation-color);
+    }
+    /* Headings ----------------------------------------------------------- */
+    .tok-heading {
+      color: var(--editor-token-heading-color);
+      font-weight: var(--editor-token-heading-font-weight, bold);
+    }
+    .tok-heading-1 {
+      color: var(--editor-token-heading-1-color);
+      font-weight: var(--editor-token-heading-1-font-weight, bold);
+    }
+    .tok-heading-2 {
+      color: var(--editor-token-heading-2-color);
+      font-weight: var(--editor-token-heading-2-font-weight, bold);
+    }
+    .tok-heading-3 {
+      color: var(--editor-token-heading-3-color);
+      font-weight: var(--editor-token-heading-3-font-weight, bold);
+    }
+    .tok-heading-4 {
+      color: var(--editor-token-heading-4-color);
+      font-weight: var(--editor-token-heading-4-font-weight, bold);
+    }
+    .tok-heading-5 {
+      color: var(--editor-token-heading-5-color);
+      font-weight: var(--editor-token-heading-5-font-weight, bold);
+    }
+    .tok-heading-6 {
+      color: var(--editor-token-heading-6-color);
+      font-weight: var(--editor-token-heading-6-font-weight, bold);
+    }
+    /* Prose content ------------------------------------------------------ */
+    .tok-content-separator {
+      color: var(--editor-token-content-separator-color);
+    }
+    .tok-list {
+      color: var(--editor-token-list-color);
+    }
+    @layer quote {
+      .tok-quote:not(.md-alert) {
+        color: var(--editor-token-quote-color);
+        font-style: var(--editor-token-quote-font-style, italic);
+      }
+    }
+    .tok-emphasis {
+      color: var(--editor-token-emphasis-color);
+      font-style: var(--editor-token-emphasis-font-style, italic);
+    }
+    .tok-strong {
+      color: var(--editor-token-strong-color);
+      font-weight: var(--editor-token-strong-font-weight, bold);
+    }
+    .tok-link {
+      color: var(--editor-token-link-color);
+      text-decoration: var(--editor-token-link-text-decoration, underline);
+      text-underline-position: under;
+    }
+    /* a url that is also a link keeps the url color */
+    .tok-link.tok-url {
+      color: var(--editor-token-url-color);
+    }
+    .tok-monospace {
+      color: var(--editor-token-monospace-color);
+    }
+    .tok-strikethrough {
+      text-decoration: var(--editor-token-strikethrough-text-decoration, line-through);
+    }
+    .tok-content {
+      color: var(--editor-token-content-color);
+    }
+    /* Diffs & meta ------------------------------------------------------- */
+    .tok-inserted {
+      color: var(--editor-token-inserted-color);
+    }
+    .tok-deleted {
+      color: var(--editor-token-deleted-color);
+    }
+    .tok-changed {
+      color: var(--editor-token-changed-color);
+    }
+    .tok-document-meta {
+      color: var(--editor-token-document-meta-color);
+    }
+    .tok-annotation {
+      color: var(--editor-token-annotation-color);
+    }
+    .tok-processing-instruction {
+      color: var(--editor-token-processing-instruction-color);
+    }
+    .tok-meta {
+      color: var(--editor-token-meta-color);
+    }
+    /* Diagnostics -------------------------------------------------------- */
+    .tok-invalid {
+      color: var(--editor-token-invalid-color);
+      border-bottom: var(
+        --editor-token-invalid-border-bottom,
+        1px dotted var(--editor-token-invalid-color)
+      );
+    }
+
+    /* Markdown-specific token marks (produced by mdTokenHighlighter) ----- */
+    .md-header-mark {
+    }
+    .md-hard-break {
+    }
+    .md-quote-mark.tok-quote {
+      color: var(--editor-token-quote-color);
+    }
+    .md-list-mark {
+      color: var(--md-list-mark-color);
+    }
+    .md-link-mark {
+    }
+    .md-emphasis-mark {
+    }
+    .md-code-mark {
+    }
+    .md-table-delimiter {
+    }
+    .md-strikethrough-mark {
+    }
+    .md-inline-code {
+      padding: var(--md-inline-code-padding, 1px);
+      background-color: var(
+        --md-inline-code-background-color,
+        var(--md-codeblock-background-color)
+      );
+      border: var(--md-inline-code-border-width, var(--md-codeblock-border-width)) solid
+        var(--md-inline-code-border-color, var(--md-codeblock-border-color));
+      border-radius: 0.4em;
+      line-height: calc(140% + 2px);
+    }
+    .md-inline-mark {
+      color: var(--md-inline-mark-text-color);
+      background-color: var(--md-inline-mark-background-color, #f0f00030);
+      text-decoration: underline var(--md-inline-mark-underline-color, yellow);
+      text-underline-offset: 0.2em;
+      text-decoration-thickness: 3px;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: none;
+    }
+  }
+}
