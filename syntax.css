@@ -7,6 +7,9 @@
    */
   .cm-editor,
   .mde-preview .codeblock {
+    .tok-list {
+      color: var(--syntax-list-color);
+    }
     /* Comments ----------------------------------------------------------- */
     .tok-comment {
       color: var(--syntax-comment-color);
@@ -278,9 +281,6 @@
     .tok-content-separator {
       color: var(--syntax-content-separator-color);
     }
-    .tok-list {
-      color: var(--syntax-list-color);
-    }
     @layer quote {
       .tok-quote:not(.md-alert) {
         color: var(--syntax-quote-color);
@@ -381,6 +381,17 @@
       text-decoration-thickness: 3px;
       text-decoration-style: solid;
       text-decoration-skip-ink: none;
+    }
+    .md-task-marker {
+      cursor: pointer;
+      font-weight: var(--md-task-marker-font-weight, normal);
+    }
+    .md-task-done-text {
+      text-decoration: var(--md-task-done-text-decoration, line-through);
+      text-decoration-color: var(
+        --md-task-done-text-decoration-color,
+        color-mix(in srgb, currentColor, transparent 40%)
+      );
     }
   }
 }
