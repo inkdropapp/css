@@ -90,15 +90,18 @@
     --mde-preview-codeblock-meta-font-size: 80%;
     --mde-preview-codeblock-meta-text-color: var(--muted-text-color);
     --mde-preview-codeblock-meta-background-color: light-dark(
-      var(--strong-transparent-black),
-      var(--strong-transparent-white)
-    );
-    --mde-preview-codeblock-text-color: var(--text-color);
-    --mde-preview-codeblock-background-color: light-dark(
       var(--transparent-black),
       var(--transparent-white)
     );
-    --mde-preview-codeblock-border-color: var(--border-color);
+    --mde-preview-codeblock-text-color: var(--text-color);
+    --mde-preview-codeblock-background-color: light-dark(
+      hsl(var(--hsl-slate-200) / 10%),
+      hsl(var(--hsl-neutral-700) / 20%)
+    );
+    --mde-preview-codeblock-border-color: light-dark(
+      hsl(var(--hsl-slate-300) / 50%),
+      hsl(var(--hsl-blue-200) / 10%)
+    );
   }
 
   .mde-preview {
