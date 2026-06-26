@@ -1,4 +1,4 @@
-@layer theme.ui {
+@layer theme.ui.base {
   :root {
     --note-status-active: hsl(var(--hsl-slate-400));
     --note-status-onhold: hsl(var(--hsl-amber-500));

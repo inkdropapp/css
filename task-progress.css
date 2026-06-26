@@ -1,16 +1,14 @@
-@layer theme {
+@layer theme.ui.base {
   :root {
-    --task-progress-view-border-color: hsl(var(--hsl-gray-950) / 30%);
+    --task-progress-view-border-color: light-dark(
+      hsl(var(--hsl-gray-950) / 30%),
+      hsl(var(--hsl-gray-50) / 10%)
+    );
     --task-progress-view-background-color: hsl(var(--hsl-gray-950) / 30%);
-    --task-progress-view-foreground-color: hsl(var(--hsl-white) / 60%);
-    --task-progress-view-completed-color: hsl(var(--hsl-green-500));
-  }
-
-  body[class*='dark-ui'],
-  .dark-mode {
-    --task-progress-view-border-color: hsl(var(--hsl-gray-50) / 10%);
-    --task-progress-view-background-color: hsl(var(--hsl-gray-950) / 30%);
-    --task-progress-view-foreground-color: hsl(var(--hsl-gray-50) / 60%);
+    --task-progress-view-foreground-color: light-dark(
+      hsl(var(--hsl-white) / 60%),
+      hsl(var(--hsl-gray-50) / 60%)
+    );
     --task-progress-view-completed-color: hsl(var(--hsl-green-500));
   }
 }
