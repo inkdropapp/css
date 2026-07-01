@@ -24,13 +24,16 @@
     /* General text, titles and edges */
     --mermaid-text-color: var(--text-color);
     --mermaid-title-color: var(--mermaid-text-color);
-    --mermaid-line-color: light-dark(var(--color-slate-400), var(--color-neutral-500));
+    --mermaid-line-color: light-dark(hsl(var(--hsl-slate-700)), hsl(var(--hsl-amber-500)));
     --mermaid-arrowhead-color: var(--mermaid-line-color);
     --mermaid-default-link-color: var(--mermaid-line-color);
 
     /* Nodes — flowchart shapes, class/state boxes, sequence actors */
-    --mermaid-node-background-color: light-dark(var(--color-slate-50), var(--color-neutral-800));
-    --mermaid-node-border-color: light-dark(var(--color-slate-300), var(--color-neutral-600));
+    --mermaid-node-background-color: light-dark(
+      var(--color-violet-50),
+      hsl(var(--hsl-violet-950) / 30%)
+    );
+    --mermaid-node-border-color: light-dark(var(--color-violet-600), var(--color-violet-500));
     --mermaid-node-text-color: var(--text-color);
     --mermaid-label-color: var(--mermaid-node-text-color);
 
@@ -48,9 +51,12 @@
     --mermaid-edge-label-background-color: light-dark(var(--color-white), var(--color-neutral-900));
 
     /* Notes (sequence / state) — sticky-note amber */
-    --mermaid-note-background-color: light-dark(var(--color-amber-100), var(--color-amber-950));
-    --mermaid-note-border-color: light-dark(var(--color-amber-300), var(--color-amber-800));
-    --mermaid-note-text-color: light-dark(var(--color-amber-950), var(--color-amber-100));
+    --mermaid-note-background-color: light-dark(
+      var(--color-green-100),
+      hsl(var(--hsl-green-950) / 70%)
+    );
+    --mermaid-note-border-color: light-dark(var(--color-green-600), var(--color-green-800));
+    --mermaid-note-text-color: light-dark(var(--color-green-700), var(--color-green-200));
 
     /* Sequence */
     --mermaid-actor-background-color: var(--mermaid-node-background-color);
@@ -59,9 +65,9 @@
     --mermaid-actor-line-color: var(--mermaid-line-color);
     --mermaid-signal-color: var(--mermaid-line-color);
     --mermaid-signal-text-color: var(--mermaid-text-color);
-    --mermaid-label-box-background-color: var(--mermaid-node-background-color);
-    --mermaid-label-box-border-color: var(--mermaid-node-border-color);
-    --mermaid-label-text-color: var(--mermaid-text-color);
+    --mermaid-label-box-background-color: light-dark(var(--color-pink-100), var(--color-pink-900));
+    --mermaid-label-box-border-color: light-dark(var(--color-pink-400), var(--color-pink-600));
+    --mermaid-label-text-color: light-dark(var(--color-pink-600), var(--color-pink-200));
     --mermaid-loop-text-color: var(--mermaid-text-color);
     --mermaid-activation-background-color: var(--mermaid-node-background-color);
     --mermaid-activation-border-color: var(--mermaid-node-border-color);
@@ -134,10 +140,141 @@
      * quadrant slices) from these three, so they read as a muted, theme-aware
      * set. Override with distinct hues for more vivid categorical charts.
      */
-    --mermaid-primary-color: var(--primary-color);
-    --mermaid-secondary-color: light-dark(var(--color-slate-300), var(--color-neutral-600));
-    --mermaid-tertiary-color: light-dark(var(--color-slate-100), var(--color-neutral-800));
+    --mermaid-primary-color: light-dark(var(--color-violet-100), var(--color-violet-900));
+    --mermaid-secondary-color: light-dark(var(--color-pink-100), var(--color-pink-900));
+    --mermaid-tertiary-color: light-dark(var(--color-amber-100), var(--color-amber-900));
     --mermaid-primary-text-color: var(--mermaid-text-color);
-    --mermaid-quadrant-1-background-color: var(--mermaid-node-background-color);
+
+    /* Error (bad diagram / broken relation) */
+    --mermaid-error-background-color: light-dark(var(--color-red-100), var(--color-red-950));
+    --mermaid-error-text-color: light-dark(var(--color-red-800), var(--color-red-200));
+
+    /* C4 */
+    --mermaid-person-background-color: var(--mermaid-node-background-color);
+    --mermaid-person-border-color: var(--mermaid-node-border-color);
+
+    /* Architecture */
+    --mermaid-arch-edge-color: var(--mermaid-line-color);
+    --mermaid-arch-edge-arrow-color: var(--mermaid-line-color);
+    --mermaid-arch-group-border-color: var(--mermaid-cluster-border-color);
+
+    /* Requirement */
+    --mermaid-requirement-background-color: var(--mermaid-node-background-color);
+    --mermaid-requirement-border-color: var(--mermaid-node-border-color);
+    --mermaid-requirement-text-color: var(--mermaid-node-text-color);
+
+    /* Pie — slice colours come from the seed palette; these are text & strokes */
+    --mermaid-pie-title-text-color: var(--mermaid-title-color);
+    --mermaid-pie-section-text-color: var(--mermaid-text-color);
+    --mermaid-pie-legend-text-color: var(--mermaid-text-color);
+    --mermaid-pie-stroke-color: var(--mermaid-node-border-color);
+    --mermaid-pie-outer-stroke-color: var(--mermaid-node-border-color);
+
+    /* Quadrant */
+    --mermaid-quadrant-1-background-color: var(--mermaid-primary-color);
+    --mermaid-quadrant-2-background-color: var(--mermaid-secondary-color);
+    --mermaid-quadrant-3-background-color: var(--mermaid-tertiary-color);
+    --mermaid-quadrant-4-background-color: var(--mermaid-cluster-background-color);
+    --mermaid-quadrant-text-color: var(--mermaid-text-color);
+    --mermaid-quadrant-point-color: var(--mermaid-line-color);
+    --mermaid-quadrant-title-color: var(--mermaid-title-color);
+    --mermaid-quadrant-border-color: var(--mermaid-node-border-color);
+
+    /* Venn */
+    --mermaid-venn-title-text-color: var(--mermaid-title-color);
+    --mermaid-venn-set-text-color: var(--mermaid-text-color);
+
+    /* Git — commit / tag labels (branch & commit dot colours use the seeds) */
+    --mermaid-commit-label-color: var(--mermaid-text-color);
+    --mermaid-commit-label-background-color: var(--mermaid-edge-label-background-color);
+    --mermaid-tag-label-color: var(--mermaid-node-text-color);
+    --mermaid-tag-label-background-color: var(--mermaid-node-background-color);
+    --mermaid-tag-label-border-color: var(--mermaid-node-border-color);
+
+    /* Event modeling — each element kind keeps a distinct, theme-aware hue */
+    --mermaid-em-ui-background-color: var(--mermaid-node-background-color);
+    --mermaid-em-ui-border-color: var(--mermaid-node-border-color);
+    --mermaid-em-processor-background-color: light-dark(
+      var(--color-violet-100),
+      var(--color-violet-950)
+    );
+    --mermaid-em-processor-border-color: light-dark(
+      var(--color-violet-400),
+      var(--color-violet-600)
+    );
+    --mermaid-em-read-model-background-color: light-dark(
+      var(--color-green-100),
+      var(--color-green-950)
+    );
+    --mermaid-em-read-model-border-color: light-dark(
+      var(--color-green-400),
+      var(--color-green-600)
+    );
+    --mermaid-em-command-background-color: light-dark(var(--color-blue-100), var(--color-blue-950));
+    --mermaid-em-command-border-color: light-dark(var(--color-blue-400), var(--color-blue-600));
+    --mermaid-em-event-background-color: light-dark(var(--color-amber-100), var(--color-amber-950));
+    --mermaid-em-event-border-color: light-dark(var(--color-amber-400), var(--color-amber-600));
+    --mermaid-em-swimlane-background-color: var(--mermaid-section-background-color);
+    --mermaid-em-swimlane-border-color: var(--mermaid-cluster-border-color);
+    --mermaid-em-arrowhead-color: var(--mermaid-line-color);
+    --mermaid-em-relation-color: var(--mermaid-line-color);
+
+    /* Packet — Mermaid's base theme has no packet entry, so these are load-bearing */
+    --mermaid-packet-byte-color: var(--mermaid-text-color);
+    --mermaid-packet-label-color: var(--mermaid-text-color);
+    --mermaid-packet-title-color: var(--mermaid-title-color);
+    --mermaid-packet-block-border-color: var(--mermaid-node-border-color);
+    --mermaid-packet-block-background-color: var(--mermaid-node-background-color);
+
+    /* XY chart — data-series colours are a fixed palette set in theme.ts */
+    --mermaid-xychart-background-color: var(--mermaid-background-color);
+    --mermaid-xychart-title-color: var(--mermaid-title-color);
+    --mermaid-xychart-text-color: var(--mermaid-text-color);
+    --mermaid-xychart-axis-color: var(--mermaid-line-color);
+
+    /* Wardley map */
+    --mermaid-wardley-background-color: var(--mermaid-background-color);
+    --mermaid-wardley-axis-color: var(--mermaid-line-color);
+    --mermaid-wardley-axis-text-color: var(--mermaid-text-color);
+    --mermaid-wardley-grid-color: var(--mermaid-grid-color);
+    --mermaid-wardley-component-background-color: var(--mermaid-node-background-color);
+    --mermaid-wardley-component-border-color: var(--mermaid-node-border-color);
+    --mermaid-wardley-component-label-color: var(--mermaid-text-color);
+    --mermaid-wardley-link-color: var(--mermaid-line-color);
+    --mermaid-wardley-evolution-color: light-dark(var(--color-red-500), var(--color-red-400));
+    --mermaid-wardley-annotation-border-color: var(--mermaid-node-border-color);
+    --mermaid-wardley-annotation-text-color: var(--mermaid-text-color);
+    --mermaid-wardley-annotation-background-color: var(--mermaid-node-background-color);
+
+    /* Radar */
+    --mermaid-radar-axis-color: var(--mermaid-line-color);
+    --mermaid-radar-graticule-color: var(--mermaid-grid-color);
+
+    /* Cynefin — each domain keeps its conventional hue, theme-aware */
+    --mermaid-cynefin-boundary-color: var(--mermaid-line-color);
+    --mermaid-cynefin-cliff-color: light-dark(var(--color-red-700), var(--color-red-400));
+    --mermaid-cynefin-arrow-color: var(--mermaid-line-color);
+    --mermaid-cynefin-complex-background-color: light-dark(
+      var(--color-green-100),
+      var(--color-green-950)
+    );
+    --mermaid-cynefin-complicated-background-color: light-dark(
+      var(--color-blue-100),
+      var(--color-blue-950)
+    );
+    --mermaid-cynefin-chaotic-background-color: light-dark(
+      var(--color-red-100),
+      var(--color-red-950)
+    );
+    --mermaid-cynefin-clear-background-color: light-dark(
+      var(--color-amber-100),
+      var(--color-amber-950)
+    );
+    --mermaid-cynefin-confusion-background-color: light-dark(
+      var(--color-violet-100),
+      var(--color-violet-950)
+    );
+    --mermaid-cynefin-text-color: var(--mermaid-text-color);
+    --mermaid-cynefin-label-color: var(--mermaid-primary-text-color);
   }
 }
