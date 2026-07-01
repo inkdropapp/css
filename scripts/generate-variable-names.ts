@@ -20,6 +20,7 @@ const STYLESHEETS = [
   'tags.css',
   'task-progress.css',
   'markdown.css',
+  'mermaid.css',
   'syntax.css'
 ]
 

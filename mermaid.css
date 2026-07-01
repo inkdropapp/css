@@ -1,0 +1,143 @@
+@layer theme.preview.base {
+  /*
+   * Mermaid diagram colours for the Markdown preview. Consumed by the `mermaid`
+   * plugin's built-in `inkdrop` theme, which maps Mermaid's theme variables onto
+   * these `--mermaid-*` custom properties (see inkdrop-mermaid/src/theme.ts).
+   *
+   * A handful of "base" tokens carry the actual colours; every other token
+   * cascades from one of them via var() (e.g. --mermaid-actor-background-color
+   * defaults to --mermaid-node-background-color), so a theme can restyle a whole
+   * family by overriding a base, or a single surface by overriding its token.
+   *
+   * Values that differ between light & dark use light-dark(), which resolves
+   * against the color-scheme that index.html sets on <body> (light by default;
+   * dark under body.dark-mode / [class*='dark-ui']) — same convention as
+   * markdown.css. A selected preview theme's :root (unlayered, or @layer
+   * theme.preview) outranks this @layer and can override any of these.
+   *
+   * The Tailwind-inspired tokens (--color-* / --hsl-*) come from tokens.css.
+   */
+  :root {
+    /* Canvas — transparent so diagrams blend into the preview background */
+    --mermaid-background-color: transparent;
+
+    /* General text, titles and edges */
+    --mermaid-text-color: var(--text-color);
+    --mermaid-title-color: var(--mermaid-text-color);
+    --mermaid-line-color: light-dark(var(--color-slate-400), var(--color-neutral-500));
+    --mermaid-arrowhead-color: var(--mermaid-line-color);
+    --mermaid-default-link-color: var(--mermaid-line-color);
+
+    /* Nodes — flowchart shapes, class/state boxes, sequence actors */
+    --mermaid-node-background-color: light-dark(var(--color-slate-50), var(--color-neutral-800));
+    --mermaid-node-border-color: light-dark(var(--color-slate-300), var(--color-neutral-600));
+    --mermaid-node-text-color: var(--text-color);
+    --mermaid-label-color: var(--mermaid-node-text-color);
+
+    /* Subgraphs / composite states / block surfaces */
+    --mermaid-cluster-background-color: light-dark(
+      hsl(var(--hsl-slate-400) / 12%),
+      hsl(var(--hsl-neutral-100) / 6%)
+    );
+    --mermaid-cluster-border-color: light-dark(var(--color-slate-200), var(--color-neutral-700));
+    --mermaid-secondary-border-color: var(--mermaid-cluster-border-color);
+    --mermaid-surface-background-color: var(--mermaid-cluster-background-color);
+    --mermaid-surface-border-color: var(--mermaid-cluster-border-color);
+
+    /* Edge / relation labels */
+    --mermaid-edge-label-background-color: light-dark(var(--color-white), var(--color-neutral-900));
+
+    /* Notes (sequence / state) — sticky-note amber */
+    --mermaid-note-background-color: light-dark(var(--color-amber-100), var(--color-amber-950));
+    --mermaid-note-border-color: light-dark(var(--color-amber-300), var(--color-amber-800));
+    --mermaid-note-text-color: light-dark(var(--color-amber-950), var(--color-amber-100));
+
+    /* Sequence */
+    --mermaid-actor-background-color: var(--mermaid-node-background-color);
+    --mermaid-actor-border-color: var(--mermaid-node-border-color);
+    --mermaid-actor-text-color: var(--mermaid-node-text-color);
+    --mermaid-actor-line-color: var(--mermaid-line-color);
+    --mermaid-signal-color: var(--mermaid-line-color);
+    --mermaid-signal-text-color: var(--mermaid-text-color);
+    --mermaid-label-box-background-color: var(--mermaid-node-background-color);
+    --mermaid-label-box-border-color: var(--mermaid-node-border-color);
+    --mermaid-label-text-color: var(--mermaid-text-color);
+    --mermaid-loop-text-color: var(--mermaid-text-color);
+    --mermaid-activation-background-color: var(--mermaid-node-background-color);
+    --mermaid-activation-border-color: var(--mermaid-node-border-color);
+    --mermaid-sequence-number-color: var(--mermaid-edge-label-background-color);
+
+    /* Class */
+    --mermaid-class-text-color: var(--mermaid-node-text-color);
+
+    /* State */
+    --mermaid-state-background-color: var(--mermaid-node-background-color);
+    --mermaid-state-border-color: var(--mermaid-node-border-color);
+    --mermaid-state-label-color: var(--mermaid-node-text-color);
+    --mermaid-transition-color: var(--mermaid-line-color);
+    --mermaid-transition-label-color: var(--mermaid-text-color);
+    --mermaid-special-state-color: var(--mermaid-line-color);
+    --mermaid-composite-background-color: var(--mermaid-cluster-background-color);
+    --mermaid-composite-title-background-color: var(--mermaid-cluster-background-color);
+    --mermaid-composite-border-color: var(--mermaid-cluster-border-color);
+    --mermaid-alt-background-color: var(--mermaid-cluster-background-color);
+    --mermaid-inner-end-background-color: var(--mermaid-node-border-color);
+
+    /* Entity-relationship */
+    --mermaid-relation-color: var(--mermaid-line-color);
+    --mermaid-relation-label-color: var(--mermaid-text-color);
+    --mermaid-relation-label-background-color: var(--mermaid-edge-label-background-color);
+    --mermaid-row-odd-background-color: var(--mermaid-node-background-color);
+    --mermaid-row-even-background-color: var(--mermaid-cluster-background-color);
+    --mermaid-attribute-odd-background-color: var(--mermaid-node-background-color);
+    --mermaid-attribute-even-background-color: var(--mermaid-cluster-background-color);
+
+    /* Gantt — sections */
+    --mermaid-section-background-color: light-dark(
+      hsl(var(--hsl-slate-400) / 18%),
+      hsl(var(--hsl-neutral-100) / 8%)
+    );
+    --mermaid-alt-section-background-color: light-dark(
+      hsl(var(--hsl-slate-400) / 8%),
+      hsl(var(--hsl-neutral-100) / 4%)
+    );
+    --mermaid-exclude-background-color: var(--mermaid-alt-section-background-color);
+
+    /* Gantt — tasks */
+    --mermaid-task-background-color: light-dark(var(--color-blue-200), var(--color-blue-800));
+    --mermaid-task-border-color: light-dark(var(--color-blue-400), var(--color-blue-600));
+    --mermaid-task-text-color: var(--text-color);
+    --mermaid-task-text-light-color: var(--mermaid-task-text-color);
+    --mermaid-task-text-dark-color: var(--mermaid-task-text-color);
+    --mermaid-task-text-outside-color: var(--mermaid-text-color);
+    --mermaid-task-text-clickable-color: var(--mermaid-task-text-color);
+    --mermaid-active-task-background-color: light-dark(
+      var(--color-violet-200),
+      var(--color-violet-700)
+    );
+    --mermaid-active-task-border-color: light-dark(
+      var(--color-violet-400),
+      var(--color-violet-500)
+    );
+    --mermaid-done-task-background-color: light-dark(
+      var(--color-slate-200),
+      var(--color-neutral-700)
+    );
+    --mermaid-done-task-border-color: light-dark(var(--color-slate-400), var(--color-neutral-500));
+    --mermaid-crit-task-background-color: light-dark(var(--color-red-200), var(--color-red-800));
+    --mermaid-crit-task-border-color: light-dark(var(--color-red-400), var(--color-red-600));
+    --mermaid-grid-color: light-dark(var(--color-slate-200), var(--color-neutral-700));
+    --mermaid-today-line-color: light-dark(var(--color-red-500), var(--color-red-400));
+
+    /*
+     * Seed palette — Mermaid derives its categorical scales (pie / git /
+     * quadrant slices) from these three, so they read as a muted, theme-aware
+     * set. Override with distinct hues for more vivid categorical charts.
+     */
+    --mermaid-primary-color: var(--primary-color);
+    --mermaid-secondary-color: light-dark(var(--color-slate-300), var(--color-neutral-600));
+    --mermaid-tertiary-color: light-dark(var(--color-slate-100), var(--color-neutral-800));
+    --mermaid-primary-text-color: var(--mermaid-text-color);
+    --mermaid-quadrant-1-background-color: var(--mermaid-node-background-color);
+  }
+}
