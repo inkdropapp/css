@@ -78,6 +78,7 @@ reset, base, tokens, recipes, utilities, theme, theme.ui, theme.preview, theme.s
 | `theme.ui`      | `status.css`        | Note status colors (`--note-status-*`)                                          |
 | `theme`         | `task-progress.css` | Task progress view colors (light + dark)                                        |
 | `theme.preview` | `markdown.css`      | GFM markdown preview and alert colors (light + dark via `light-dark()`)         |
+| `theme.preview` | `mermaid.css`       | Mermaid diagram colors (`--mermaid-*`, light + dark via `light-dark()`)          |
 | —               | `tags.css`          | Tag color palettes                                                              |
 
 ## TypeScript exports
