@@ -48,7 +48,10 @@
     --mermaid-surface-border-color: var(--mermaid-cluster-border-color);
 
     /* Edge / relation labels */
-    --mermaid-edge-label-background-color: light-dark(var(--color-white), var(--color-neutral-900));
+    --mermaid-edge-label-background-color: light-dark(
+      var(--color-purple-50),
+      var(--color-purple-900)
+    );
 
     /* Notes (sequence / state) — sticky-note amber */
     --mermaid-note-background-color: light-dark(
