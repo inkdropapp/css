@@ -257,7 +257,8 @@
     --syntax-heading-5-font-weight: var(--syntax-heading-font-weight);
     --syntax-heading-6-color: var(--syntax-heading-color);
     --syntax-heading-6-font-weight: var(--syntax-heading-font-weight);
-    --syntax-content-separator-color: var(--editor-foreground-color);
+    --syntax-content-separator-color: light-dark(var(--color-pink-600), var(--color-pink-400));
+    --syntax-content-separator-font-weight: bold;
     --syntax-list-color: var(--editor-foreground-color);
     --syntax-quote-color: light-dark(var(--color-slate-600), var(--color-gray-400));
     --syntax-quote-font-style: italic;
@@ -608,6 +609,7 @@
     /* Prose content ------------------------------------------------------ */
     .tok-content-separator {
       color: var(--syntax-content-separator-color);
+      font-weight: var(--syntax-content-separator-font-weight);
     }
     :not([class^='md-alert']) {
       .tok-quote:not(.md-alert) {
