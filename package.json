@@ -1,6 +1,6 @@
 {
   "name": "@inkdropapp/css",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "The common stylesheets for Inkdrop",
   "license": "MIT",
   "author": "Takuya Matsuyama <t@inkdrop.app>",
