@@ -336,6 +336,14 @@
    */
   .cm-editor,
   .mde-preview .codeblock {
+    :not([class^='md-alert']) {
+      .tok-quote:not(.md-alert) {
+        font-style: var(--syntax-quote-font-style, italic);
+        &.tok-content {
+          color: var(--syntax-quote-color);
+        }
+      }
+    }
     .tok-list {
       color: var(--syntax-list-color);
     }
@@ -610,12 +618,6 @@
     .tok-content-separator {
       color: var(--syntax-content-separator-color);
       font-weight: var(--syntax-content-separator-font-weight);
-    }
-    :not([class^='md-alert']) {
-      .tok-quote:not(.md-alert) {
-        color: var(--syntax-quote-color);
-        font-style: var(--syntax-quote-font-style, italic);
-      }
     }
     .tok-emphasis {
       color: var(--syntax-emphasis-color);
