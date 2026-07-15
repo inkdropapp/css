@@ -1464,13 +1464,16 @@
     );
     --note-list-bar-border-right: 1px solid
       light-dark(var(--white-down), hsl(var(--hsl-neutral-800) / 75%));
-    --note-list-bar-pinned-section-header-background: var(--color-neutral-200);
+    --note-list-bar-pinned-section-header-background: light-dark(
+      var(--color-neutral-200),
+      hsl(var(--hsl-neutral-900))
+    );
     --note-list-bar-pinned-section-header-border-bottom: none;
-    --note-list-bar-pinned-section-footer-border-bottom: 4px solid #ccc;
+    --note-list-bar-pinned-section-footer-border-bottom: 4px solid transparent;
     --note-list-bar-section-header-text-color: var(--text-color);
     --note-list-bar-section-header-background: var(
       --note-list-bar-pinned-section-header-background,
-      var(--color-neutral-200)
+      light-dark(var(--color-neutral-200), hsl(var(--hsl-neutral-900)))
     );
     --note-list-bar-section-header-border-bottom: var(
       --note-list-bar-pinned-section-header-border-bottom,
@@ -1478,7 +1481,7 @@
     );
     --note-list-bar-section-footer-border-bottom: var(
       --note-list-bar-pinned-section-footer-border-bottom,
-      4px solid #ccc
+      4px solid transparent
     );
     --note-list-view-item-header-color: var(--text-color);
     --note-list-view-item-color: var(--muted-text-color);
