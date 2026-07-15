@@ -861,6 +861,10 @@
 
     ol > li.task-list-item {
       list-style-type: inherit;
+
+      .task-list-item-checkbox {
+        margin: 0 0.2em 0 0;
+      }
     }
 
     .task-list-item label {
