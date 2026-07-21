@@ -1439,9 +1439,9 @@
     --sidebar-sync-status-view-text-color: var(--muted-text-color);
     --sidebar-sync-status-view-detail-color: var(--unselected-text-color);
     --sidebar-sync-status-view-border-top: 1px solid var(--border-color);
-    --sidebar-scrollbar-width: 6px;
-    --sidebar-scrollbar-track-background: rgba(255, 255, 255, 0.02);
-    --sidebar-scrollbar-thumb-background: rgba(255, 255, 255, 0.2);
+    --sidebar-scrollbar-width: var(--scrollbar-width);
+    --sidebar-scrollbar-track-background: var(--scrollbar-track-background);
+    --sidebar-scrollbar-thumb-background: var(--scrollbar-thumb-background);
     --sidebar-notification-view-background: var(--warning-color);
     --sidebar-notification-view-color: light-dark(
       var(--warning-text-color),
