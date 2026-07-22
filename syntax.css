@@ -726,4 +726,8 @@
       );
     }
   }
+
+  :root:has(body.acrylic-window) {
+    --editor-background-color: transparent;
+  }
 }
