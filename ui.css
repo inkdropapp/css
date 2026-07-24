@@ -21,9 +21,9 @@
       Border Radius
     --------------------*/
 
-    --default-corner-shape: squircle;
-    --default-squircle-radius: var(--15px);
-    --large-squircle-radius: var(--24px);
+    --default-corner-shape: round;
+    --default-squircle-radius: var(--absolute-border-radius);
+    --large-squircle-radius: var(--12px);
 
     /*-------------------
       Brand Colors
@@ -1545,6 +1545,18 @@
       hsl(var(--hsl-blue-300) / 20%)
     );
     --preferences-view-background: light-dark(var(--color-white), var(--color-neutral-950));
+  }
+
+  /*-------------------------------
+    Squircle corners (Chromium only)
+  --------------------------------*/
+
+  @supports (corner-shape: squircle) {
+    :root {
+      --default-corner-shape: squircle;
+      --default-squircle-radius: var(--15px);
+      --large-squircle-radius: var(--24px);
+    }
   }
 
   /*-------------------------------
