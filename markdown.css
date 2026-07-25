@@ -795,6 +795,22 @@
       border: 0;
     }
 
+    .mde-preview-code {
+      display: flex;
+      flex-direction: row;
+      gap: 1em;
+
+      &.with-line-numbers code.mde-preview-code-body {
+        overflow: auto;
+        white-space: pre;
+      }
+
+      .mde-preview-code-line-number {
+        user-select: none;
+        text-align: right;
+      }
+    }
+
     [data-footnote-ref]::before {
       content: '[';
     }
