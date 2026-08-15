@@ -83,6 +83,11 @@
     --mde-preview-footnote-border-color: var(--solid-border-color);
     --mde-preview-footnote-highlight-border-color: var(--primary-color-active);
 
+    /* List markers */
+    --mde-preview-list-marker-color: var(--text-color);
+    --mde-preview-list-marker-2-color: var(--text-color);
+    --mde-preview-list-marker-3-color: var(--text-color);
+
     /* Task list */
     --mde-preview-task-list-checked-color: var(--muted-text-color);
 
@@ -416,6 +421,10 @@
       padding-left: 2em;
     }
 
+    ul {
+      list-style-type: disc;
+    }
+
     ol ol,
     ul ol {
       list-style-type: lower-roman;
@@ -426,6 +435,34 @@
     ol ul ol,
     ol ol ol {
       list-style-type: lower-alpha;
+    }
+
+    li::marker {
+      color: var(--mde-preview-list-marker-color);
+    }
+    li li::marker {
+      color: var(--mde-preview-list-marker-2-color);
+    }
+    li li li::marker {
+      color: var(--mde-preview-list-marker-3-color);
+    }
+    li li li li::marker {
+      color: var(--mde-preview-list-marker-color);
+    }
+    li li li li li::marker {
+      color: var(--mde-preview-list-marker-2-color);
+    }
+    li li li li li li::marker {
+      color: var(--mde-preview-list-marker-3-color);
+    }
+    li li li li li li li::marker {
+      color: var(--mde-preview-list-marker-color);
+    }
+    li li li li li li li li::marker {
+      color: var(--mde-preview-list-marker-2-color);
+    }
+    li li li li li li li li li::marker {
+      color: var(--mde-preview-list-marker-3-color);
     }
 
     dd {

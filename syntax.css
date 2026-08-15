@@ -325,6 +325,8 @@
 
     --md-blockquote-border-color: light-dark(var(--color-slate-400), var(--color-neutral-500));
     --md-list-mark-color: var(--color-indigo-500);
+    --md-list-mark-2-color: var(--color-orange-500);
+    --md-list-mark-3-color: var(--color-emerald-500);
     --md-task-marker-font-weight: bold;
   }
 
@@ -683,6 +685,12 @@
     }
     .md-list-mark {
       color: var(--md-list-mark-color);
+    }
+    .md-list-mark-2 .md-list-mark {
+      color: var(--md-list-mark-2-color);
+    }
+    .md-list-mark-3 .md-list-mark {
+      color: var(--md-list-mark-3-color);
     }
     .md-link-mark {
     }
