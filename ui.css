@@ -80,17 +80,23 @@
     --------------------*/
 
     /* Used on inputs, textarea etc */
-    --focused-form-border-color: light-dark(#85b7d9, hsl(var(--hsl-sky-300) / 60%));
+    --focused-form-border-color: light-dark(
+      hsl(var(--hsl-sky-600) / 50%),
+      hsl(var(--hsl-sky-300) / 60%)
+    );
 
     /* Used on dropdowns, other larger blocks */
-    --focused-form-muted-border-color: light-dark(#96c8da, hsl(var(--hsl-sky-300) / 40%));
+    --focused-form-muted-border-color: light-dark(
+      hsl(var(--hsl-sky-700) / 40%),
+      hsl(var(--hsl-sky-300) / 40%)
+    );
 
     --unfocused-outline-color: transparent;
     --unfocused-outline-offset: 0.4rem;
     --focused-outline-style: solid;
     --focused-outline-width: var(--2px);
     --focused-outline-color: light-dark(
-      color-mix(in srgb, var(--focused-form-muted-border-color), transparent 30%),
+      hsl(var(--hsl-sky-500) / 40%),
       hsl(var(--hsl-sky-300) / 30%)
     );
     --focused-outline-offset: 0rem;
