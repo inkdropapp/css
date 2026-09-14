@@ -69,8 +69,14 @@
       rgba(115, 115, 115, 0.87),
       hsl(var(--hsl-neutral-300) / 35%)
     );
-    --input-error-placeholder-color: light-dark(#e7bdbc, var(--negative-text-color));
-    --input-error-placeholder-focus-color: light-dark(#da9796, hsl(var(--hsl-red-200) / 90%));
+    --input-error-placeholder-color: light-dark(
+      hsl(var(--hsl-red-300) / 60%),
+      hsl(var(--hsl-red-200) / 40%)
+    );
+    --input-error-placeholder-focus-color: light-dark(
+      hsl(var(--hsl-red-700) / 45%),
+      hsl(var(--hsl-red-200) / 60%)
+    );
 
     /* Line Height Default For Inputs in Browser */
     --input-line-height: 1.21428571em;
