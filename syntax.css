@@ -708,10 +708,14 @@
         --md-inline-code-background-color,
         var(--md-codeblock-background-color)
       );
-      border: var(--md-inline-code-border-width, var(--md-codeblock-border-width)) solid
+      outline: var(--md-inline-code-border-width, var(--md-codeblock-border-width)) solid
         var(--md-inline-code-border-color, var(--md-codeblock-border-color));
       border-radius: 0.4em;
       line-height: calc(140% + 2px);
+    }
+    .md-table .md-inline-code {
+      --md-inline-code-padding: 0px;
+      border: none;
     }
     .md-inline-mark {
       color: var(--md-inline-mark-text-color);
