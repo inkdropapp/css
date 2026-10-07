@@ -23,13 +23,13 @@
     "prepublishOnly": "npm run generate-variable-names"
   },
   "devDependencies": {
-    "@types/node": "^25.9.3",
-    "oxfmt": "0.54.0",
-    "oxlint": "1.69.0",
-    "postcss": "^8.5.15",
-    "typescript": "^6.0.3"
+    "@types/node": "^26.6.4",
+    "oxfmt": "0.71.0",
+    "oxlint": "1.86.0",
+    "postcss": "^8.5.28",
+    "typescript": "^7.0.2"
   },
   "optionalDependencies": {
-    "inkdrop-model": "^2.11.5"
+    "inkdrop-model": "^3.0.0"
   }
 }
