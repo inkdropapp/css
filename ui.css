@@ -1472,7 +1472,7 @@
     --------------------*/
     --note-list-bar-background: light-dark(
       var(--color-stone-50),
-      hsl(var(--hsl-neutral-900) / 50%)
+      color-mix(in srgb, hsl(var(--hsl-neutral-900)), hsl(var(--hsl-neutral-950)))
     );
     --note-list-bar-border-right: 1px solid
       light-dark(var(--white-down), hsl(var(--hsl-neutral-800) / 75%));
