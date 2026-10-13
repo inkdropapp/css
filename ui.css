@@ -29,10 +29,10 @@
       Brand Colors
     --------------------*/
 
-    --primary-color: light-dark(var(--color-blue-500), hsl(var(--hsl-blue-400) / 80%));
-    --secondary-color: light-dark(var(--color-zinc-900), hsl(var(--hsl-zinc-400) / 80%));
+    --primary-color: light-dark(var(--color-blue-500), hsl(var(--hsl-blue-400)));
+    --secondary-color: light-dark(var(--color-zinc-900), hsl(var(--hsl-zinc-400)));
 
-    --light-primary-color: light-dark(var(--color-blue-400), hsl(var(--hsl-blue-300) / 80%));
+    --light-primary-color: light-dark(var(--color-blue-400), hsl(var(--hsl-blue-300)));
     --light-secondary-color: var(--color-neutral-700);
 
     /*--------------
