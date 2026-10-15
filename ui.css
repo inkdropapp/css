@@ -1428,8 +1428,8 @@
     --sidebar-background: light-dark(var(--color-gray-100), var(--color-neutral-900));
     --sidebar-border-right: 1px solid light-dark(var(--border-color), hsl(var(--hsl-neutral-800)));
     --sidebar-menu-item-inactive-background: light-dark(
-      hsl(var(--hsl-sky-800) / 20%),
-      hsl(var(--hsl-blue-300) / 20%)
+      hsl(var(--hsl-slate-300)),
+      hsl(var(--hsl-slate-700))
     );
     --sidebar-menu-item-active-background: light-dark(
       var(--primary-color),
@@ -1501,8 +1501,8 @@
       light-dark(var(--white-down), hsl(var(--hsl-neutral-800) / 75%));
     --note-list-view-item-date-color: var(--primary-color);
     --note-list-view-item-selected-background: light-dark(
-      hsl(var(--hsl-sky-800) / 20%),
-      hsl(var(--hsl-blue-300) / 20%)
+      hsl(var(--hsl-slate-300)),
+      hsl(var(--hsl-slate-700))
     );
     --note-list-view-item-active-background: light-dark(
       var(--primary-color),
@@ -1554,7 +1554,7 @@
     --preferences-sidebar-background: light-dark(var(--color-gray-100), var(--color-neutral-900));
     --preferences-sidebar-item-active-background: light-dark(
       hsl(var(--hsl-sky-800) / 20%),
-      hsl(var(--hsl-blue-300) / 20%)
+      hsl(var(--hsl-slate-700))
     );
     --preferences-view-background: light-dark(var(--color-white), var(--color-neutral-950));
   }
