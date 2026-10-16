@@ -36,6 +36,11 @@
     --mermaid-node-border-color: light-dark(var(--color-violet-600), var(--color-violet-500));
     --mermaid-node-text-color: var(--text-color);
     --mermaid-label-color: var(--mermaid-node-text-color);
+    /* Node shadow under Mermaid's `neo` look — a `filter` value (SVG shapes
+       ignore box-shadow), e.g. any drop-shadow() chain, or `none` */
+    --mermaid-node-shadow: drop-shadow(
+      0 1px 2px light-dark(hsl(var(--hsl-black) / 15%), hsl(var(--hsl-black) / 50%))
+    );
 
     /* Subgraphs / composite states / block surfaces */
     --mermaid-cluster-background-color: light-dark(
@@ -46,6 +51,7 @@
     --mermaid-secondary-border-color: var(--mermaid-cluster-border-color);
     --mermaid-surface-background-color: var(--mermaid-cluster-background-color);
     --mermaid-surface-border-color: var(--mermaid-cluster-border-color);
+    --mermaid-flow-container-border-color: var(--mermaid-secondary-border-color);
 
     /* Edge / relation labels */
     --mermaid-edge-label-background-color: light-dark(
@@ -186,6 +192,16 @@
     /* Venn */
     --mermaid-venn-title-text-color: var(--mermaid-title-color);
     --mermaid-venn-set-text-color: var(--mermaid-text-color);
+
+    /* Use case — actors, use cases and system boundaries */
+    --mermaid-usecase-actor-background-color: var(--mermaid-actor-background-color);
+    --mermaid-usecase-actor-border-color: var(--mermaid-actor-border-color);
+    --mermaid-usecase-background-color: var(--mermaid-node-background-color);
+    --mermaid-usecase-border-color: var(--mermaid-node-border-color);
+    --mermaid-usecase-boundary-background-color: var(--mermaid-cluster-background-color);
+    --mermaid-usecase-boundary-border-color: var(--mermaid-cluster-border-color);
+    --mermaid-usecase-include-line-color: var(--mermaid-line-color);
+    --mermaid-usecase-extend-line-color: var(--mermaid-line-color);
 
     /* Git — commit / tag labels (branch & commit dot colours use the seeds) */
     --mermaid-commit-label-color: var(--mermaid-text-color);
