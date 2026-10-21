@@ -180,7 +180,6 @@
     }
 
     h1 {
-      margin: 0.67em 0;
       font-weight: var(--font-weights-bold, 600);
       padding-bottom: 0.3em;
       font-size: var(--h1);
