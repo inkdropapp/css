@@ -217,7 +217,8 @@
       top: -0.5em;
     }
 
-    img {
+    img,
+    video {
       border-style: none;
       max-width: 100%;
       box-sizing: content-box;
