@@ -705,7 +705,7 @@
     /*-------------------
       Button
     --------------------*/
-    --button-background: light-dark(var(--color-gray-200), hsl(var(--hsl-neutral-800) / 70%)) none;
+    --button-background: light-dark(var(--color-gray-200), var(--color-neutral-800)) none;
     --button-text-color: light-dark(hsl(var(--hsl-black) / 60%), hsl(var(--hsl-neutral-50) / 60%));
     --button-border: none;
     /* --button-border: 1px solid */
@@ -721,10 +721,7 @@
     --button-corner-shape: var(--default-corner-shape);
 
     /* Hovered */
-    --button-hover-background-color: light-dark(
-      var(--color-gray-300),
-      hsl(var(--hsl-neutral-700) / 70%)
-    );
+    --button-hover-background-color: light-dark(var(--color-gray-300), var(--color-neutral-700));
     --button-hover-background-image: none;
     --button-hover-box-shadow: var(--button-box-shadow);
     --button-hover-color: var(--hovered-text-color);
@@ -742,20 +739,14 @@
     --button-disabled-box-shadow: none;
 
     /* Pressed Down */
-    --button-down-background-color: light-dark(
-      var(--color-gray-400),
-      hsl(var(--hsl-neutral-800) / 80%)
-    );
+    --button-down-background-color: light-dark(var(--color-gray-400), var(--color-neutral-800));
     --button-down-background-image: '';
     --button-down-pressed-shadow: none;
     --button-down-box-shadow: var(--button-box-shadow);
     --button-down-color: var(--pressed-text-color);
 
     /* Active */
-    --button-active-background-color: light-dark(
-      var(--color-gray-400),
-      hsl(var(--hsl-neutral-700) / 70%)
-    );
+    --button-active-background-color: light-dark(var(--color-gray-400), var(--color-neutral-700));
     --button-active-background-image: none;
     --button-active-color: var(--selected-text-color);
     --button-active-box-shadow: var(--button-box-shadow);
