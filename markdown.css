@@ -154,12 +154,6 @@
       display: none !important;
     }
 
-    a {
-      background-color: transparent;
-      color: var(--mde-preview-link-color);
-      text-decoration: none;
-    }
-
     abbr[title] {
       border-bottom: none;
       text-decoration: underline dotted;
@@ -177,6 +171,16 @@
 
     dfn {
       font-style: italic;
+    }
+
+    a {
+      background-color: transparent;
+      color: var(--mde-preview-link-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     h1 {
@@ -291,10 +295,6 @@
       -webkit-appearance: button;
       appearance: button;
       font: inherit;
-    }
-
-    a:hover {
-      text-decoration: underline;
     }
 
     ::placeholder {
